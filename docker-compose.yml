@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    container_name: 'teyre-ui'
+    build: .
+    volumes:
+      - .:/home/node/app
+      - /home/node/app/node_modules
+    ports:
+      - '3001:3001'
+    stdin_open: true
+    tty: true
