@@ -19,14 +19,28 @@ function build(filePath, subDir) {
   )
 }
 
+function buildDir(dir) {
+  const files = fs.readdirSync(dir)
+  files.forEach(file => {
+    const filePath = path.resolve(dir, file)
+    const stat = fs.lstatSync(filePath)
+    if (stat.isDirectory()) {
+      buildDir(filePath)
+    } else {
+      build(filePath, true)
+    }
+  })
+}
+
 // Build main library entrypoint
 build(path.resolve(paths.src, 'index.js'), false)
 
 // Build all components in components directory
-const components = fs.readdirSync(paths.components)
-components.forEach(component => {
-  build(path.resolve(paths.components, component), true)
-})
+buildDir(paths.components)
+// const components = fs.readdirSync(paths.components)
+// components.forEach(component => {
+//   build(path.resolve(paths.components, component), true)
+// })
 
 // Rename index.common.js to index.js
 fs.copySync(path.resolve(paths.build, 'index.common.js'), path.resolve(paths.build, 'index.js'))

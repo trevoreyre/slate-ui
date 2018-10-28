@@ -1,11 +1,12 @@
 {
   "name": "@trevoreyre/ui",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "private": false,
   "main": "index.js",
   "files": [
     "*.json",
-    "**/*.js"
+    "**/*.js",
+    "**/*.css"
   ],
   "scripts": {
     "serve": "vue-cli-service serve --port 3001",
