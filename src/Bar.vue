@@ -1,13 +1,13 @@
 <template>
-  <div class='bar'>
-    <div class='left' v-if="$slots['left']">
-      <slot name='left'></slot>
+  <div class="bar">
+    <div class="left" v-if="$slots['left']">
+      <slot name="left"></slot>
     </div>
-    <div class='center' v-if="$slots['center']">
-      <slot name='center'></slot>
+    <div class="center" v-if="$slots['center']">
+      <slot name="center"></slot>
     </div>
-    <div class='right' v-if="$slots['right']">
-      <slot name='right'></slot>
+    <div class="right" v-if="$slots['right']">
+      <slot name="right"></slot>
     </div>
   </div>
 </template>
@@ -49,4 +49,3 @@ export default {
   justify-content: flex-end;
 }
 </style>
-
