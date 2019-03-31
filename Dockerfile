@@ -4,8 +4,6 @@ USER node
 
 RUN mkdir /home/node/app
 RUN mkdir /home/node/app/node_modules
-
-# Install app dependencies
 RUN npm install -g @vue/cli
 
-WORKDIR /home/node
+WORKDIR /home/node/app

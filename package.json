@@ -1,43 +1,31 @@
 {
   "name": "@trevoreyre/ui",
-  "version": "0.0.12",
+  "version": "0.0.13",
+  "description": "Vue UI component library",
   "main": "dist/ui.common.js",
   "unpkg": "dist/ui.umd.min.js",
+  "keywords": [
+    "vue",
+    "component",
+    "library",
+    "UI"
+  ],
   "author": "Trevor Eyre <trevoreyre@gmail.com> (https://trevoreyre.com)",
   "license": "MIT",
   "repository": "trevoreyre/ui",
-  "bugs": "https://github.com/trevoreure/ui/issues",
+  "bugs": "https://github.com/trevoreyre/ui/issues",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "*.json",
-    "**/*.js",
-    "**/*.css",
-    "**/*.vue"
-  ],
   "scripts": {
     "serve": "vue-cli-service serve --port 3001",
     "build": "npm run build:index && npm run build:lib",
     "build:index": "node scripts/build-index.js",
     "build:lib": "vue-cli-service build --target lib --name ui src/index.js",
-    "lint": "vue-cli-service lint"
-  },
-  "peerDependencies": {
-    "vue": "^2.6.6"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
-    "@vue/cli-plugin-eslint": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "fs-extra": "^7.0.0",
-    "lint-staged": "^8.1.4",
-    "vue-template-compiler": "^2.5.21"
+    "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -p 6006 --ci",
+    "build-storybook": "build-storybook"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -47,5 +35,26 @@
       "vue-cli-service lint",
       "git add"
     ]
+  },
+  "dependencies": {
+    "vue": "^2.6.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@storybook/addon-actions": "^5.0.5",
+    "@storybook/addon-links": "^5.0.5",
+    "@storybook/addons": "^5.0.5",
+    "@storybook/vue": "^5.0.5",
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "babel-preset-vue": "^2.0.2",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "lint-staged": "^8.1.4",
+    "vue-template-compiler": "^2.5.21"
   }
 }
