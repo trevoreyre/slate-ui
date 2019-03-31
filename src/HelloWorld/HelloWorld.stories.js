@@ -1,8 +1,8 @@
-import { storiesOf } from "@storybook/vue";
+import { storiesOf } from '@storybook/vue'
 
-import HelloWorld from "./HelloWorld.vue";
+import HelloWorld from './HelloWorld.vue'
 
-storiesOf("HelloWorld", module).add("default", () => ({
+storiesOf('HelloWorld', module).add('default', () => ({
   components: { HelloWorld },
-  template: `<HelloWorld msg="Trevor" />`
-}));
+  template: `<HelloWorld msg="Trevor" />`,
+}))

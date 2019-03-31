@@ -5,19 +5,19 @@
 </template>
 
 <script>
-import HelloWorld from "../HelloWorld/HelloWorld.vue";
+import HelloWorld from '../HelloWorld/HelloWorld.vue'
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    HelloWorld
-  }
-};
+    HelloWorld,
+  },
+}
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

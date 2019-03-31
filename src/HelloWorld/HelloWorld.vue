@@ -88,11 +88,12 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
+  foo: 'bar',
   props: {
-    msg: String
-  }
-};
+    msg: String,
+  },
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
