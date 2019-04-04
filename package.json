@@ -1,6 +1,6 @@
 {
   "name": "@trevoreyre/ui",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Vue UI component library",
   "main": "dist/ui.common.js",
   "unpkg": "dist/ui.umd.min.js",
