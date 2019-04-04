@@ -37,6 +37,8 @@
     ]
   },
   "dependencies": {
+    "@trevoreyre/autocomplete-vue": "^1.0.1",
+    "normalize.css": "^8.0.1",
     "vue": "^2.6.6"
   },
   "devDependencies": {
