@@ -23,7 +23,7 @@ html {
 body {
   min-height: 100%;
   color: var(--text-color-primary);
-  background-color: var(--color-background);
+  background: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-family);

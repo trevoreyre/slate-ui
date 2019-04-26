@@ -19,12 +19,14 @@
     "access": "public"
   },
   "scripts": {
-    "serve": "vue-cli-service serve --port 3001",
+    "postinstall": "npm link @trevoreyre/autocomplete-vue",
+    "serve": "vue-cli-service serve --port 3000",
     "build": "npm run build:index && npm run build:lib",
     "build:index": "node scripts/build-index.js",
     "build:lib": "vue-cli-service build --target lib --name ui src/index.js",
+    "build:watch": "vue-cli-service build --target lib --name ui src/index.js --watch",
     "lint": "vue-cli-service lint",
-    "storybook": "start-storybook -p 6006 --ci",
+    "storybook": "start-storybook -p 4000 --ci",
     "build-storybook": "build-storybook"
   },
   "gitHooks": {
@@ -44,8 +46,9 @@
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@storybook/addon-actions": "^5.0.5",
+    "@storybook/addon-cssresources": "^5.0.6",
     "@storybook/addon-links": "^5.0.5",
-    "@storybook/addons": "^5.0.5",
+    "@storybook/addon-viewport": "^5.0.6",
     "@storybook/vue": "^5.0.5",
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-plugin-eslint": "^3.0.5",
@@ -57,6 +60,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^8.1.4",
+    "storybook-addon-styles": "^1.0.0",
     "vue-template-compiler": "^2.5.21"
   }
 }

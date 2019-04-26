@@ -9,7 +9,7 @@ export default {
     },
     size: {
       type: String,
-      default: 'medium',
+      default: 'm',
       validator: sizeValidator,
     },
     theme: {
@@ -60,11 +60,11 @@ export default {
   margin-right: var(--spacing-s);
 }
 
-.small {
+.s {
   padding: var(--spacing-s);
 }
 
-.large {
+.l {
   padding: var(--spacing-l);
 }
 

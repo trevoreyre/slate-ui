@@ -1,41 +1,61 @@
-import { configure, addDecorator, addParameters } from '@storybook/vue';
-import { makeDecorator } from '@storybook/addons'
+import { configure, addDecorator, addParameters } from '@storybook/vue'
+import { withCssResources } from '@storybook/addon-cssresources'
+import { withStyles } from 'storybook-addon-styles/vue'
 import AppCss from '../src/AppCss/AppCss.vue'
 import Theme from '../src/Theme/Theme.vue'
 
-const withStyles = makeDecorator({
-  name: 'withStyles',
-  parameterName: 'styles',
-  wrapper: (story, context, { parameters }) => {
-    return {
-      components: { AppCss, Theme },
-      template: `
-        <Theme>
-          <AppCss />
-          <div :style="styles">
-            <story />
-          </div>
-        </Theme>
-      `,
-      data() {
-        return {
-          styles: {
-            ...parameters
-          }
-        }
-      }
-    }
-  }
+const withTheme = () => ({
+  components: { AppCss, Theme },
+  template: `
+    <Theme>
+      <AppCss />
+      <story />
+    </Theme>
+  `
 })
 
+const themeFont = `
+<link href="https://fonts.googleapis.com/css?family=Lato:400,600,900" rel="stylesheet" />
+`
+
+const backgroundLight = `
+<style>
+body {
+  background: var(--color-background-light);
+}
+</style>
+`
+
+const themeToucheUnderwater = `
+<style>
+:root {
+  --color-background: #f1f3f5;
+  --color-divider: rgba(0, 33, 66, 0.24);
+}
+</style>
+`
+
+addDecorator(withCssResources)
 addDecorator(withStyles)
+addDecorator(withTheme)
 addParameters({
   options: {
-    showPanel: false
+    panelPosition: 'right'
   },
   styles: {
     padding: '40px'
-  }
+  },
+  cssresources: [{
+    id: 'theme-font',
+    code: themeFont,
+    picked: true
+  }, {
+    id: 'background-light',
+    code: backgroundLight
+  }, {
+    id: 'theme-touche-underwater',
+    code: themeToucheUnderwater
+  }],
 })
 
 // Automatically import all files ending in *.stories.js

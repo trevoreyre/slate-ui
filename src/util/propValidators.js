@@ -3,11 +3,25 @@ const alignValidator = value => {
 }
 
 const sizeValidator = value => {
-  return ['small', 'medium', 'large'].includes(value)
+  return ['s', 'm', 'l'].includes(value)
+}
+
+const spacingValidator = value => {
+  return ['xs', 's', 'm', 'l', 'xl', 'xxl'].includes(value)
 }
 
 const themeValidator = value => {
   return ['neutral', 'primary', 'secondary'].includes(value)
 }
 
-export { alignValidator, sizeValidator, themeValidator }
+const themeBackgroundValidator = value => {
+  return ['default', 'light'].includes(value)
+}
+
+export {
+  alignValidator,
+  sizeValidator,
+  spacingValidator,
+  themeValidator,
+  themeBackgroundValidator,
+}

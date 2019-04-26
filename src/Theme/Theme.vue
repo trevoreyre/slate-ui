@@ -9,7 +9,7 @@ export default {
 <style>
 :root {
   /* Typography */
-  --font-family: 'Open Sans', Verdana, sans-serif;
+  --font-family: 'Lato', Verdana, sans-serif;
   --font-size: 16px;
 
   /* Layout */

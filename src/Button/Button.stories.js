@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import { storiesOf } from '@storybook/vue'
 import { linkTo } from '@storybook/addon-links'
+import Buttons from '../Buttons/Buttons.vue'
 import Button from './Button.vue'
 
 const CoolLink = Vue.component('CoolLink', {
@@ -11,33 +12,33 @@ const CoolLink = Vue.component('CoolLink', {
 
 storiesOf('Button', module)
   .add('default', () => ({
-    components: { Button },
+    components: { Button, Buttons },
     template: `
-      <div>
+      <Buttons>
         <Button theme="neutral">Neutral (default)</Button>
         <Button theme="primary">Primary</Button>
         <Button theme="secondary">Secondary</Button>
-      </div>
+      </Buttons>
     `,
   }))
   .add('size', () => ({
-    components: { Button },
+    components: { Button, Buttons },
     template: `
-      <div>
-        <Button theme="primary" size="small">Small</Button>
-        <Button theme="primary" size="medium">Medium</Button>
-        <Button theme="primary" size="large">Large</Button>
-      </div>
+      <Buttons>
+        <Button theme="primary" size="s">Small</Button>
+        <Button theme="primary" size="m">Medium</Button>
+        <Button theme="primary" size="l">Large</Button>
+      </Buttons>
   `,
   }))
   .add('type', () => ({
-    components: { Button },
+    components: { Button, Buttons },
     template: `
-      <div>
+      <Buttons>
         <Button theme="primary" type="default">Default</Button>
         <Button theme="primary" type="raised">Raised</Button>
         <Button theme="primary" type="flat">Flat</Button>
-      </div>
+      </Buttons>
     `,
   }))
   .add('custom tag', () => ({
@@ -64,4 +65,29 @@ storiesOf('Button', module)
     data() {
       return { CoolLink }
     },
+  }))
+  .add('buttons alignment', () => ({
+    components: { Button, Buttons },
+    template: `
+      <div>
+        <h2>Left (default)</h2>
+        <Buttons align="left">
+          <Button theme="primary">Button</Button>
+          <Button theme="primary">Button</Button>
+          <Button theme="primary">Button</Button>
+        </Buttons>
+        <h2 style="text-align: center">Center</h2>
+        <Buttons align="center">
+          <Button theme="primary">Button</Button>
+          <Button theme="primary">Button</Button>
+          <Button theme="primary">Button</Button>
+        </Buttons>
+        <h2 style="text-align: right">Right</h2>
+        <Buttons align="right">
+          <Button theme="primary">Button</Button>
+          <Button theme="primary">Button</Button>
+          <Button theme="primary">Button</Button>
+        </Buttons>
+      </div>
+    `,
   }))
