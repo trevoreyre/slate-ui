@@ -19,7 +19,6 @@
     "access": "public"
   },
   "scripts": {
-    "postinstall": "npm link @trevoreyre/autocomplete-vue",
     "serve": "vue-cli-service serve --port 3000",
     "build": "npm run build:index && npm run build:lib",
     "build:index": "node scripts/build-index.js",
