@@ -1,5 +1,9 @@
 <template>
-  <input :class="['input', theme]" :value="value" v-on="listeners" />
+  <input
+    :class="['input', theme, { rounded: rounded }]"
+    :value="value"
+    v-on="listeners"
+  />
 </template>
 
 <script>
@@ -12,6 +16,10 @@ export default {
       type: String,
       default: 'default',
       validator: themeBackgroundValidator,
+    },
+    rounded: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
@@ -35,9 +43,9 @@ export default {
 
 <style scoped>
 .input {
-  border-radius: var(--border-radius-s);
+  border-radius: var(--border-radius-m);
   border: 1px solid var(--color-divider);
-  padding: var(--spacing-s);
+  padding: calc(var(--spacing-s) - 2px) var(--spacing-s);
   width: 100%;
 }
 
@@ -47,5 +55,10 @@ export default {
 
 .light {
   background: var(--color-background-light);
+}
+
+.rounded {
+  border-radius: var(--border-radius-xl);
+  padding: calc(var(--spacing-s) - 2px) var(--spacing-m);
 }
 </style>

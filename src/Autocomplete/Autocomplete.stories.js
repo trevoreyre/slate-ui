@@ -1,11 +1,37 @@
 import { storiesOf } from '@storybook/vue'
+import Container from '../Container/Container.vue'
 import Autocomplete from './Autocomplete.vue'
 
+const search = input => {
+  if (input.length < 1) {
+    return []
+  }
+  return countries.filter(country => {
+    return country.toLowerCase().startsWith(input.toLowerCase())
+  })
+}
+
 storiesOf('Autocomplete', module)
-  .addParameters({ styles: { maxWidth: '400px' } })
+  .addParameters({ styles: { padding: 0 } })
   .add('default', () => ({
-    components: { Autocomplete },
-    template: `<Autocomplete placeholder="Search for a country" :search="search" />`,
+    components: { Autocomplete, Container },
+    template: `
+      <div>
+        <Container size="s" padding="xl">
+          <Autocomplete
+            placeholder="Search for a country"
+            :search="search"
+            theme="light"
+          />
+        </Container>
+        <Container theme="light" size="s" padding="xl">
+          <Autocomplete
+            placeholder="Search for a country"
+            :search="search"
+          />
+        </Container>
+      </div>
+    `,
     methods: {
       search(input) {
         if (input.length < 1) {
@@ -16,6 +42,25 @@ storiesOf('Autocomplete', module)
         })
       },
     },
+  }))
+  .addParameters({ styles: { padding: '40px', maxWidth: '400px' } })
+  .add('rounded', () => ({
+    components: { Autocomplete },
+    template: `<Autocomplete rounded theme="light" placeholder="Search for a country" :search="search" />`,
+    methods: { search },
+  }))
+  .add('position above', () => ({
+    components: { Autocomplete },
+    template: `
+      <div style="height: 90vh; display: flex; flex-flow: column nowrap; justify-content: flex-end;">
+        <Autocomplete
+          theme="light"
+          placeholder="Search for a country"
+          :search="search"
+        />
+      </div>
+    `,
+    methods: { search },
   }))
 
 const countries = [

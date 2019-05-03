@@ -10,18 +10,24 @@ storiesOf('Input', module)
     template: `
       <div>
         <Container size="s" padding="xl">
-          <Input theme="light" />
+          <Input theme="light" placeholder="Placeholder" />
         </Container>
         <Container theme="light" size="s" padding="xl">
-          <Input />
+          <Input placeholder="Placeholder" />
         </Container>
       </div>
     `,
   }))
   .addParameters({ styles: { padding: '40px', maxWidth: '400px' } })
+  .add('rounded', () => ({
+    components: { Input, Container },
+    template: `
+      <Input rounded theme="light" placeholder="Placeholder" />
+    `,
+  }))
   .add('v-model', () => ({
     components: { Input },
-    template: `<Input v-model="value" />`,
+    template: `<Input v-model="value" theme="light" />`,
     data() {
       return {
         value: 'Initial value',
@@ -30,14 +36,14 @@ storiesOf('Input', module)
   }))
   .add('input listener', () => ({
     components: { Input },
-    template: `<Input @input="action" />`,
+    template: `<Input @input="action" theme="light" />`,
     methods: {
       action: action('input'),
     },
   }))
   .add('native input listener', () => ({
     components: { Input },
-    template: `<Input @input.native="action" />`,
+    template: `<Input @input.native="action" theme="light" />`,
     methods: {
       action: action('input'),
     },
