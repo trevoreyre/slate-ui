@@ -11,37 +11,52 @@
         resultProps,
       }"
     >
-      <div v-bind="rootProps">
+      <div v-bind="rootProps" :class="['autocomplete', { rounded }]">
         <Input
           :rounded="rounded"
           :theme="theme"
           v-bind="{ ...inputProps, ...$attrs }"
+          :class="'autocomplete-input'"
           v-on="otherInputListeners"
           @input.native="input"
         />
         <ul
           v-bind="resultListProps"
           v-on="resultListListeners"
-          :class="['autocomplete-results', { rounded: rounded }]"
+          :class="'autocomplete-results'"
         >
           <li
             v-for="(result, index) in results"
             :key="resultProps[index].id"
             v-bind="resultProps[index]"
+            :class="'autocomplete-result'"
           >
             {{ result }}
+            <div class="icon" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="M21 21l-4-4" />
+              </svg>
+            </div>
           </li>
         </ul>
         <div class="icon" aria-hidden="true">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
+            viewBox="0 0 24 24"
           >
             <circle cx="11" cy="11" r="8" />
             <path d="M21 21l-4-4" />
@@ -81,25 +96,31 @@ export default {
 <style scoped>
 .icon {
   position: absolute;
-  top: calc(var(--spacing-s) - 4px);
+  top: 50%;
   left: var(--spacing-s);
+  transform: translateY(-50%);
   pointer-events: none;
   color: var(--icon-color-secondary);
 }
 
+.rounded .icon {
+  left: var(--spacing-m);
+}
+
 .icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
   display: block;
 }
 
 .autocomplete-input {
-  padding-left: 48px;
-  background-repeat: no-repeat;
-  background-position: calc(var(--spacing-s) - 2px) center;
+  /* Small padding between border, icon, and text + width of icon */
+  padding-left: calc(2 * var(--spacing-s) + 1rem);
 }
 
-.rounded {
-  padding-left: 56px;
-  background-position: calc(var(--spacing-m) - 2px) center;
+.rounded .autocomplete-input {
+  /* Medium padding for rounded corners + width of icon + small padding for text */
+  padding-left: calc(var(--spacing-m) + 1rem + var(--spacing-s));
 }
 
 .autocomplete-input:focus,
@@ -111,36 +132,27 @@ export default {
 
 [data-position='below'] .autocomplete-input[aria-expanded='true'] {
   border-bottom-color: transparent;
-  border-radius: var(--border-radius-m) var(--border-radius-m) 0 0;
-}
-
-[data-position='below'] .autocomplete-input.rounded[aria-expanded='true'] {
-  border-bottom-color: transparent;
-  border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 [data-position='above'] .autocomplete-input[aria-expanded='true'] {
   border-top-color: transparent;
-  border-radius: 0 0 var(--border-radius-m) var(--border-radius-m);
-  z-index: 2;
-}
-
-[data-position='above'] .autocomplete-input.rounded[aria-expanded='true'] {
-  border-top-color: transparent;
-  border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   z-index: 2;
 }
 
 /* Loading spinner */
 .autocomplete[data-loading='true']::after {
   content: '';
-  border: 3px solid rgba(0, 0, 0, 0.12);
-  border-right: 3px solid rgba(0, 0, 0, 0.48);
+  border: 3px solid var(--color-icon-secondary);
+  border-right: 3px solid var(--color-icon-primary);
   border-radius: 100%;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
-  right: 12px;
+  right: var(--spacing-s);
   top: 50%;
   transform: translateY(-50%);
   animation: rotate 1s infinite linear;
@@ -148,50 +160,52 @@ export default {
 
 .autocomplete-results {
   margin: 0;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--border-radius-m);
   padding: 0;
   box-sizing: border-box;
   max-height: 296px;
   overflow-y: auto;
-  background: #fff;
+  background: var(--color-background-light);
   list-style: none;
   box-shadow: var(--shadow);
+}
+
+.rounded .autocomplete-results {
+  border-radius: var(--border-radius-xl);
 }
 
 [data-position='below'] .autocomplete-results {
   margin-top: -1px;
   border-top-color: transparent;
-  border-radius: 0 0 var(--border-radius-m) var(--border-radius-m);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   padding-bottom: var(--spacing-xs);
-}
-
-[data-position='below'] .autocomplete-results.rounded {
-  border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
 }
 
 [data-position='above'] .autocomplete-results {
   margin-bottom: -1px;
   border-bottom-color: transparent;
-  border-radius: var(--border-radius-m) var(--border-radius-m) 0 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   padding-top: var(--spacing-xs);
-}
-
-[data-position='above'] .autocomplete-results.rounded {
-  border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
 }
 
 /* Single result item */
 .autocomplete-result {
   cursor: default;
-  padding: 12px 12px 12px 48px;
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjY2NjIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iOCIvPjxwYXRoIGQ9Ik0yMSAyMWwtNC00Ii8+PC9zdmc+');
-  background-repeat: no-repeat;
-  background-position: 12px center;
+  padding: calc(var(--spacing-m) / 2);
+  padding-left: calc(2 * var(--spacing-s) + 1rem);
+  position: relative;
+}
+
+.rounded .autocomplete-result {
+  padding-left: calc(var(--spacing-m) + 1rem + var(--spacing-s));
 }
 
 .autocomplete-result:hover,
 .autocomplete-result[aria-selected='true'] {
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: var(--color-hover);
 }
 
 @keyframes rotate {

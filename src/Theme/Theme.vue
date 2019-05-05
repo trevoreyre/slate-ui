@@ -33,6 +33,7 @@ export default {
   --color-background-light: #fff;
   --color-background: #fafafa;
   --color-divider: rgba(0, 0, 0, 0.12);
+  --color-hover: rgba(0, 0, 0, 0.06);
   --text-color-primary: rgba(0, 0, 0, 0.7);
   --text-color-secondary: rgba(0, 0, 0, 0.5);
   --text-color-disabled: rgba(0, 0, 0, 0.38);
