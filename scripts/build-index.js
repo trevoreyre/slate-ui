@@ -17,7 +17,7 @@ const getVueFiles = async dir => {
   return Array.prototype.concat(...files).filter(file => /\.vue$/.test(file))
 }
 
-// Takes an array of .vue file paths, and maps to relative path and component nam
+// Takes an array of .vue file paths, and maps to relative path and component name
 const getComponents = files =>
   files.map(file => ({
     path: file.replace(src, '.'),
@@ -39,7 +39,9 @@ ${components
 
 // Export library as a plugin, and individual components
 export default { install }
-export { ${components.map(component => component.name).join(', ')} }
+export {
+  ${components.map(component => component.name).join(',\n  ')},
+}
 `
 
 getVueFiles(src).then(files => {
