@@ -38,7 +38,7 @@
     ]
   },
   "dependencies": {
-    "@trevoreyre/autocomplete-vue": "^1.0.1",
+    "@trevoreyre/autocomplete-vue": "^2.0.2",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.6"
   },

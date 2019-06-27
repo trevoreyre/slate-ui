@@ -1,5 +1,11 @@
 <template>
-  <Autocomplete :search="search">
+  <Autocomplete
+    :search="search"
+    :auto-select="autoSelect"
+    :default-value="defaultValue"
+    :get-result-value="getResultValue"
+    @submit="handleSubmit"
+  >
     <template
       v-slot="{
         rootProps,
@@ -23,7 +29,7 @@
         <ul
           v-bind="resultListProps"
           v-on="resultListListeners"
-          :class="'autocomplete-results'"
+          :class="'autocomplete-result-list'"
         >
           <li
             v-for="(result, index) in results"
@@ -31,7 +37,7 @@
             v-bind="resultProps[index]"
             :class="'autocomplete-result'"
           >
-            {{ result }}
+            {{ getResultValue(result) }}
             <div class="icon" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -80,6 +86,18 @@ export default {
       type: Function,
       required: true,
     },
+    autoSelect: {
+      type: Boolean,
+      default: false,
+    },
+    getResultValue: {
+      type: Function,
+      default: result => result,
+    },
+    defaultValue: {
+      type: String,
+      default: '',
+    },
     theme: {
       type: String,
       default: 'default',
@@ -88,6 +106,11 @@ export default {
     rounded: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    handleSubmit(selectedResult) {
+      this.$emit('submit', selectedResult)
     },
   },
 }
@@ -158,7 +181,7 @@ export default {
   animation: rotate 1s infinite linear;
 }
 
-.autocomplete-results {
+.autocomplete-result-list {
   margin: 0;
   border: 1px solid var(--color-divider);
   border-radius: var(--border-radius-m);
@@ -171,11 +194,11 @@ export default {
   box-shadow: var(--shadow);
 }
 
-.rounded .autocomplete-results {
+.rounded .autocomplete-result-list {
   border-radius: var(--border-radius-xl);
 }
 
-[data-position='below'] .autocomplete-results {
+[data-position='below'] .autocomplete-result-list {
   margin-top: -1px;
   border-top-color: transparent;
   border-top-left-radius: 0;
@@ -183,7 +206,7 @@ export default {
   padding-bottom: var(--spacing-xs);
 }
 
-[data-position='above'] .autocomplete-results {
+[data-position='above'] .autocomplete-result-list {
   margin-bottom: -1px;
   border-bottom-color: transparent;
   border-bottom-left-radius: 0;
