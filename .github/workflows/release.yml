@@ -5,24 +5,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: npm install and build
-        run: |
+      - run: |
           npm install
           npm run build
+      - uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: dist
 
   publish-npm:
+    name: Publish npm
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - uses: actions/download-artifact@v1
+        with:
+          name: dist
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
