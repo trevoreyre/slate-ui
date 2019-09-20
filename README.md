@@ -1,26 +1,5 @@
-# vue-app
+# @trevoreyre/ui
 
-## Project setup
-```
-npm install
-```
+Shared Vue UI components. Currently under development.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+[View in-progress examples](https://ui.trevoreyre.com)
