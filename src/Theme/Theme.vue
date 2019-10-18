@@ -32,6 +32,7 @@ export default {
   --color-secondary: #e03616;
   --color-background-light: #fff;
   --color-background: #fafafa;
+  --color-border: rgba(0, 0, 0, 0.12);
   --color-divider: rgba(0, 0, 0, 0.12);
   --color-hover: rgba(0, 0, 0, 0.06);
   --text-color-primary: rgba(0, 0, 0, 0.7);
@@ -49,6 +50,14 @@ export default {
   --icon-color-primary: rgba(0, 0, 0, 0.4);
   --icon-color-secondary: rgba(0, 0, 0, 0.2);
 
+  /* Set borders using box shadow */
+  --border-top: inset 0 1px 0 0 var(--color-border);
+  --border-bottom: inset 0 -1px 0 0 var(--color-border);
+  --border-left: inset 1px 0 0 0 var(--color-border);
+  --border-right: inset -1px 0 0 0 var(--color-border);
+  --border: inset 0 0 0 1px var(--color-border);
+
+  /* Shadows */
   --shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
 
   /* Nav button */

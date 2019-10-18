@@ -116,6 +116,15 @@ export default {
 }
 </script>
 
+<style>
+:root {
+  --autocomplete-shadow-above: var(--border-top), var(--border-left),
+    var(--border-right), var(--shadow);
+  --autocomplete-shadow-below: var(--border-bottom), var(--border-left),
+    var(--border-right), var(--shadow);
+}
+</style>
+
 <style scoped>
 .icon {
   position: absolute;
@@ -148,22 +157,21 @@ export default {
 
 .autocomplete-input:focus,
 .autocomplete-input[aria-expanded='true'] {
+  outline: none;
   background-color: var(--color-background-light);
-  outline-offset: 4px;
-  box-shadow: var(--shadow);
 }
 
 [data-position='below'] .autocomplete-input[aria-expanded='true'] {
-  border-bottom-color: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  box-shadow: var(--autocomplete-shadow-above);
 }
 
 [data-position='above'] .autocomplete-input[aria-expanded='true'] {
-  border-top-color: transparent;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   z-index: 2;
+  box-shadow: var(--autocomplete-shadow-below);
 }
 
 /* Loading spinner */
@@ -183,7 +191,6 @@ export default {
 
 .autocomplete-result-list {
   margin: 0;
-  border: 1px solid var(--color-divider);
   border-radius: var(--border-radius-m);
   padding: 0;
   box-sizing: border-box;
@@ -191,7 +198,6 @@ export default {
   overflow-y: auto;
   background: var(--color-background-light);
   list-style: none;
-  box-shadow: var(--shadow);
 }
 
 .rounded .autocomplete-result-list {
@@ -199,19 +205,17 @@ export default {
 }
 
 [data-position='below'] .autocomplete-result-list {
-  margin-top: -1px;
-  border-top-color: transparent;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding-bottom: var(--spacing-xs);
+  box-shadow: var(--autocomplete-shadow-below);
 }
 
 [data-position='above'] .autocomplete-result-list {
-  margin-bottom: -1px;
-  border-bottom-color: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   padding-top: var(--spacing-xs);
+  box-shadow: var(--autocomplete-shadow-above);
 }
 
 /* Single result item */
