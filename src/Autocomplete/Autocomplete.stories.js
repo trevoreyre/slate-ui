@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 import Container from '../Container/Container.vue'
 import Autocomplete from './Autocomplete.vue'
 
@@ -10,6 +11,25 @@ const search = input => {
     return country.toLowerCase().startsWith(input.toLowerCase())
   })
 }
+
+const wikiUrl = 'https://en.wikipedia.org'
+const wikiParams = 'action=query&list=search&format=json&origin=*'
+const searchWikipedia = input =>
+  new Promise(resolve => {
+    const url = `${wikiUrl}/w/api.php?${wikiParams}&srsearch=${encodeURI(
+      input
+    )}`
+
+    if (input.length < 3) {
+      return resolve([])
+    }
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        resolve(data.query.search)
+      })
+  })
 
 storiesOf('Autocomplete', module)
   .addParameters({ styles: { padding: 0 } })
@@ -61,6 +81,140 @@ storiesOf('Autocomplete', module)
       </div>
     `,
     methods: { search },
+  }))
+  .add('Default results', () => ({
+    components: { Autocomplete },
+    template: `
+      <Autocomplete
+        theme="light"
+        rounded
+        aria-label="Search for a country"
+        placeholder="Search for a country"
+        :search="search"
+        :get-result-value="getResultValue"
+      />
+    `,
+    methods: {
+      search(input) {
+        if (input.length < 1) {
+          return ['Canada', 'Mexico', 'United Kingdom', 'Russia'].map(c => ({
+            name: c,
+          }))
+        }
+        return countries
+          .filter(country => {
+            return country.toLowerCase().startsWith(input.toLowerCase())
+          })
+          .map(c => ({ name: c }))
+      },
+      getResultValue(result) {
+        return result.name
+      },
+    },
+  }))
+  .add('Advanced search', () => ({
+    components: { Autocomplete },
+    template: `
+      <Autocomplete
+        aria-label="Search Wikipedia"
+        placeholder="Search Wikipedia"
+        :search="search"
+        :get-result-value="getResultValue"
+        @submit="onSubmit"
+      />
+    `,
+    methods: {
+      search(input) {
+        return searchWikipedia(input)
+      },
+      getResultValue(result) {
+        console.log('getResultValue', result)
+        return result.title
+      },
+      onSubmit(result) {
+        window.open(`${wikiUrl}/wiki/${encodeURI(result.title)}`)
+      },
+    },
+  }))
+  .add('Submit event', () => ({
+    components: { Autocomplete },
+    template: `
+      <Autocomplete
+        aria-label="Search for a country"
+        placeholder="Search for a country"
+        :search="search"
+        @submit="onSubmit"
+      />
+    `,
+    methods: {
+      search,
+      onSubmit(result) {
+        alert(`You selected ${result}`)
+      },
+    },
+  }))
+  .add('Custom class', () => ({
+    components: { Autocomplete },
+    template: `
+      <Autocomplete
+        aria-label="Search for a country"
+        placeholder="Search for a country"
+        :search="search"
+        base-class="search"
+      />
+    `,
+    methods: {
+      search,
+    },
+  }))
+  .add('Custom events', () => ({
+    components: { Autocomplete },
+    template: `
+      <Autocomplete
+        aria-label="Search for a country"
+        placeholder="Search for a country"
+        :search="search"
+        @input="handleInput"
+        @keyup="handleKeyup"
+      />
+    `,
+    methods: {
+      search,
+      handleInput(event) {
+        return action('input')(event)
+      },
+      handleKeyup(event) {
+        return action('keyup')(event)
+      },
+    },
+  }))
+  .add('Auto select', () => ({
+    components: { Autocomplete },
+    template: `
+      <Autocomplete
+        aria-label="Search for a country"
+        placeholder="Search for a country"
+        :search="search"
+        auto-select
+      />
+    `,
+    methods: {
+      search,
+    },
+  }))
+  .add('Default value', () => ({
+    components: { Autocomplete },
+    template: `
+      <Autocomplete
+        aria-label="Search for a country"
+        placeholder="Search for a country"
+        :search="search"
+        default-value="United Kingdom"
+      />
+    `,
+    methods: {
+      search,
+    },
   }))
 
 const countries = [
