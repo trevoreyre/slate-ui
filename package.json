@@ -26,7 +26,7 @@
     "build:watch": "vue-cli-service build --target lib --name ui src/index.js --watch",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 4000 --ci",
-    "build-storybook": "build-storybook"
+    "build:storybook": "build-storybook"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
