@@ -42,7 +42,7 @@ export default {
 <style scoped>
 .button {
   border-radius: var(--border-radius-s);
-  border: 1px solid var(--color-background-low-contrast);
+  border: none;
   padding: var(--spacing-m);
   max-width: 100%;
   display: inline-flex;
