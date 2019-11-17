@@ -44,9 +44,10 @@ export default {
 <style scoped>
 .input {
   border-radius: var(--border-radius-m);
-  border: 1px solid var(--color-divider);
-  padding: calc(var(--spacing-xs) - 2px) var(--spacing-xs);
+  border: none;
+  padding: var(--spacing-xs);
   width: 100%;
+  box-shadow: var(--border);
 }
 
 .default {

@@ -30,8 +30,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--spacing-sm) - 0.5px) var(--spacing-sm);
-  border-bottom: 1px solid var(--color-divider);
+  padding: var(--spacing-sm);
+  box-shadow: var(--border-bottom);
 }
 
 .container {
