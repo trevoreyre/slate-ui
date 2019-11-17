@@ -16,12 +16,23 @@ export default {
   --content-max-width: 1024px;
   --breakpoint-desktop: 1200px;
   --breakpoint-tablet: 800px;
-  --spacing-xs: 8px;
-  --spacing-s: 16px;
-  --spacing-m: 24px;
-  --spacing-l: 48px;
-  --spacing-xl: 96px;
-  --spacing-xxl: 192px;
+
+  --spacing-none: 0;
+  --spacing-4xs: 0.25rem; /* 4px */
+  --spacing-3xs: 0.5rem; /* 8px */
+  --spacing-2xs: 0.75rem; /* 12px */
+  --spacing-xs: 1rem; /* 16px */
+  --spacing-sm: 1.5rem; /* 24px */
+  --spacing-md: 2rem; /* 32px */
+  --spacing-lg: 2.5rem; /* 40px */
+  --spacing-xl: 3rem; /* 48px */
+  --spacing-2xl: 4rem; /* 64px */
+  --spacing-3xl: 5rem; /* 80px */
+  --spacing-4xl: 6rem; /* 96px */
+  --spacing-5xl: 8rem; /* 128px */
+  --spacing-6xl: 10rem; /* 160px */
+  --spacing-7xl: 12rem; /* 192px */
+
   --border-radius-s: 4px;
   --border-radius-m: 8px;
   --border-radius-l: 16px;

@@ -120,14 +120,14 @@ export default {
 .icon {
   position: absolute;
   top: 50%;
-  left: var(--spacing-s);
+  left: var(--spacing-xs);
   transform: translateY(-50%);
   pointer-events: none;
   color: var(--icon-color-secondary);
 }
 
 .rounded .icon {
-  left: var(--spacing-m);
+  left: var(--spacing-sm);
 }
 
 .icon svg {
@@ -138,12 +138,12 @@ export default {
 
 .autocomplete-input {
   /* Small padding between border, icon, and text + width of icon */
-  padding-left: calc(2 * var(--spacing-s) + 1rem);
+  padding-left: calc(2 * var(--spacing-xs) + 1rem);
 }
 
 .rounded .autocomplete-input {
   /* Medium padding for rounded corners + width of icon + small padding for text */
-  padding-left: calc(var(--spacing-m) + 1rem + var(--spacing-s));
+  padding-left: calc(var(--spacing-sm) + 1rem + var(--spacing-xs));
 }
 
 .autocomplete-input:focus,
@@ -175,7 +175,7 @@ export default {
   width: 1.25rem;
   height: 1.25rem;
   position: absolute;
-  right: var(--spacing-s);
+  right: var(--spacing-xs);
   top: 50%;
   transform: translateY(-50%);
   animation: rotate 1s infinite linear;
@@ -203,7 +203,7 @@ export default {
   border-top-color: transparent;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  padding-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-3xs);
 }
 
 [data-position='above'] .autocomplete-result-list {
@@ -211,19 +211,19 @@ export default {
   border-bottom-color: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  padding-top: var(--spacing-xs);
+  padding-top: var(--spacing-3xs);
 }
 
 /* Single result item */
 .autocomplete-result {
   cursor: default;
-  padding: calc(var(--spacing-m) / 2);
-  padding-left: calc(2 * var(--spacing-s) + 1rem);
+  padding: calc(var(--spacing-sm) / 2);
+  padding-left: calc(2 * var(--spacing-xs) + 1rem);
   position: relative;
 }
 
 .rounded .autocomplete-result {
-  padding-left: calc(var(--spacing-m) + 1rem + var(--spacing-s));
+  padding-left: calc(var(--spacing-sm) + 1rem + var(--spacing-xs));
 }
 
 .autocomplete-result:hover,

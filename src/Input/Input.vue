@@ -45,7 +45,7 @@ export default {
 .input {
   border-radius: var(--border-radius-m);
   border: 1px solid var(--color-divider);
-  padding: calc(var(--spacing-s) - 2px) var(--spacing-s);
+  padding: calc(var(--spacing-xs) - 2px) var(--spacing-xs);
   width: 100%;
 }
 
@@ -59,6 +59,6 @@ export default {
 
 .rounded {
   border-radius: var(--border-radius-xl);
-  padding: calc(var(--spacing-s) - 2px) var(--spacing-m);
+  padding: calc(var(--spacing-xs) - 2px) var(--spacing-sm);
 }
 </style>

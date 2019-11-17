@@ -43,7 +43,7 @@ export default {
 .button {
   border-radius: var(--border-radius-s);
   border: 1px solid var(--color-background-low-contrast);
-  padding: var(--spacing-m);
+  padding: var(--spacing-sm);
   max-width: 100%;
   display: inline-flex;
   align-items: center;
@@ -57,15 +57,15 @@ export default {
 }
 
 .button > *:not(:last-child) {
-  margin-right: var(--spacing-s);
+  margin-right: var(--spacing-xs);
 }
 
 .s {
-  padding: var(--spacing-s);
+  padding: var(--spacing-xs);
 }
 
 .l {
-  padding: var(--spacing-l);
+  padding: var(--spacing-4xl);
 }
 
 .primary {

@@ -69,26 +69,26 @@ export default {
 }
 
 .padding-xs {
-  padding: var(--spacing-xs);
+  padding: var(--spacing-3xs);
 }
 
 .padding-s {
-  padding: var(--spacing-s);
+  padding: var(--spacing-xs);
 }
 
 .padding-m {
-  padding: var(--spacing-m);
+  padding: var(--spacing-sm);
 }
 
 .padding-l {
-  padding: var(--spacing-l);
+  padding: var(--spacing-4xl);
 }
 
 .padding-xl {
-  padding: var(--spacing-xl);
+  padding: var(--spacing-4xl);
 }
 
 .padding-xxl {
-  padding: var(--spacing-xxl);
+  padding: var(--spacing-7xl);
 }
 </style>

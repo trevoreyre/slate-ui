@@ -30,7 +30,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--spacing-m) - 0.5px) var(--spacing-m);
+  padding: calc(var(--spacing-sm) - 0.5px) var(--spacing-sm);
   border-bottom: 1px solid var(--color-divider);
 }
 
@@ -51,10 +51,10 @@ export default {
 }
 
 .s {
-  padding: var(--spacing-s) var(--spacing-m);
+  padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 .l {
-  padding: var(--spacing-l) var(--spacing-m);
+  padding: var(--spacing-4xl) var(--spacing-sm);
 }
 </style>

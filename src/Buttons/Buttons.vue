@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .buttons {
-  margin: calc(-1 * var(--spacing-s));
+  margin: calc(-1 * var(--spacing-xs));
   max-width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -28,7 +28,7 @@ export default {
 }
 
 .buttons > * {
-  margin: var(--spacing-s);
+  margin: var(--spacing-xs);
 }
 
 .left {
