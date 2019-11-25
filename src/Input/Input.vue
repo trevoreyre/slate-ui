@@ -43,11 +43,11 @@ export default {
 
 <style scoped>
 .input {
-  border-radius: var(--border-radius-m);
+  --border: var(--border-sm);
+  border-radius: var(--rounded-md);
   border: none;
   padding: var(--spacing-xs);
   width: 100%;
-  box-shadow: var(--border);
 }
 
 .default {
@@ -59,7 +59,7 @@ export default {
 }
 
 .rounded {
-  border-radius: var(--border-radius-xl);
+  border-radius: var(--rounded-xl);
   padding: calc(var(--spacing-xs) - 2px) var(--spacing-sm);
 }
 </style>

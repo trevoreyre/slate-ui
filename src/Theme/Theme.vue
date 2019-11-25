@@ -9,14 +9,17 @@ export default {
 <style>
 :root {
   /* Typography */
-  --font-family: 'Lato', Verdana, sans-serif;
-  --font-size: 16px;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-size: 100%;
 
   /* Layout */
   --content-max-width: 1024px;
   --breakpoint-desktop: 1200px;
   --breakpoint-tablet: 800px;
 
+  /* Spacing - margin, padding */
   --spacing-none: 0;
   --spacing-4xs: 0.25rem; /* 4px */
   --spacing-3xs: 0.5rem; /* 8px */
@@ -33,10 +36,13 @@ export default {
   --spacing-6xl: 10rem; /* 160px */
   --spacing-7xl: 12rem; /* 192px */
 
-  --border-radius-s: 4px;
-  --border-radius-m: 8px;
-  --border-radius-l: 16px;
-  --border-radius-xl: 24px;
+  /* Border radius */
+  --rounded-none: 0;
+  --rounded-sm: 4px;
+  --rounded-md: 8px;
+  --rounded-lg: 16px;
+  --rounded-xl: 24px;
+  --rounded-full: 9999px;
 
   /* Theme colors and text colors */
   --color-primary: #1c5b72;
@@ -45,6 +51,7 @@ export default {
   --color-background: #fafafa;
   --color-border: rgba(0, 0, 0, 0.12);
   --color-divider: rgba(0, 0, 0, 0.12);
+  /* TODO: Re-think color-hover variable */
   --color-hover: rgba(0, 0, 0, 0.06);
   --text-color-primary: rgba(0, 0, 0, 0.7);
   --text-color-secondary: rgba(0, 0, 0, 0.5);
@@ -61,25 +68,35 @@ export default {
   --icon-color-primary: rgba(0, 0, 0, 0.4);
   --icon-color-secondary: rgba(0, 0, 0, 0.2);
 
-  /* Set borders using box shadow */
-  --border-top: inset 0 1px 0 0 var(--color-border);
-  --border-bottom: inset 0 -1px 0 0 var(--color-border);
-  --border-left: inset 1px 0 0 0 var(--color-border);
-  --border-right: inset -1px 0 0 0 var(--color-border);
-  --border: inset 0 0 0 1px var(--color-border);
+  /*
+    Set borders using box shadow, to avoid affecting layout. Use
+    0 0 transparent for no border, because the "none" keyword can't
+    be used in a comma-separated list of shadows, and we want to
+    use borders and shadows together on elements.
+  */
+  --border-none: 0 0 transparent;
+  --border-sm: inset 0 0 0 1px var(--color-border);
+  --border-t-sm: inset 0 1px 0 0 var(--color-border);
+  --border-b-sm: inset 0 -1px 0 0 var(--color-border);
+  --border-l-sm: inset 1px 0 0 0 var(--color-border);
+  --border-r-sm: inset -1px 0 0 0 var(--color-border);
+  --border-active: inset 0 0 0 4px var(--color-primary);
+
+  /* Outline */
+  --outline-none: 0 0 transparent;
+  /* TODO: Figure out color for outline */
+  --outline-sm: 0 0 0 3px rgba(66, 153, 225, 0.5);
 
   /* Shadows */
-  --shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
-
-  /* Nav button */
-  --button-width: 56px;
-  --button-height: 56px;
-  --bar-thickness: 2px;
-  --button-pad: 18px;
-  --button-bar-space: 4px;
-  --button-transistion-duration: 0.3s;
-
-  /* Logo */
-  --logo-width: 160px;
+  --shadow-none: 0 0 transparent;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 }
 </style>

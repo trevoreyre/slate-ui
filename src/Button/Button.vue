@@ -7,6 +7,7 @@ export default {
       type: [String, Function],
       default: 'button',
     },
+    /* TODO: Rename s, m, l to sm, md, lg */
     size: {
       type: String,
       default: 'm',
@@ -41,7 +42,7 @@ export default {
 
 <style scoped>
 .button {
-  border-radius: var(--border-radius-s);
+  border-radius: var(--rounded-sm);
   border: none;
   padding: var(--spacing-sm);
   max-width: 100%;

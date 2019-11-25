@@ -116,16 +116,14 @@ export default {
 }
 </script>
 
-<style>
-:root {
-  --autocomplete-shadow-above: var(--border-top), var(--border-left),
-    var(--border-right), var(--shadow);
-  --autocomplete-shadow-below: var(--border-bottom), var(--border-left),
-    var(--border-right), var(--shadow);
-}
-</style>
-
 <style scoped>
+.autocomplete {
+  --autocomplete-border-above: var(--border-t-sm), var(--border-r-sm),
+    var(--border-l-sm);
+  --autocomplete-border-below: var(--border-b-sm), var(--border-r-sm),
+    var(--border-l-sm);
+}
+
 .icon {
   position: absolute;
   top: 50%;
@@ -162,16 +160,18 @@ export default {
 }
 
 [data-position='below'] .autocomplete-input[aria-expanded='true'] {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  box-shadow: var(--autocomplete-shadow-above);
+  --border: var(--autocomplete-border-above);
+  --shadow: var(--shadow-md);
+  border-bottom-left-radius: var(--rounded-none);
+  border-bottom-right-radius: var(--rounded-none);
 }
 
 [data-position='above'] .autocomplete-input[aria-expanded='true'] {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  --border: var(--autocomplete-border-below);
+  --shadow: var(--shadow-md);
+  border-top-left-radius: var(--rounded-none);
+  border-top-right-radius: var(--rounded-none);
   z-index: 2;
-  box-shadow: var(--autocomplete-shadow-below);
 }
 
 /* Loading spinner */
@@ -179,7 +179,7 @@ export default {
   content: '';
   border: 3px solid var(--color-icon-secondary);
   border-right: 3px solid var(--color-icon-primary);
-  border-radius: 100%;
+  border-radius: var(--rounded-full);
   width: 1.25rem;
   height: 1.25rem;
   position: absolute;
@@ -190,9 +190,9 @@ export default {
 }
 
 .autocomplete-result-list {
-  margin: 0;
-  border-radius: var(--border-radius-m);
-  padding: 0;
+  margin: var(--spacing-none);
+  border-radius: var(--rounded-md);
+  padding: var(--spacing-none);
   box-sizing: border-box;
   max-height: 296px;
   overflow-y: auto;
@@ -201,21 +201,23 @@ export default {
 }
 
 .rounded .autocomplete-result-list {
-  border-radius: var(--border-radius-xl);
+  border-radius: var(--rounded-xl);
 }
 
 [data-position='below'] .autocomplete-result-list {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  --border: var(--autocomplete-border-below);
+  --shadow: var(--shadow-md);
+  border-top-left-radius: var(--rounded-none);
+  border-top-right-radius: var(--rounded-none);
   padding-bottom: var(--spacing-3xs);
-  box-shadow: var(--autocomplete-shadow-below);
 }
 
 [data-position='above'] .autocomplete-result-list {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  --border: var(--autocomplete-border-above);
+  --shadow: var(--shadow-md);
+  border-bottom-left-radius: var(--rounded-none);
+  border-bottom-right-radius: var(--rounded-none);
   padding-top: var(--spacing-3xs);
-  box-shadow: var(--autocomplete-shadow-above);
 }
 
 /* Single result item */

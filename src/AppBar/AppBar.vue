@@ -16,6 +16,7 @@ export default {
       default: 'default',
       validator: themeBackgroundValidator,
     },
+    /* TODO: Rename s, m, l to sm, md, lg */
     size: {
       type: String,
       default: 'm',
@@ -27,11 +28,11 @@ export default {
 
 <style scoped>
 .app-bar {
+  --border: var(--border-b-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-sm);
-  box-shadow: var(--border-bottom);
 }
 
 .container {
