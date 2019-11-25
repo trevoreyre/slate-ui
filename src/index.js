@@ -11,6 +11,9 @@ import Input from './Input/Input.vue'
 import Paragraph from './Paragraph/Paragraph.vue'
 import Text from './Text/Text.vue'
 import Theme from './Theme/Theme.vue'
+import * as propValidators from './util/propValidators.js'
+import * as shadow from './util/shadow.js'
+import * as spacing from './util/spacing.js'
 
 // Install components globally
 const install = Vue => {
@@ -43,4 +46,7 @@ export {
   Paragraph,
   Text,
   Theme,
+  propValidators,
+  shadow,
+  spacing,
 }
