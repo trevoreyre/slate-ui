@@ -12,11 +12,13 @@ import { spacingValidator } from '../util/propValidators'
 export default {
   name: 'container',
   props: {
+    /* TODO: Rename s, m,.l to sm, md, lg */
     size: {
       type: String,
       default: 'full',
       validator: value => ['s', 'm', 'l', 'full'].includes(value),
     },
+    /* Rename s, m, l to sm, md, lg */
     padding: {
       type: String,
       default: 'm',

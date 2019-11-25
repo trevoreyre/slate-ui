@@ -1,75 +1,58 @@
 import { storiesOf } from '@storybook/vue'
-import Code from '../Code/Code.vue'
 import Container from '../Container/Container.vue'
-import Heading from '../Heading/Heading.vue'
-import Paragraph from '../Paragraph/Paragraph.vue'
-import Text from '../Text/Text.vue'
+import H1 from './H1'
+import H2 from './H2'
+import H3 from './H3'
+import H4 from './H4'
+import H5 from './H5'
+import H6 from './H6'
+import P from './P'
+import P2 from './P2'
+import Txt from './Txt'
+import Txt2 from './Txt2'
+import Overline from './Overline'
+import Label from './Label'
 
 storiesOf('Typography', module)
   .addParameters({ styles: { padding: 0 } })
   .addDecorator(() => ({
     components: { Container },
     template: `
-      <Container size="s">
+      <Container size="m">
         <story />
       </Container>
     `,
   }))
   .add('all', () => ({
-    components: { Code, Container, Heading, Paragraph, Text },
+    components: {
+      Container,
+      H1,
+      H2,
+      H3,
+      H4,
+      H5,
+      H6,
+      P,
+      P2,
+      Txt,
+      Txt2,
+      Overline,
+      Label,
+    },
     template: `
     <div>
-      <Heading size="xxl">H1: What Can I Do With Archetype?</Heading>
-      <Paragraph>
-        Paragraph: Archetype lets designers like you very quickly and easily
-        create consistent typography styling and spacing live, in the browser.
-        These styles are all underpinned by established typographic best practices
-        meaning less guesswork and more harmonious designs.
-      </Paragraph>
-      <Paragraph>
-        Archetype helps you create a design system of consistent, reusable
-        components which can be easily implemented as your finished design is
-        exported as developer-friendly CSS so everyone's happy!
-      </Paragraph>
-      <Heading size="xl">H2: Sounds Great, Where Do I Start?</Heading>
-      <Paragraph>
-        Paragraph: It's easy peasy: 1) Start by selecting a visually compatible
-        font pair. 2) Define harmoniously proportioned sizes for all the standard
-        typographic elements your design might require. 3) Set the optimal
-        vertical spacing of all elements in your design. 4) Tweak and refine
-        individual elements to get everything looking exactly the way you want. 5)
-        Export as CSS ready to send to a developer. Job Done.
-      </Paragraph>
-      <Heading size="l">H3: Help Us Improve</Heading>
-      <Paragraph>
-        Paragraph: This is version 1 of Archetype and we'd love your feedback and
-        suggestions on how we can improve it to make it even more useful. Please
-        use the feedback link in the header to let us know what you think. Be as
-        critical as you like, we have thick skin.
-      </Paragraph>
-      <Heading size="m">H4: Still Reading?</Heading>
-      <Paragraph>
-        Paragraph: Well here's some inspirational quotes for you: "Good design is
-        making something intelligible and memorable. Great design is making
-        something memorable and meaningful": Dieter Rams.
-      </Paragraph>
-      <Heading size="s">H5: More? Ok</Heading>
-      <Paragraph>
-        Paragraph: "A designer knows he has achieved perfection not when there is
-        nothing left to add, but when there is nothing left to take away": Antoine
-        de Saint-Exupery.
-      </Paragraph>
-      <Heading size="xs">H6: One For the Road</Heading>
-      <Paragraph>
-        Paragraph: "The best activities for your health are pumping and humping":
-        Arnold Schwarzenegger.
-      </Paragraph>
-      <Heading size="xxl">Heading One</Heading>
-      <Heading size="xl">Heading Two</Heading>
-      <Heading size="l">Heading Three</Heading>
-      <Heading size="m">Heading Four</Heading>
-      <Heading size="s">Heading Five</Heading>
-      <Heading size="xs">Heading Six</Heading>
+      <H1>H1: The quick brown fox jumps over the lazy dog</H1>
+      <H2>H2: The quick brown fox jumps over the lazy dog</H2>
+      <H3>H3: The quick brown fox jumps over the lazy dog</H3>
+      <H4>H4: The quick brown fox jumps over the lazy dog</H4>
+      <H5>H5: The quick brown fox jumps over the lazy dog</H5>
+      <H6>H6: The quick brown fox jumps over the lazy dog</H6>
+      <P>P: The quick brown fox jumps over the lazy dog</P>
+      <P2>P2: The quick brown fox jumps over the lazy dog</P2>
+      <Txt>Txt: The quick brown fox jumps over the lazy dog</Txt>
+      <Txt2>Txt2: The quick brown fox jumps over the lazy dog</Txt2>
+      <Overline>Overline: The quick brown fox jumps over the lazy dog</Overline>
+      <Label>Label: The quick brown fox jumps over the lazy dog</Label>
     </div>
   `,
   }))

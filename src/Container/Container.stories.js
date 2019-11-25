@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { storiesOf } from '@storybook/vue'
-import Heading from '../Heading/Heading.vue'
+import H2 from '../Typography/H2'
 import Container from './Container.vue'
 
 const LoremIpsum = Vue.component('LoremIpsum', {
@@ -21,15 +21,15 @@ storiesOf('Container', module)
     styles: { padding: 0 },
   })
   .add('default', () => ({
-    components: { Container, Heading, LoremIpsum },
+    components: { Container, H2, LoremIpsum },
     template: `
-      <div>
+    <div>
         <Container theme="default" padding="xlarge">
-          <Heading>Default</Heading>
+          <H2>Default</H2>
           <LoremIpsum />
         </Container>
         <Container theme="light" padding="xlarge">
-          <Heading>Light</Heading>
+          <H2>Light</H2>
           <LoremIpsum />
         </Container>
       </div>
