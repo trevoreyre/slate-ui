@@ -17,7 +17,46 @@ const values = [
   'auto',
 ]
 
-export const validator = value => values.includes(value)
+export const spacingValidator = value => values.includes(value)
+
+export const paddingProps = {
+  padding: { type: String, validator: spacingValidator },
+  paddingTop: { type: String, validator: spacingValidator },
+  paddingRight: { type: String, validator: spacingValidator },
+  paddingBottom: { type: String, validator: spacingValidator },
+  paddingLeft: { type: String, validator: spacingValidator },
+  paddingX: { type: String, validator: spacingValidator },
+  paddingY: { type: String, validator: spacingValidator },
+  p: { type: String, validator: spacingValidator },
+  pt: { type: String, validator: spacingValidator },
+  pr: { type: String, validator: spacingValidator },
+  pb: { type: String, validator: spacingValidator },
+  pl: { type: String, validator: spacingValidator },
+  px: { type: String, validator: spacingValidator },
+  py: { type: String, validator: spacingValidator },
+}
+
+export const marginProps = {
+  margin: { type: String, validator: spacingValidator },
+  marginTop: { type: String, validator: spacingValidator },
+  marginRight: { type: String, validator: spacingValidator },
+  marginBottom: { type: String, validator: spacingValidator },
+  marginLeft: { type: String, validator: spacingValidator },
+  marginX: { type: String, validator: spacingValidator },
+  marginY: { type: String, validator: spacingValidator },
+  m: { type: String, validator: spacingValidator },
+  mt: { type: String, validator: spacingValidator },
+  mr: { type: String, validator: spacingValidator },
+  mb: { type: String, validator: spacingValidator },
+  ml: { type: String, validator: spacingValidator },
+  mx: { type: String, validator: spacingValidator },
+  my: { type: String, validator: spacingValidator },
+}
+
+export const spacingProps = {
+  ...paddingProps,
+  ...marginProps,
+}
 
 export function paddingClass() {
   return {
@@ -48,45 +87,6 @@ export function spacingClass() {
     ...paddingClass.bind(this)(),
     ...marginClass.bind(this)(),
   }
-}
-
-export const paddingProps = {
-  padding: { type: String, validator },
-  paddingTop: { type: String, validator },
-  paddingRight: { type: String, validator },
-  paddingBottom: { type: String, validator },
-  paddingLeft: { type: String, validator },
-  paddingX: { type: String, validator },
-  paddingY: { type: String, validator },
-  p: { type: String, validator },
-  pt: { type: String, validator },
-  pr: { type: String, validator },
-  pb: { type: String, validator },
-  pl: { type: String, validator },
-  px: { type: String, validator },
-  py: { type: String, validator },
-}
-
-export const marginProps = {
-  margin: { type: String, validator },
-  marginTop: { type: String, validator },
-  marginRight: { type: String, validator },
-  marginBottom: { type: String, validator },
-  marginLeft: { type: String, validator },
-  marginX: { type: String, validator },
-  marginY: { type: String, validator },
-  m: { type: String, validator },
-  mt: { type: String, validator },
-  mr: { type: String, validator },
-  mb: { type: String, validator },
-  ml: { type: String, validator },
-  mx: { type: String, validator },
-  my: { type: String, validator },
-}
-
-export const spacingProps = {
-  ...paddingProps,
-  ...marginProps,
 }
 
 export const paddingMixin = {

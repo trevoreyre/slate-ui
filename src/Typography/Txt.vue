@@ -1,9 +1,9 @@
 <script>
-import { marginMixin } from '../util/spacing'
+import { typographyMixin } from '../util/typography'
 
 export default {
   name: 'SlateTxt',
-  mixins: [marginMixin],
+  mixins: [typographyMixin],
   props: {
     as: {
       type: [String, Function],
@@ -14,7 +14,8 @@ export default {
     return h(
       this.as,
       {
-        class: ['txt', this.marginClass],
+        class: ['txt', this.typographyClass],
+        style: this.typographyStyle,
       },
       this.$slots.default
     )
@@ -24,8 +25,8 @@ export default {
 
 <style scoped>
 .txt {
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 400;
+  font-size: var(--font-size-default);
+  line-height: var(--line-height-lg);
+  font-weight: var(--font-weight-normal);
 }
 </style>

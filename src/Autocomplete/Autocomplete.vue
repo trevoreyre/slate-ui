@@ -38,49 +38,37 @@
             :class="'autocomplete-result'"
           >
             {{ getResultValue(result) }}
-            <div class="icon" aria-hidden="true">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                viewBox="0 0 24 24"
-              >
-                <circle cx="11" cy="11" r="8" />
-                <path d="M21 21l-4-4" />
-              </svg>
-            </div>
+            <Icon class="icon-search" theme="secondary">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4 11a7 7 0 1114 0 7 7 0 01-14 0zm12.62 7.03a9 9 0 111.41-1.41l3.68 3.67a1 1 0 01-1.42 1.42l-3.67-3.68z"
+              />
+            </Icon>
           </li>
         </ul>
-        <div class="icon" aria-hidden="true">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            viewBox="0 0 24 24"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <path d="M21 21l-4-4" />
-          </svg>
-        </div>
+        <Icon class="icon-search" theme="secondary">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4 11a7 7 0 1114 0 7 7 0 01-14 0zm12.62 7.03a9 9 0 111.41-1.41l3.68 3.67a1 1 0 01-1.42 1.42l-3.67-3.68z"
+          />
+        </Icon>
       </div>
     </template>
   </Autocomplete>
 </template>
 
 <script>
+import Vue from 'vue'
 import Autocomplete from '@trevoreyre/autocomplete-vue'
 import { themeBackgroundValidator } from '../util/propValidators'
-import Input from '../Input/Input.vue'
+import Icon from '../Icon/Icon'
+import Input from '../Input/Input'
 
 export default {
   inheritAttrs: false,
-  components: { Autocomplete, Input },
+  components: { Autocomplete, Icon, Input },
   props: {
     search: {
       type: Function,
@@ -124,23 +112,16 @@ export default {
     var(--border-l-sm);
 }
 
-.icon {
+.icon-search {
   position: absolute;
   top: 50%;
   left: var(--spacing-xs);
   transform: translateY(-50%);
   pointer-events: none;
-  color: var(--icon-color-secondary);
 }
 
-.rounded .icon {
+.rounded .icon-search {
   left: var(--spacing-sm);
-}
-
-.icon svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: block;
 }
 
 .autocomplete-input {
@@ -162,15 +143,15 @@ export default {
 [data-position='below'] .autocomplete-input[aria-expanded='true'] {
   --border: var(--autocomplete-border-above);
   --shadow: var(--shadow-md);
-  border-bottom-left-radius: var(--rounded-none);
-  border-bottom-right-radius: var(--rounded-none);
+  border-bottom-left-radius: var(--border-radius-none);
+  border-bottom-right-radius: var(--border-radius-none);
 }
 
 [data-position='above'] .autocomplete-input[aria-expanded='true'] {
   --border: var(--autocomplete-border-below);
   --shadow: var(--shadow-md);
-  border-top-left-radius: var(--rounded-none);
-  border-top-right-radius: var(--rounded-none);
+  border-top-left-radius: var(--border-radius-none);
+  border-top-right-radius: var(--border-radius-none);
   z-index: 2;
 }
 
@@ -179,7 +160,7 @@ export default {
   content: '';
   border: 3px solid var(--color-icon-secondary);
   border-right: 3px solid var(--color-icon-primary);
-  border-radius: var(--rounded-full);
+  border-radius: var(--border-radius-full);
   width: 1.25rem;
   height: 1.25rem;
   position: absolute;
@@ -191,7 +172,7 @@ export default {
 
 .autocomplete-result-list {
   margin: var(--spacing-none);
-  border-radius: var(--rounded-md);
+  border-radius: var(--border-radius-md);
   padding: var(--spacing-none);
   box-sizing: border-box;
   max-height: 296px;
@@ -201,22 +182,22 @@ export default {
 }
 
 .rounded .autocomplete-result-list {
-  border-radius: var(--rounded-xl);
+  border-radius: var(--border-radius-xl);
 }
 
 [data-position='below'] .autocomplete-result-list {
   --border: var(--autocomplete-border-below);
   --shadow: var(--shadow-md);
-  border-top-left-radius: var(--rounded-none);
-  border-top-right-radius: var(--rounded-none);
+  border-top-left-radius: var(--border-radius-none);
+  border-top-right-radius: var(--border-radius-none);
   padding-bottom: var(--spacing-3xs);
 }
 
 [data-position='above'] .autocomplete-result-list {
   --border: var(--autocomplete-border-above);
   --shadow: var(--shadow-md);
-  border-bottom-left-radius: var(--rounded-none);
-  border-bottom-right-radius: var(--rounded-none);
+  border-bottom-left-radius: var(--border-radius-none);
+  border-bottom-right-radius: var(--border-radius-none);
   padding-top: var(--spacing-3xs);
 }
 

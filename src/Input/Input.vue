@@ -44,7 +44,7 @@ export default {
 <style scoped>
 .input {
   --border: var(--border-sm);
-  border-radius: var(--rounded-md);
+  border-radius: var(--border-radius-md);
   border: none;
   padding: var(--spacing-xs);
   width: 100%;
@@ -59,7 +59,7 @@ export default {
 }
 
 .rounded {
-  border-radius: var(--rounded-xl);
+  border-radius: var(--border-radius-xl);
   padding: calc(var(--spacing-xs) - 2px) var(--spacing-sm);
 }
 </style>

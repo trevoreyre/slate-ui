@@ -1,34 +1,43 @@
-<template>
-  <div :class="['container', theme]">
-    <div :class="['content', size, `padding-${padding}`]">
-      <slot></slot>
-    </div>
-  </div>
-</template>
-
 <script>
-import { spacingValidator } from '../util/propValidators'
+import { colorMixin } from '../util/color'
+import { shadowMixin } from '../util/shadow'
+import { spacingMixin, spacingValidator } from '../util/spacing'
 
 export default {
-  name: 'container',
+  name: 'SlateContainer',
+  mixins: [colorMixin, shadowMixin, spacingMixin],
   props: {
-    /* TODO: Rename s, m,.l to sm, md, lg */
-    size: {
-      type: String,
-      default: 'full',
-      validator: value => ['s', 'm', 'l', 'full'].includes(value),
+    as: {
+      type: [String, Function],
+      default: 'div',
     },
-    /* Rename s, m, l to sm, md, lg */
     padding: {
       type: String,
-      default: 'm',
+      default: 'xs',
       validator: spacingValidator,
     },
-    theme: {
+    size: {
       type: String,
-      default: 'inherit',
-      validator: value => ['default', 'light', 'inherit'].includes(value),
+      validator: value => ['sm', 'md', 'lg', 'xl'].includes(value),
     },
+  },
+  render(h) {
+    return h(
+      this.as,
+      {
+        class: [
+          'container',
+          this.size,
+          this.colorClass,
+          this.shadowClass,
+          this.spacingClass,
+        ],
+        attrs: this.$attrs,
+        props: this.$props,
+        on: this.$listeners,
+      },
+      this.$slots.default
+    )
   },
 }
 </script>
@@ -36,61 +45,23 @@ export default {
 <style scoped>
 .container {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.default {
-  background: var(--color-background);
+.container.sm {
+  max-width: var(--breakpoint-sm);
 }
 
-.light {
-  background: var(--color-background-light);
+.container.md {
+  max-width: var(--breakpoint-md);
 }
 
-.inherit {
-  background: transparent;
+.container.lg {
+  max-width: var(--breakpoint-lg);
 }
 
-.content {
-  margin: 0 auto;
-}
-
-.s {
-  max-width: 600px;
-}
-
-.m {
-  max-width: var(--breakpoint-tablet);
-}
-
-.l {
-  max-width: var(--breakpoint-desktop);
-}
-
-.f {
-  max-width: 100%;
-}
-
-.padding-xs {
-  padding: var(--spacing-3xs);
-}
-
-.padding-s {
-  padding: var(--spacing-xs);
-}
-
-.padding-m {
-  padding: var(--spacing-sm);
-}
-
-.padding-l {
-  padding: var(--spacing-4xl);
-}
-
-.padding-xl {
-  padding: var(--spacing-4xl);
-}
-
-.padding-xxl {
-  padding: var(--spacing-7xl);
+.container.xl {
+  max-width: var(--breakpoint-xl);
 }
 </style>

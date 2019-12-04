@@ -1,9 +1,9 @@
 <script>
-import { marginMixin } from '../util/spacing'
+import { typographyMixin } from '../util/typography'
 
 export default {
   name: 'SlateLabel',
-  mixins: [marginMixin],
+  mixins: [typographyMixin],
   props: {
     as: {
       type: [String, Function],
@@ -14,7 +14,8 @@ export default {
     return h(
       this.as,
       {
-        class: ['label', this.marginClass],
+        class: ['label', this.typographyClass],
+        style: this.typographyStyle,
       },
       this.$slots.default
     )
@@ -24,8 +25,8 @@ export default {
 
 <style scoped>
 .label {
-  font-size: 0.75rem;
-  line-height: 1;
-  font-weight: 400;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-none);
+  font-weight: var(--font-weight-normal);
 }
 </style>

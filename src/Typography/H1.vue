@@ -1,12 +1,9 @@
 <script>
-import { marginMixin } from '../util/spacing'
+import { typographyMixin } from '../util/typography'
 
 export default {
   name: 'SlateH1',
-  mixins: [marginMixin],
-  inject: {
-    headingLevel: { default: 2 },
-  },
+  mixins: [typographyMixin],
   props: {
     as: {
       type: [String, Function],
@@ -19,7 +16,8 @@ export default {
     return h(
       this.as,
       {
-        class: ['h1', this.marginClass],
+        class: ['h1', this.typographyClass],
+        style: this.typographyStyle,
       },
       this.$slots.default
     )
@@ -29,8 +27,8 @@ export default {
 
 <style scoped>
 .h1 {
-  font-size: 3rem;
-  line-height: 1.15;
-  font-weight: 300;
+  --font-size: var(--font-size-5xl);
+  --line-height: var(--line-height-sm);
+  --font-weight: var(--font-weight-light);
 }
 </style>

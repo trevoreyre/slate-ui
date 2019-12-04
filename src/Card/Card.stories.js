@@ -14,9 +14,14 @@ storiesOf('Card', module)
   .add('as button', () => ({
     components: { Card },
     template: `
-      <Card as="button">
-        Button card
-      </Card>
+      <div>
+        <Card as="button" mr="sm">
+          Button card
+        </Card>
+        <Card as="button">
+          Button card
+        </Card>
+      </div>
     `,
   }))
   .add('shadows', () => ({

@@ -3,6 +3,8 @@ import { action } from '@storybook/addon-actions'
 import Container from '../Container/Container.vue'
 import Autocomplete from './Autocomplete.vue'
 
+const components = { Container, Autocomplete }
+
 const search = input => {
   if (input.length < 1) {
     return []
@@ -34,17 +36,17 @@ const searchWikipedia = input =>
 storiesOf('Autocomplete', module)
   .addParameters({ styles: { padding: 0 } })
   .add('default', () => ({
-    components: { Autocomplete, Container },
+    components,
     template: `
       <div>
-        <Container size="s" padding="xl">
+        <Container size="sm" p="xl">
           <Autocomplete
             placeholder="Search for a country"
             :search="search"
             theme="light"
           />
         </Container>
-        <Container theme="light" size="s" padding="xl">
+        <Container bgColor="light" size="sm" p="xl">
           <Autocomplete
             placeholder="Search for a country"
             :search="search"
@@ -65,12 +67,12 @@ storiesOf('Autocomplete', module)
   }))
   .addParameters({ styles: { padding: '40px', maxWidth: '400px' } })
   .add('rounded', () => ({
-    components: { Autocomplete },
+    components,
     template: `<Autocomplete rounded theme="light" placeholder="Search for a country" :search="search" />`,
     methods: { search },
   }))
   .add('position above', () => ({
-    components: { Autocomplete },
+    components,
     template: `
       <div style="height: 90vh; display: flex; flex-flow: column nowrap; justify-content: flex-end;">
         <Autocomplete
@@ -83,7 +85,7 @@ storiesOf('Autocomplete', module)
     methods: { search },
   }))
   .add('Default results', () => ({
-    components: { Autocomplete },
+    components,
     template: `
       <Autocomplete
         theme="light"
@@ -113,7 +115,7 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Advanced search', () => ({
-    components: { Autocomplete },
+    components,
     template: `
       <Autocomplete
         aria-label="Search Wikipedia"
@@ -137,7 +139,7 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Submit event', () => ({
-    components: { Autocomplete },
+    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"
@@ -154,7 +156,7 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Custom class', () => ({
-    components: { Autocomplete },
+    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"
@@ -168,7 +170,7 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Custom events', () => ({
-    components: { Autocomplete },
+    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"
@@ -189,7 +191,7 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Auto select', () => ({
-    components: { Autocomplete },
+    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"
@@ -203,7 +205,7 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Default value', () => ({
-    components: { Autocomplete },
+    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"

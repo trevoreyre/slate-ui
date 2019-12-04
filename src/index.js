@@ -2,10 +2,12 @@
 import AppBar from './AppBar/AppBar.vue'
 import AppCss from './AppCss/AppCss.vue'
 import Autocomplete from './Autocomplete/Autocomplete.vue'
+import Badge from './Badge/Badge.vue'
 import Button from './Button/Button.vue'
 import Buttons from './Buttons/Buttons.vue'
 import Card from './Card/Card.vue'
 import Container from './Container/Container.vue'
+import Icon from './Icon/Icon.vue'
 import Img from './Img/Img.vue'
 import Input from './Input/Input.vue'
 import Theme from './Theme/Theme.vue'
@@ -21,19 +23,23 @@ import P from './Typography/P.vue'
 import P2 from './Typography/P2.vue'
 import Txt from './Typography/Txt.vue'
 import Txt2 from './Typography/Txt2.vue'
+import * as icon from './util/icon.js'
 import * as propValidators from './util/propValidators.js'
 import * as shadow from './util/shadow.js'
 import * as spacing from './util/spacing.js'
+import * as typography from './util/typography.js'
 
 // Install components globally
 const install = Vue => {
   Vue.component('AppBar', AppBar)
   Vue.component('AppCss', AppCss)
   Vue.component('Autocomplete', Autocomplete)
+  Vue.component('Badge', Badge)
   Vue.component('Button', Button)
   Vue.component('Buttons', Buttons)
   Vue.component('Card', Card)
   Vue.component('Container', Container)
+  Vue.component('Icon', Icon)
   Vue.component('Img', Img)
   Vue.component('Input', Input)
   Vue.component('Theme', Theme)
@@ -57,10 +63,12 @@ export {
   AppBar,
   AppCss,
   Autocomplete,
+  Badge,
   Button,
   Buttons,
   Card,
   Container,
+  Icon,
   Img,
   Input,
   Theme,
@@ -76,7 +84,9 @@ export {
   P2,
   Txt,
   Txt2,
+  icon,
   propValidators,
   shadow,
   spacing,
+  typography,
 }

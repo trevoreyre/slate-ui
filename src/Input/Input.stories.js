@@ -3,16 +3,18 @@ import { action } from '@storybook/addon-actions'
 import Container from '../Container/Container.vue'
 import Input from './Input.vue'
 
+const components = { Container, Input }
+
 storiesOf('Input', module)
   .addParameters({ styles: { padding: 0 } })
   .add('default', () => ({
-    components: { Input, Container },
+    components,
     template: `
       <div>
-        <Container size="s" padding="xl">
+        <Container size="sm" p="xl">
           <Input theme="light" placeholder="Placeholder" />
         </Container>
-        <Container theme="light" size="s" padding="xl">
+        <Container bgColor="light" size="sm" p="xl">
           <Input placeholder="Placeholder" />
         </Container>
       </div>
@@ -20,13 +22,13 @@ storiesOf('Input', module)
   }))
   .addParameters({ styles: { padding: '40px', maxWidth: '400px' } })
   .add('rounded', () => ({
-    components: { Input, Container },
+    components,
     template: `
       <Input rounded theme="light" placeholder="Placeholder" />
     `,
   }))
   .add('v-model', () => ({
-    components: { Input },
+    components,
     template: `<Input v-model="value" theme="light" />`,
     data() {
       return {
@@ -35,14 +37,14 @@ storiesOf('Input', module)
     },
   }))
   .add('input listener', () => ({
-    components: { Input },
+    components,
     template: `<Input @input="action" theme="light" />`,
     methods: {
       action: action('input'),
     },
   }))
   .add('native input listener', () => ({
-    components: { Input },
+    components,
     template: `<Input @input.native="action" theme="light" />`,
     methods: {
       action: action('input'),

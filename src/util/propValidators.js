@@ -3,7 +3,7 @@ const alignValidator = value => {
 }
 
 const sizeValidator = value => {
-  return ['s', 'm', 'l'].includes(value)
+  return ['sm', 'md', 'lg'].includes(value)
 }
 
 const spacingValidator = value => {
@@ -18,10 +18,13 @@ const themeBackgroundValidator = value => {
   return ['default', 'light'].includes(value)
 }
 
+const booleanStringValidator = value => ['true', 'false'].includes(value)
+
 export {
   alignValidator,
   sizeValidator,
   spacingValidator,
   themeValidator,
   themeBackgroundValidator,
+  booleanStringValidator,
 }

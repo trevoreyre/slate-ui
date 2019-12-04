@@ -1,50 +1,67 @@
 import Vue from 'vue'
 import { storiesOf } from '@storybook/vue'
 import { linkTo } from '@storybook/addon-links'
-import Buttons from '../Buttons/Buttons.vue'
+import Icon from '../Icon/Icon'
 import Button from './Button.vue'
 
-const CoolLink = Vue.component('CoolLink', {
+const CustomLink = Vue.component('CustomLink', {
   template: `
-    <a class="cool-link" style="color: red;"><slot></slot></a>
+    <a class="custom-link" style="color: red;"><slot></slot></a>
   `,
 })
 
+const UserSvg = Vue.component('UserSvg', {
+  template: `
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 7a3 3 0 116 0 3 3 0 01-6 0zm3-5a5 5 0 100 10 5 5 0 000-10zM8 14a5 5 0 00-5 5v2a1 1 0 102 0v-2a3 3 0 013-3h8a3 3 0 013 3v2a1 1 0 102 0v-2a5 5 0 00-5-5H8z" />
+  `,
+})
+
+const components = { Button, CustomLink, Icon, UserSvg }
+
 storiesOf('Button', module)
   .add('default', () => ({
-    components: { Button, Buttons },
+    components,
     template: `
-      <Buttons>
-        <Button theme="neutral">Neutral (default)</Button>
-        <Button theme="primary">Primary</Button>
-        <Button theme="secondary">Secondary</Button>
-      </Buttons>
+      <Button>Button</Button>
+    `,
+  }))
+  .add('theme', () => ({
+    components,
+    template: `
+      <div>
+        <Button theme="primary" mr="2xs">Primary button</Button>
+        <Button theme="secondary">Secondary button</Button>
+      </div>
     `,
   }))
   .add('size', () => ({
-    components: { Button, Buttons },
+    components,
     template: `
-      <Buttons>
-        <Button theme="primary" size="s">Small</Button>
-        <Button theme="primary" size="m">Medium</Button>
-        <Button theme="primary" size="l">Large</Button>
-      </Buttons>
+      <div>
+        <Button size="sm" mr="2xs">Small</Button>
+        <Button size="md" mr="2xs">Medium</Button>
+        <Button size="lg">Large</Button>
+      </div>
   `,
   }))
-  .add('type', () => ({
-    components: { Button, Buttons },
+  .add('icons', () => ({
+    components,
     template: `
-      <Buttons>
-        <Button theme="primary" type="default">Default</Button>
-        <Button theme="primary" type="raised">Raised</Button>
-        <Button theme="primary" type="flat">Flat</Button>
-      </Buttons>
+      <div>
+        <Button mr="2xs">
+          <Icon size="sm"><UserSvg /></Icon>
+          Icon + Text
+        </Button>
+        <Button>
+          <Icon><UserSvg /></Icon>
+        </Button>
+      </div>
     `,
   }))
   .add('custom tag', () => ({
-    components: { Button },
+    components,
     template: `
-      <Button as="a" theme="primary" href="#" @click="link">
+      <Button as="a" href="#" @click="link">
         Link to default button
       </Button>
     `,
@@ -56,38 +73,13 @@ storiesOf('Button', module)
     },
   }))
   .add('custom component', () => ({
-    components: { Button, CoolLink },
+    components,
     template: `
-      <Button :as="CoolLink" href="#">
-        Cool link
+      <Button :as="CustomLink" href="#">
+        Custom link
       </Button>
     `,
     data() {
-      return { CoolLink }
+      return { CustomLink }
     },
-  }))
-  .add('buttons alignment', () => ({
-    components: { Button, Buttons },
-    template: `
-      <div>
-        <h2>Left (default)</h2>
-        <Buttons align="left">
-          <Button theme="primary">Button</Button>
-          <Button theme="primary">Button</Button>
-          <Button theme="primary">Button</Button>
-        </Buttons>
-        <h2 style="text-align: center">Center</h2>
-        <Buttons align="center">
-          <Button theme="primary">Button</Button>
-          <Button theme="primary">Button</Button>
-          <Button theme="primary">Button</Button>
-        </Buttons>
-        <h2 style="text-align: right">Right</h2>
-        <Buttons align="right">
-          <Button theme="primary">Button</Button>
-          <Button theme="primary">Button</Button>
-          <Button theme="primary">Button</Button>
-        </Buttons>
-      </div>
-    `,
   }))

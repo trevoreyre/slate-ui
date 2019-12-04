@@ -1,9 +1,9 @@
 <script>
-import { marginMixin } from '../util/spacing'
+import { typographyMixin } from '../util/typography'
 
 export default {
   name: 'SlateOverline',
-  mixins: [marginMixin],
+  mixins: [typographyMixin],
   props: {
     as: {
       type: [String, Function],
@@ -14,7 +14,8 @@ export default {
     return h(
       this.as,
       {
-        class: ['overline', this.marginClass],
+        class: ['overline', this.typographyClass],
+        style: this.typographyStyle,
       },
       this.$slots.default
     )
@@ -24,10 +25,10 @@ export default {
 
 <style scoped>
 .overline {
-  font-size: 0.875rem;
-  line-height: 1;
-  font-weight: 600;
-  letter-spacing: 0.05rem;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-none);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-xl);
   text-transform: uppercase;
 }
 </style>

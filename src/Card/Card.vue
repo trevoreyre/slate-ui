@@ -28,7 +28,7 @@ export default {
 <style scoped>
 .card {
   --shadow: var(--shadow-md);
-  border-radius: var(--rounded-md);
+  border-radius: var(--border-radius-md);
   padding: var(--spacing-sm);
   background: var(--color-background-light);
   transition: 0.3s transform ease, 0.3s box-shadow ease;
@@ -37,10 +37,5 @@ export default {
   text-align: left;
   text-decoration: none;
   line-height: inherit;
-}
-
-.card:focus {
-  --outline: var(--outline-sm);
-  outline: none;
 }
 </style>

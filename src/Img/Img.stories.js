@@ -2,8 +2,10 @@ import { storiesOf } from '@storybook/vue'
 import Container from '../Container/Container.vue'
 import Img from './Img.vue'
 
+const components = { Container, Img }
+
 storiesOf('Image', module).add('default', () => ({
-  components: { Container, Img },
+  components,
   data() {
     return {
       image: {
@@ -15,7 +17,7 @@ storiesOf('Image', module).add('default', () => ({
     }
   },
   template: `
-    <Container size="m">
+    <Container size="md">
       <Img :image="image" :src="src" />
     </Container>
   `,
