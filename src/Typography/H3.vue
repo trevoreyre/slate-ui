@@ -27,8 +27,8 @@ export default {
 
 <style scoped>
 .h3 {
-  font-size: var(--font-size-3xl);
-  line-height: var(--line-height-md);
-  font-weight: var(--font-weight-normal);
+  --font-size: var(--font-size-3xl);
+  --line-height: var(--line-height-md);
+  --font-weight: var(--font-weight-normal);
 }
 </style>

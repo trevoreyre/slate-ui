@@ -82,29 +82,43 @@ export default {
   --text-transform-lowercase: lowercase;
   --text-transform-default: var(--text-transform-none);
 
-  /* Theme colors */
+  /* Brand colors */
+  /* TODO: Figure out brand colors and text-on-brand colors */
+  --color-brand-100: #f7fafc;
+  --color-brand-200: #edf2f7;
+  --color-brand-300: #e2e8f0;
+  --color-brand-400: #cbd5e0;
+  --color-brand-500: #a0aec0;
+  --color-brand-600: #718096;
+  --color-brand-700: #4a5568;
+  --color-brand-800: #2d3748;
+  --color-brand-900: #1a202c;
+  --color-brand-default: var(--color-brand-700);
+
   --color-brand-primary: #1c5b72;
-  --color-brand-secondary: #e03616;
+
   --color-background-light: #fff;
   --color-background: #fafafa;
+
   --color-border: rgba(0, 0, 0, 0.12);
   --color-divider: rgba(0, 0, 0, 0.12);
   /* TODO: Re-think color-hover variable */
   --color-hover: rgba(0, 0, 0, 0.06);
+
   --color-text-primary: rgba(0, 0, 0, 0.7);
   --color-text-secondary: rgba(0, 0, 0, 0.5);
   --color-text-disabled: rgba(0, 0, 0, 0.38);
+
   --color-text-primary-on-brand-primary: #fff;
   --color-text-secondary-on-brand-primary: rgba(255, 255, 255, 0.7);
   --color-text-disabled-on-brand-primary: rgba(255, 255, 255, 0.5);
-  --color-text-primary-on-brand-secondary: #fff;
-  --color-text-secondary-on-brand-secondary: rgba(255, 255, 255, 0.7);
-  --color-text-disabled-on-brand-secondary: rgba(255, 255, 255, 0.5);
+
   --color-icon-primary: rgba(0, 0, 0, 0.4);
   --color-icon-secondary: rgba(0, 0, 0, 0.2);
+
   /* TODO: Select icon colors on brand colors */
-  --color-icon-primary-on-brand-primary: #c2fff9;
-  --color-icon-secondary-on-brand-primary: #c2fff9;
+  --color-icon-primary-on-brand-primary: #edf2f7;
+  --color-icon-secondary-on-brand-primary: #e2e8f0;
 
   /*
     Set borders using box shadow, to avoid affecting layout. Use
@@ -148,9 +162,6 @@ export default {
 }
 .bg-color-brand-primary {
   background-color: var(--color-brand-primary);
-}
-.bg-color-brand-secondary {
-  background-color: var(--color-brand-secondary);
 }
 
 /* Typography utility classes */

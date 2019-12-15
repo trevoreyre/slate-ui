@@ -25,8 +25,8 @@ export default {
 
 <style scoped>
 .txt {
-  font-size: var(--font-size-default);
-  line-height: var(--line-height-lg);
-  font-weight: var(--font-weight-normal);
+  --font-size: var(--font-size-default);
+  --line-height: var(--line-height-lg);
+  --font-weight: var(--font-weight-normal);
 }
 </style>

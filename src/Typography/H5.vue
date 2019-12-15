@@ -27,8 +27,8 @@ export default {
 
 <style scoped>
 .h5 {
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-lg);
-  font-weight: var(--font-weight-normal);
+  --font-size: var(--font-size-xl);
+  --line-height: var(--line-height-lg);
+  --font-weight: var(--font-weight-normal);
 }
 </style>

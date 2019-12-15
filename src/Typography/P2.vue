@@ -26,8 +26,8 @@ export default {
 <style scoped>
 .p2 {
   margin-bottom: var(--spacing-xs);
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-lg);
-  font-weight: var(--font-weight-normal);
+  --font-size: var(--font-size-sm);
+  --line-height: var(--line-height-lg);
+  --font-weight: var(--font-weight-normal);
 }
 </style>

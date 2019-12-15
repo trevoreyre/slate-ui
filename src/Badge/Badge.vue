@@ -2,7 +2,7 @@
 export default {
   name: 'SlateBadge',
   provide: {
-    backgroundColor: 'primary',
+    backgroundColor: 'brand-primary',
   },
 }
 </script>

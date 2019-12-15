@@ -1,13 +1,13 @@
 <script>
-import { marginMixin, marginClass } from '../util/spacing'
+import { marginMixin } from '../util/spacing'
 import { sizeValidator } from '../util/propValidators'
 import { bool } from '../util/props'
 
 /**
- * A button allows a user to take an action on the current page
+ * Display a single icon as a square or circle button
  */
 export default {
-  name: 'SlateButton',
+  name: 'SlateButtonIcon',
   mixins: [marginMixin],
   inheritAttrs: false,
 
@@ -21,7 +21,7 @@ export default {
     },
     /** Disables interaction */
     disabled: Boolean,
-    /** Set to `true` for rounded, pill-shaped buttons */
+    /** Set to `true` for circular button */
     rounded: Boolean,
     /** Size of the button. `sm | md | lg` */
     size: {
@@ -42,7 +42,6 @@ export default {
       backgroundColor: this.theme === 'primary' ? 'brand-primary' : undefined,
     }
   },
-
   render(h) {
     const {
       as: As,
@@ -68,7 +67,7 @@ export default {
 
     return (
       <As
-        class={['button', size, theme, this.marginClass, { rounded }]}
+        class={['button-icon', size, theme, this.marginClass, { rounded }]}
         disabled={disabled}
         aria-disabled={ariaDisabled}
         tabindex={isDisabled ? -1 : tabindex}
@@ -85,65 +84,52 @@ export default {
 </script>
 
 <style scoped>
-.button {
-  --font-size: var(--font-size-sm);
-  --line-height: var(--line-height-none);
-  --font-weight: var(--font-weight-bold);
-  --letter-spacing: var(--letter-spacing-xl);
-  --text-transform: var(--text-transform-uppercase);
+.button-icon {
   border-radius: var(--border-radius-default);
   border: none;
-  padding: 0 var(--spacing-sm);
-  min-height: var(--spacing-xl);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: var(--spacing-xl);
+  height: var(--spacing-xl);
+  display: inline-block;
   text-decoration: none;
-  text-align: center;
   vertical-align: middle;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: 9999px;
 }
 
-.button.sm {
-  padding: 0 var(--spacing-xs);
-  min-height: var(--spacing-lg);
+.button-icon > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.button.lg {
-  padding: 0 var(--spacing-md);
-  min-height: var(--spacing-2xl);
+.button-icon.sm {
+  width: var(--spacing-lg);
+  height: var(--spacing-lg);
 }
 
-.button.rounded {
+.button-icon.lg {
+  width: var(--spacing-2xl);
+  height: var(--spacing-2xl);
+}
+
+.button-icon.rounded {
   border-radius: var(--border-radius-full);
 }
 
-.button.primary {
+.button-icon.primary {
   background-color: var(--color-brand-700);
   color: var(--color-text-primary-on-brand-primary);
 }
 
-.button.secondary {
-  padding: 0 var(--spacing-xs);
+.button-icon.secondary {
   background-color: transparent;
   color: var(--color-text-primary);
 }
 
-.button.secondary:hover {
+.button-icon.secondary:hover {
   background-color: var(--color-brand-200);
-}
-
-.button.sm.secondary {
-  padding: 0 var(--spacing-2xs);
-}
-
-.button.lg.secondary {
-  padding: 0 var(--spacing-sm);
-}
-
-.button[disabled],
-.button[aria-disabled='true'] {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
 }
 </style>

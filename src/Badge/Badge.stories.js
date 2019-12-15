@@ -61,8 +61,8 @@ storiesOf('Badge', module)
             Typography
             <Badge>5</Badge>
           </Txt>
-          <Button size="s" class="mr-xs">
-            <Overline>Button</Overline>
+          <Button theme="secondary" class="mr-xs">
+            Button
             <Badge>
               <Icon size="sm"><UserSvg /></Icon>
             </Badge>

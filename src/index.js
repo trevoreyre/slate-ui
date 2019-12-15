@@ -4,6 +4,7 @@ import AppCss from './AppCss/AppCss.vue'
 import Autocomplete from './Autocomplete/Autocomplete.vue'
 import Badge from './Badge/Badge.vue'
 import Button from './Button/Button.vue'
+import ButtonIcon from './ButtonIcon/ButtonIcon.vue'
 import Buttons from './Buttons/Buttons.vue'
 import Card from './Card/Card.vue'
 import Container from './Container/Container.vue'
@@ -23,10 +24,12 @@ import P from './Typography/P.vue'
 import P2 from './Typography/P2.vue'
 import Txt from './Typography/Txt.vue'
 import Txt2 from './Typography/Txt2.vue'
+import * as color from './util/color.js'
 import * as icon from './util/icon.js'
 import * as propValidators from './util/propValidators.js'
 import * as shadow from './util/shadow.js'
 import * as spacing from './util/spacing.js'
+import * as theme from './util/theme.js'
 import * as typography from './util/typography.js'
 
 // Install components globally
@@ -36,6 +39,7 @@ const install = Vue => {
   Vue.component('Autocomplete', Autocomplete)
   Vue.component('Badge', Badge)
   Vue.component('Button', Button)
+  Vue.component('ButtonIcon', ButtonIcon)
   Vue.component('Buttons', Buttons)
   Vue.component('Card', Card)
   Vue.component('Container', Container)
@@ -65,6 +69,7 @@ export {
   Autocomplete,
   Badge,
   Button,
+  ButtonIcon,
   Buttons,
   Card,
   Container,
@@ -84,9 +89,11 @@ export {
   P2,
   Txt,
   Txt2,
+  color,
   icon,
   propValidators,
   shadow,
   spacing,
+  theme,
   typography,
 }

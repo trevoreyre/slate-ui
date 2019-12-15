@@ -25,10 +25,10 @@ export default {
 
 <style scoped>
 .overline {
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-none);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-xl);
+  --font-size: var(--font-size-sm);
+  --line-height: var(--line-height-none);
+  --font-weight: var(--font-weight-bold);
+  --letter-spacing: var(--letter-spacing-xl);
   text-transform: uppercase;
 }
 </style>

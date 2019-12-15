@@ -25,8 +25,8 @@ export default {
 
 <style scoped>
 .label {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-none);
-  font-weight: var(--font-weight-normal);
+  --font-size: var(--font-size-xs);
+  --line-height: var(--line-height-none);
+  --font-weight: var(--font-weight-normal);
 }
 </style>

@@ -27,8 +27,8 @@ export default {
 
 <style scoped>
 .h4 {
-  font-size: var(--font-size-2xl);
-  line-height: var(--line-height-md);
-  font-weight: var(--font-weight-normal);
+  --font-size: var(--font-size-2xl);
+  --line-height: var(--line-height-md);
+  --font-weight: var(--font-weight-normal);
 }
 </style>

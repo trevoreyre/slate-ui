@@ -1,12 +1,11 @@
 const colors = [
   'brand-primary',
-  'brand-secondary',
   'text-primary',
   'text-secondary',
   'text-disabled',
 ]
 
-const bgColors = ['light', 'normal', 'brand-primary', 'brand-secondary']
+const bgColors = ['light', 'normal', 'brand-primary']
 
 export const colorValidator = value => colors.includes(value)
 export const bgColorValidator = value => bgColors.includes(value)
