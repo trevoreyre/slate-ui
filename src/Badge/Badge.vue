@@ -22,9 +22,9 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(40%, -40%);
+  transform: translate(33%, -33%);
   transform-origin: 100% 0%;
-  background: var(--color-brand-primary);
+  background: var(--color-brand-700);
   color: var(--color-text-primary-on-brand-primary);
   font-size: var(--font-size-xs);
   text-align: center;
