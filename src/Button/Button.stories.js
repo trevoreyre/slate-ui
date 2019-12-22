@@ -1,5 +1,4 @@
 import { action } from '@storybook/addon-actions'
-import { iconMixin } from '../util/icon'
 import Button from './Button.vue'
 
 export default {
@@ -64,39 +63,22 @@ export const size = () => ({
 })
 
 export const icons = () => {
-  const IconPlus = {
-    mixins: [iconMixin],
-    template: `
-      <svg v-bind="iconProps" :class="iconClass">
-        <path d="M13 5a1 1 0 10-2 0v6H5a1 1 0 100 2h6v6a1 1 0 102 0v-6h6a1 1 0 100-2h-6V5z" />
-      </svg>
-    `,
-  }
-
   return {
-    components: { IconPlus },
     template: `
       <div>
-        <div class="mb-sm">
-          <Button mr="2xs">
-            <IconPlus mr="3xs" />
-            Primary
-          </Button>
-          <Button theme="secondary" mr="2xs">
-            <IconPlus mr="3xs" />
-            Secondary
-          </Button>
-        </div>
-        <div>
-          <Button rounded mr="2xs">
-            <IconPlus mr="3xs" />
-            Primary
-          </Button>
-          <Button theme="secondary" rounded mr="2xs">
-            <IconPlus mr="3xs" />
-            Secondary
-          </Button>
-        </div>
+        <Button mr="2xs">
+          <IconUser mr="3xs" />
+          Leading
+        </Button>
+        <Button mr="2xs">
+          Trailing
+          <IconClose ml="3xs" />
+        </Button>
+        <Button mr="2xs">
+          <IconUser mr="3xs" />
+          Both
+          <IconClose ml="3xs" />
+        </Button>
       </div>
     `,
   }

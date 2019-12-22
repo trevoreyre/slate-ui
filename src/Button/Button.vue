@@ -55,6 +55,13 @@ export default {
     } = this.$props
     const { tabindex, ...otherAttrs } = this.$attrs
     const { click, ...otherListeners } = this.$listeners
+    // TODO: I don't think spreading otherProps here actually works
+    // TODO: see https://github.com/vuejs/babel-plugin-transform-vue-jsx/issues/86
+    const other = {
+      ...otherProps,
+      attrs: otherAttrs,
+      on: otherListeners,
+    }
 
     const handleClick = event => {
       if (disabled || ariaDisabled) {
@@ -73,9 +80,7 @@ export default {
         aria-disabled={ariaDisabled}
         tabindex={isDisabled ? -1 : tabindex}
         onClick={handleClick}
-        {...otherProps}
-        attrs={otherAttrs}
-        {...{ on: otherListeners }}
+        {...other}
       >
         {this.$slots.default}
       </As>
