@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/vue'
 import AppBar from './AppBar.vue'
 
 storiesOf('AppBar', module)
-  .addParameters({ styles: { padding: 0 } })
   .add('default', () => ({
     components: { AppBar },
     template: `
@@ -23,13 +22,13 @@ storiesOf('AppBar', module)
     components: { AppBar },
     template: `
       <div>
-        <AppBar size="s">
+        <AppBar size="sm">
           Small
         </AppBar>
         <AppBar>
           Medium (default)
         </AppBar>
-        <AppBar size="l">
+        <AppBar size="lg">
           Large
         </AppBar>
       </div>

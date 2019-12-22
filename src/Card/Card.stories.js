@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/vue'
 import Card from './Card.vue'
 
 storiesOf('Card', module)
-  .addParameters({ styles: { maxWidth: '500px' } })
   .add('default', () => ({
     components: { Card },
     template: `

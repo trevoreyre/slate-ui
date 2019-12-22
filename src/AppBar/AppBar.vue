@@ -16,10 +16,9 @@ export default {
       default: 'default',
       validator: themeBackgroundValidator,
     },
-    /* TODO: Rename s, m, l to sm, md, lg */
     size: {
       type: String,
-      default: 'm',
+      default: 'md',
       validator: sizeValidator,
     },
   },

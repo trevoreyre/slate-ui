@@ -1,9 +1,5 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import Container from '../Container/Container.vue'
-import Autocomplete from './Autocomplete.vue'
-
-const components = { Container, Autocomplete }
 
 const search = input => {
   if (input.length < 1) {
@@ -34,9 +30,7 @@ const searchWikipedia = input =>
   })
 
 storiesOf('Autocomplete', module)
-  .addParameters({ styles: { padding: 0 } })
   .add('default', () => ({
-    components,
     template: `
       <div>
         <Container size="sm" p="xl">
@@ -67,12 +61,10 @@ storiesOf('Autocomplete', module)
   }))
   .addParameters({ styles: { padding: '40px', maxWidth: '400px' } })
   .add('rounded', () => ({
-    components,
     template: `<Autocomplete rounded theme="light" placeholder="Search for a country" :search="search" />`,
     methods: { search },
   }))
   .add('position above', () => ({
-    components,
     template: `
       <div style="height: 90vh; display: flex; flex-flow: column nowrap; justify-content: flex-end;">
         <Autocomplete
@@ -85,7 +77,6 @@ storiesOf('Autocomplete', module)
     methods: { search },
   }))
   .add('Default results', () => ({
-    components,
     template: `
       <Autocomplete
         theme="light"
@@ -115,7 +106,6 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Advanced search', () => ({
-    components,
     template: `
       <Autocomplete
         aria-label="Search Wikipedia"
@@ -139,7 +129,6 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Submit event', () => ({
-    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"
@@ -156,7 +145,6 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Custom class', () => ({
-    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"
@@ -170,7 +158,6 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Custom events', () => ({
-    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"
@@ -191,7 +178,6 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Auto select', () => ({
-    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"
@@ -205,7 +191,6 @@ storiesOf('Autocomplete', module)
     },
   }))
   .add('Default value', () => ({
-    components,
     template: `
       <Autocomplete
         aria-label="Search for a country"
