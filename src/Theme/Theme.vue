@@ -98,7 +98,8 @@ export default {
   --color-brand-primary: #1c5b72;
 
   --color-background-light: #fff;
-  --color-background: #fafafa;
+  --color-background: #f7fafc;
+  --color-background-dark: #edf2f7;
 
   --color-border: rgba(0, 0, 0, 0.12);
   --color-divider: rgba(0, 0, 0, 0.12);
@@ -119,6 +120,8 @@ export default {
   /* TODO: Select icon colors on brand colors */
   --color-icon-primary-on-brand-primary: #edf2f7;
   --color-icon-secondary-on-brand-primary: #e2e8f0;
+
+  /* TODO: Error/success colors */
 
   /*
     Set borders using box shadow, to avoid affecting layout. Use
@@ -193,17 +196,41 @@ export default {
   height: 100%;
   fill: inherit;
 }
-.icon.sm {
-  width: var(--spacing-xs);
-  height: var(--spacing-xs);
+.icon.size-xs {
+  width: var(--font-size-xs);
+  height: var(--font-size-xs);
 }
-.icon.md {
-  width: var(--spacing-sm);
-  height: var(--spacing-sm);
+.icon.size-sm {
+  width: var(--font-size-sm);
+  height: var(--font-size-sm);
 }
-.icon.lg {
-  width: var(--spacing-md);
-  height: var(--spacing-md);
+.icon.size-md {
+  width: var(--font-size-md);
+  height: var(--font-size-md);
+}
+.icon.size-lg {
+  width: var(--font-size-lg);
+  height: var(--font-size-lg);
+}
+.icon.size-xl {
+  width: var(--font-size-xl);
+  height: var(--font-size-xl);
+}
+.icon.size-2xl {
+  width: var(--font-size-2xl);
+  height: var(--font-size-2xl);
+}
+.icon.size-3xl {
+  width: var(--font-size-3xl);
+  height: var(--font-size-3xl);
+}
+.icon.size-4xl {
+  width: var(--font-size-4xl);
+  height: var(--font-size-4xl);
+}
+.icon.size-5xl {
+  width: var(--font-size-5xl);
+  height: var(--font-size-5xl);
 }
 .icon.primary {
   fill: var(--color-icon-primary);

@@ -39,9 +39,15 @@ storiesOf('Icon', module)
     components,
     template: `
       <div>
+        <Icon size="xs" mr="2xs"><UserSvg /></Icon>
         <Icon size="sm" mr="2xs"><UserSvg /></Icon>
         <Icon size="md" mr="2xs"><UserSvg /></Icon>
         <Icon size="lg" mr="2xs"><UserSvg /></Icon>
+        <Icon size="xl" mr="2xs"><UserSvg /></Icon>
+        <Icon size="2xl" mr="2xs"><UserSvg /></Icon>
+        <Icon size="3xl" mr="2xs"><UserSvg /></Icon>
+        <Icon size="4xl" mr="2xs"><UserSvg /></Icon>
+        <Icon size="5xl"><UserSvg /></Icon>
       </div>
     `,
   }))

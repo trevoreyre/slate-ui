@@ -1,14 +1,14 @@
 import { booleanStringValidator } from './propValidators'
 import { marginMixin } from './spacing'
 
-const sizes = ['sm', 'md', 'lg']
+const sizes = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl']
 const themes = ['primary', 'secondary']
 
 export const sizeValidator = value => sizes.includes(value)
 export const themeValidator = value => themes.includes(value)
 
 export const iconProps = {
-  size: { type: String, default: 'md', validator: sizeValidator },
+  size: { type: String, default: 'lg', validator: sizeValidator },
   theme: { type: String, default: 'primary', validator: themeValidator },
   ariaHidden: {
     type: String,
@@ -26,7 +26,7 @@ export function iconClass() {
   return [
     'icon',
     this.theme,
-    this.size,
+    `size-${this.size}`,
     this.marginClass,
     {
       [`on-${this.backgroundColor}`]: this.backgroundColor !== 'default',
