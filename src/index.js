@@ -11,6 +11,7 @@ import Container from './Container/Container.vue'
 import Icon from './Icon/Icon.vue'
 import Img from './Img/Img.vue'
 import Input from './Input/Input.vue'
+import Tag from './Tag/Tag.vue'
 import Theme from './Theme/Theme.vue'
 import H1 from './Typography/H1.vue'
 import H2 from './Typography/H2.vue'
@@ -27,6 +28,7 @@ import Txt2 from './Typography/Txt2.vue'
 import * as color from './util/color.js'
 import * as icon from './util/icon.js'
 import * as propValidators from './util/propValidators.js'
+import * as props from './util/props.js'
 import * as shadow from './util/shadow.js'
 import * as spacing from './util/spacing.js'
 import * as theme from './util/theme.js'
@@ -46,6 +48,7 @@ const install = Vue => {
   Vue.component('Icon', Icon)
   Vue.component('Img', Img)
   Vue.component('Input', Input)
+  Vue.component('Tag', Tag)
   Vue.component('Theme', Theme)
   Vue.component('H1', H1)
   Vue.component('H2', H2)
@@ -76,6 +79,7 @@ export {
   Icon,
   Img,
   Input,
+  Tag,
   Theme,
   H1,
   H2,
@@ -92,6 +96,7 @@ export {
   color,
   icon,
   propValidators,
+  props,
   shadow,
   spacing,
   theme,
