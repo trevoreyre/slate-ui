@@ -10,6 +10,7 @@ import Card from './Card/Card.vue'
 import Container from './Container/Container.vue'
 import Icon from './Icon/Icon.vue'
 import Img from './Img/Img.vue'
+import ImgProvider from './ImgProvider/ImgProvider.vue'
 import Input from './Input/Input.vue'
 import Tag from './Tag/Tag.vue'
 import Theme from './Theme/Theme.vue'
@@ -47,6 +48,7 @@ const install = Vue => {
   Vue.component('Container', Container)
   Vue.component('Icon', Icon)
   Vue.component('Img', Img)
+  Vue.component('ImgProvider', ImgProvider)
   Vue.component('Input', Input)
   Vue.component('Tag', Tag)
   Vue.component('Theme', Theme)
@@ -78,6 +80,7 @@ export {
   Container,
   Icon,
   Img,
+  ImgProvider,
   Input,
   Tag,
   Theme,
