@@ -1,6 +1,5 @@
 <script>
 const getSrcSet = (strings, ...props) => filename => {
-  console.log('getSrcSet', { strings, props, filename })
   return strings
     .map((string, i) => `${string}${props[i] ? filename : ''}`)
     .join()
