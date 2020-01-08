@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import { addDecorator, addParameters } from '@storybook/vue'
-import SlateUi from '../src/index'
-import { iconMixin } from '../src/util/icon'
+import SlateUi from '@slate-ui/core'
+import { iconMixin } from '@slate-ui/theme'
 
-Vue.use(SlateUi)
+Vue.use(SlateUi, { prefix: '' })
 
 const IconClose = {
   mixins: [iconMixin],
@@ -28,8 +28,8 @@ Vue.component('IconUser', IconUser)
 const withTheme = () => ({
   template: `
     <Theme>
-      <AppCss />
-      <Container size="lg">
+      <Css />
+      <Container size="lg" p="sm">
         <story />
       </Container>
     </Theme>

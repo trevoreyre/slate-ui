@@ -1,0 +1,31 @@
+{
+  "name": "@slate-ui/css",
+  "version": "0.0.17",
+  "description": "Vue component library",
+  "main": "app-css.umd.js",
+  "module": "app-css.esm.js",
+  "unpkg": "app-css.min.js",
+  "style": "style.css",
+  "keywords": [
+    "slate-ui",
+    "slate",
+    "vue",
+    "ui",
+    "frontend",
+    "library",
+    "framework",
+    "components",
+    "component"
+  ],
+  "author": "Trevor Eyre <trevoreyre@gmail.com> (https://trevoreyre.com)",
+  "license": "MIT",
+  "repository": "trevoreyre/slate-ui",
+  "bugs": "https://github.com/trevoreyre/slate-ui/issues",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "focus-visible": "^5.0.2"
+  }
+}

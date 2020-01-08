@@ -1,0 +1,31 @@
+{
+  "name": "@slate-ui/app-bar",
+  "version": "0.0.17",
+  "description": "Vue component library",
+  "main": "app-bar.umd.js",
+  "module": "app-bar.esm.js",
+  "unpkg": "app-bar.min.js",
+  "style": "style.css",
+  "keywords": [
+    "slate-ui",
+    "slate",
+    "vue",
+    "ui",
+    "frontend",
+    "library",
+    "framework",
+    "components",
+    "component"
+  ],
+  "author": "Trevor Eyre <trevoreyre@gmail.com> (https://trevoreyre.com)",
+  "license": "MIT",
+  "repository": "trevoreyre/slate-ui",
+  "bugs": "https://github.com/trevoreyre/slate-ui/issues",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@slate-ui/theme": "^0.0.17"
+  }
+}

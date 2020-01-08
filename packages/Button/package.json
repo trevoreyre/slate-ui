@@ -1,0 +1,32 @@
+{
+  "name": "@slate-ui/button",
+  "version": "0.0.17",
+  "description": "Vue component library",
+  "main": "button.umd.js",
+  "module": "button.esm.js",
+  "unpkg": "button.min.js",
+  "style": "style.css",
+  "keywords": [
+    "slate-ui",
+    "slate",
+    "vue",
+    "ui",
+    "frontend",
+    "library",
+    "framework",
+    "components",
+    "component"
+  ],
+  "author": "Trevor Eyre <trevoreyre@gmail.com> (https://trevoreyre.com)",
+  "license": "MIT",
+  "repository": "trevoreyre/slate-ui",
+  "bugs": "https://github.com/trevoreyre/slate-ui/issues",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@slate-ui/theme": "^0.0.17",
+    "@slate-ui/util": "^0.0.17"
+  }
+}

@@ -4,25 +4,7 @@ on:
     types: [published]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Run npm install and build
-        run: |
-          npm install
-          npm run build
-      - uses: actions/upload-artifact@v1
-        with:
-          name: dist
-          path: dist
-
-  publish-npm:
-    name: Publish npm
-    needs: build
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -30,9 +12,11 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - uses: actions/download-artifact@v1
-        with:
-          name: dist
-      - run: npm publish
+      - run: npm install -g yarn
+      - name: Run yarn install and build
+        run: |
+          yarn install
+          yarn build
+      - run: yarn run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

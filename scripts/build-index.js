@@ -2,8 +2,8 @@ const path = require('path')
 const { readdir, stat, writeFile } = require('fs').promises
 
 const paths = {
-  src: path.resolve(__dirname, '..', 'src'),
-  util: path.resolve(__dirname, '..', 'src', 'util'),
+  src: path.resolve(__dirname, '..', 'packages'),
+  util: path.resolve(__dirname, '..', 'packages', 'util'),
 }
 
 // Traverses all directories and subdirectories, and returns an array of file
@@ -62,6 +62,8 @@ const getIndexFile = async () => {
   return indexFile
 }
 
-getIndexFile().then(indexFile => {
+// Main
+;(async () => {
+  const indexFile = await getIndexFile()
   writeFile(path.resolve(paths.src, 'index.js'), indexFile)
-})
+})()
