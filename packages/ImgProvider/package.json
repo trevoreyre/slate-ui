@@ -1,6 +1,6 @@
 {
   "name": "@slate-ui/img-provider",
-  "version": "0.0.17",
+  "version": "0.0.1",
   "description": "Vue component library",
   "main": "img-provider.umd.js",
   "module": "img-provider.esm.js",

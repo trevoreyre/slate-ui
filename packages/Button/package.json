@@ -1,6 +1,6 @@
 {
   "name": "@slate-ui/button",
-  "version": "0.0.17",
+  "version": "0.0.1",
   "description": "Vue component library",
   "main": "button.umd.js",
   "module": "button.esm.js",

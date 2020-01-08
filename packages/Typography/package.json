@@ -1,6 +1,6 @@
 {
   "name": "@slate-ui/typography",
-  "version": "0.0.17",
+  "version": "0.0.1",
   "description": "Vue component library",
   "main": "typography.umd.js",
   "module": "typography.esm.js",

@@ -1,6 +1,6 @@
 {
   "name": "@slate-ui/card",
-  "version": "0.0.17",
+  "version": "0.0.1",
   "description": "Vue component library",
   "main": "card.umd.js",
   "module": "card.esm.js",

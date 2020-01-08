@@ -1,6 +1,6 @@
 {
   "name": "@slate-ui/core",
-  "version": "0.0.17",
+  "version": "0.0.1",
   "description": "Vue component library",
   "main": "core.umd.js",
   "module": "core.esm.js",
@@ -26,21 +26,21 @@
     "access": "public"
   },
   "dependencies": {
-    "@slate-ui/app-bar": "^0.0.17",
-    "@slate-ui/autocomplete": "^0.0.17",
-    "@slate-ui/badge": "^0.0.17",
-    "@slate-ui/button": "^0.0.17",
-    "@slate-ui/button-icon": "^0.0.17",
-    "@slate-ui/card": "^0.0.17",
-    "@slate-ui/container": "^0.0.17",
-    "@slate-ui/css": "^0.0.17",
-    "@slate-ui/icon": "^0.0.17",
-    "@slate-ui/img": "^0.0.17",
-    "@slate-ui/img-provider": "^0.0.17",
-    "@slate-ui/input": "^0.0.17",
-    "@slate-ui/tag": "^0.0.17",
-    "@slate-ui/theme": "^0.0.17",
-    "@slate-ui/typography": "^0.0.17",
-    "@slate-ui/util": "^0.0.17"
+    "@slate-ui/app-bar": "^0.0.1",
+    "@slate-ui/autocomplete": "^0.0.1",
+    "@slate-ui/badge": "^0.0.1",
+    "@slate-ui/button": "^0.0.1",
+    "@slate-ui/button-icon": "^0.0.1",
+    "@slate-ui/card": "^0.0.1",
+    "@slate-ui/container": "^0.0.1",
+    "@slate-ui/css": "^0.0.1",
+    "@slate-ui/icon": "^0.0.1",
+    "@slate-ui/img": "^0.0.1",
+    "@slate-ui/img-provider": "^0.0.1",
+    "@slate-ui/input": "^0.0.1",
+    "@slate-ui/tag": "^0.0.1",
+    "@slate-ui/theme": "^0.0.1",
+    "@slate-ui/typography": "^0.0.1",
+    "@slate-ui/util": "^0.0.1"
   }
 }
