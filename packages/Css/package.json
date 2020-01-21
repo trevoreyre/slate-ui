@@ -1,6 +1,6 @@
 {
   "name": "@slate-ui/css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue component library",
   "main": "app-css.umd.js",
   "module": "app-css.esm.js",

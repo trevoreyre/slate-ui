@@ -1,6 +1,6 @@
 {
   "name": "@slate-ui/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue component library",
   "main": "core.umd.js",
   "module": "core.esm.js",
