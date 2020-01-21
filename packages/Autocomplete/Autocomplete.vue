@@ -23,7 +23,7 @@
           :theme="theme"
           v-bind="{ ...inputProps, ...$attrs }"
           :class="'autocomplete-input'"
-          v-on="otherInputListeners"
+          v-on="{ ...otherInputListeners, ...$listeners }"
           @input.native="input"
         />
         <ul
