@@ -26,6 +26,6 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@slate-ui/theme": "^0.0.17"
+    "@slate-ui/theme": "0.0.1"
   }
 }

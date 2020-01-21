@@ -29,7 +29,7 @@
     "@trevoreyre/autocomplete-vue": "^2.0.4"
   },
   "peerDependencies": {
-    "@slate-ui/icon": "^0.0.17",
-    "@slate-ui/input": "^0.0.17"
+    "@slate-ui/icon": "0.0.1",
+    "@slate-ui/input": "0.0.1"
   }
 }
