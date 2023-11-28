@@ -1,0 +1,101 @@
+slate-heading {
+  /* Normalize */
+  box-sizing: border-box;
+  position: relative;
+
+  display: block;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  color: hsl(var(--color-text-primary));
+}
+
+slate-heading:where([variant='primary']) {
+  color: hsl(var(--color-text-primary));
+}
+slate-heading:where([variant='secondary']) {
+  color: hsl(var(--color-text-secondary));
+}
+
+slate-heading:where([size='xs']) {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-lg);
+}
+slate-heading:where([size='sm']) {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-lg);
+}
+slate-heading:where([size='md']) {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-lg);
+}
+slate-heading:where([size='lg']) {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+slate-heading:where([size='xl']) {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-md);
+}
+slate-heading:where([size='2xl']) {
+  font-size: var(--font-size-2xl);
+  /* line-height: var(--line-height-md); */
+  line-height: 2rem;
+}
+slate-heading:where([size='2xl'])::before {
+  content: '';
+  margin-bottom: -0.3322em;
+  display: table;
+}
+slate-heading:where([size='2xl'])::after {
+  content: '';
+  margin-top: -0.2931em;
+  display: table;
+}
+slate-heading:where([size='3xl']) {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-sm);
+}
+slate-heading:where([size='4xl']) {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-none);
+}
+slate-heading:where([size='5xl']) {
+  font-size: var(--font-size-5xl);
+  line-height: var(--line-height-none);
+}
+slate-heading:where([size='6xl']) {
+  font-size: var(--font-size-6xl);
+  line-height: var(--line-height-none);
+}
+
+slate-heading:where([transform='uppercase']) {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-lg);
+}
+
+slate-heading:where([line-height='none']) {
+  line-height: var(--line-height-none);
+}
+slate-heading:where([line-height='sm']) {
+  line-height: var(--line-height-sm);
+}
+slate-heading:where([line-height='md']) {
+  line-height: var(--line-height-md);
+}
+slate-heading:where([line-height='lg']) {
+  line-height: var(--line-height-lg);
+}
+slate-heading:where([line-height='xl']) {
+  line-height: var(--line-height-xl);
+}
+
+slate-heading:where([weight='light']) {
+  font-weight: var(--font-weight-light);
+}
+slate-heading:where([weight='normal']) {
+  font-weight: var(--font-weight-normal);
+}
+slate-heading:where([weight='bold']) {
+  font-weight: var(--font-weight-bold);
+}

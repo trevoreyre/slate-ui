@@ -1,5 +1,7 @@
 # Release Process
 
+### TODO: This process needs updating
+
 Release versions for slate-ui as a whole follow [Semver](https://semver.org/). However, all packages are always updated to the same release number, whether that individual package changed or not. To create a new release, use the following process.
 
 1. Commit and push changes on a feature branch, and create a pull request against `master`. Include updates to the `CHANGELOG`.

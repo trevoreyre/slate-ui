@@ -1,0 +1,12 @@
+html {
+  font-family: var(--font-family);
+  background: hsl(var(--color-background-primary));
+  color: hsl(var(--color-text-primary));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

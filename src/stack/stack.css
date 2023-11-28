@@ -1,0 +1,83 @@
+slate-stack {
+  /* Normalize */
+  box-sizing: border-box;
+  position: relative;
+  /* Fix for deprecated [align] attribute */
+  text-align: initial;
+
+  display: flex;
+
+  /* Defaults - align */
+  align-items: baseline;
+  /* Defaults - direction */
+  flex-direction: column;
+  /* Defaults - gap */
+  gap: var(--spacing-md);
+}
+
+slate-stack:where([align='baseline']) {
+  align-items: baseline;
+}
+slate-stack:where([align='start']) {
+  align-items: start;
+}
+slate-stack:where([align='center']) {
+  align-items: center;
+}
+slate-stack:where([align='end']) {
+  align-items: end;
+}
+
+slate-stack:where([direction='row']) {
+  flex-direction: row;
+}
+slate-stack:where([direction='column']) {
+  flex-direction: column;
+}
+
+slate-stack:where([gap='4xs']) {
+  gap: var(--spacing-4xs);
+}
+slate-stack:where([gap='3xs']) {
+  gap: var(--spacing-3xs);
+}
+slate-stack:where([gap='2xs']) {
+  gap: var(--spacing-2xs);
+}
+slate-stack:where([gap='xs']) {
+  gap: var(--spacing-xs);
+}
+slate-stack:where([gap='sm']) {
+  gap: var(--spacing-sm);
+}
+slate-stack:where([gap='md']) {
+  gap: var(--spacing-md);
+}
+slate-stack:where([gap='lg']) {
+  gap: var(--spacing-lg);
+}
+slate-stack:where([gap='xl']) {
+  gap: var(--spacing-xl);
+}
+slate-stack:where([gap='2xl']) {
+  gap: var(--spacing-2xl);
+}
+slate-stack:where([gap='3xl']) {
+  gap: var(--spacing-3xl);
+}
+slate-stack:where([gap='4xl']) {
+  gap: var(--spacing-4xl);
+}
+slate-stack:where([gap='5xl']) {
+  gap: var(--spacing-5xl);
+}
+slate-stack:where([gap='6xl']) {
+  gap: var(--spacing-6xl);
+}
+slate-stack:where([gap='7xl']) {
+  gap: var(--spacing-7xl);
+}
+slate-stack:where([gap='full']) {
+  justify-content: space-between;
+  gap: var(--spacing-3xs);
+}
