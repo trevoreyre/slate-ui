@@ -21,6 +21,7 @@
   "module": "src/index.js",
   "customElements": "custom-elements.json",
   "scripts": {
+    "install:package-lock": "npm install --package-lock-only --workspaces false",
     "start": "storybook dev -p 9002",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint '**/*.js'",
