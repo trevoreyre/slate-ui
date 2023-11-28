@@ -1,0 +1,149 @@
+:root {
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family-heading: Georgia, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-size-base: 100%;
+
+  /* Layout */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 800px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1248px;
+  --breakpoint-2xl: 1920px;
+
+  /* Spacing - margin, padding */
+  --spacing-none: 0;
+  --spacing-4xs: 4px;
+  --spacing-3xs: 8px;
+  --spacing-2xs: 12px;
+  --spacing-xs: 16px;
+  --spacing-sm: 24px;
+  --spacing-md: 32px;
+  --spacing-lg: 40px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+  --spacing-3xl: 80px;
+  --spacing-4xl: 96px;
+  --spacing-5xl: 128px;
+  --spacing-6xl: 160px;
+  --spacing-7xl: 192px;
+
+  /* Size - width, height */
+  --size-none: 0;
+  --size-4xs: 0.25rem; /* 4px */
+  --size-3xs: 0.5rem; /* 8px */
+  --size-2xs: 0.75rem; /* 12px */
+  --size-xs: 1rem; /* 16px */
+  --size-sm: 1.5rem; /* 24px */
+  --size-md: 2rem; /* 32px */
+  --size-lg: 2.5rem; /* 40px */
+  --size-xl: 3rem; /* 48px */
+  --size-2xl: 4rem; /* 64px */
+  --size-3xl: 5rem; /* 80px */
+  --size-4xl: 6rem; /* 96px */
+  --size-5xl: 8rem; /* 128px */
+  --size-6xl: 10rem; /* 160px */
+  --size-7xl: 12rem; /* 192px */
+
+  /* Borders */
+  --border-size-none: 0;
+  --border-size-sm: 1px;
+  --border-size-md: 2px;
+  --border-size-lg: 4px;
+
+  --border-radius-none: 0;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-full: 9999px;
+
+  /* --font-size-xs: 0.75rem; 12px */
+  --font-size-xs: 1.0593125rem; /* 16.949px */
+  --line-height-xs: 1.75rem;
+  /* --font-size-sm: 0.875rem; 14px */
+  --font-size-sm: 1.2358625rem; /* 19.7738px */
+  --line-height-sm: 1.875rem;
+  /* --font-size-md: 1rem; 16px */
+  --font-size-md: 1.4124125rem; /* 22.5986px */
+  --line-height-md: 2.5rem;
+  /* --font-size-lg: 1.125rem; 18px */
+  --font-size-lg: 1.5889625rem; /* 25.4234px */
+  --line-height-lg: 2.625rem;
+  /* --font-size-xl: 1.25rem; 20px */
+  --font-size-xl: 1.76551875rem; /* 28.2483px */
+  --line-height-xl: 2.5rem;
+  /* --font-size-2xl: 1.5rem; 24px */
+  --font-size-2xl: 2.11861875rem; /* 33.8979px */
+  --line-height-2xl: 2.75rem;
+  /* --font-size-3xl: 1.875rem; 30px */
+  --font-size-3xl: 2.648275rem; /* 42.3724px */
+  --line-height-3xl: 3rem;
+  /* --font-size-4xl: 2.25rem; 36px */
+  --font-size-4xl: 3.17793125rem; /* 50.8469px */
+  --line-height-4xl: 3.375rem;
+  /* --font-size-5xl: 3rem; 48px */
+  --font-size-5xl: 4.23724375rem; /* 67.7959px */
+  --line-height-5xl: 4.5rem; /* 72px */
+  /* --font-size-6xl: 3.75rem; 60px */
+  --font-size-6xl: 5.29655rem; /* 84.7448px */
+  --line-height-6xl: 5.25rem; /* 84px */
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+
+  --line-height-none: 1;
+
+  --letter-spacing-sm: -0.025em;
+  --letter-spacing-md: 0;
+  --letter-spacing-lg: 2px;
+  --letter-spacing-xl: 4px;
+
+  --color-neutral-0: 0 0% 100%;
+  --color-neutral-50: 210 20% 98%;
+  --color-neutral-100: 220 14% 96%;
+  --color-neutral-200: 220 13% 91%;
+  --color-neutral-300: 216 12% 84%;
+  --color-neutral-400: 218 11% 65%;
+  /* --color-neutral-500: 220 9% 46%; */
+  --color-neutral-500: 218 12% 50%;
+  --color-neutral-600: 215 14% 34%;
+  --color-neutral-700: 217 19% 27%;
+  --color-neutral-800: 215 28% 17%;
+  --color-neutral-900: 221 39% 11%;
+  --color-neutral-1000: 0 0% 0%;
+
+  --color-background-primary: var(--color-neutral-900);
+  --color-background-secondary: var(--color-neutral-800);
+  --color-text-primary: var(--color-neutral-100);
+  --color-text-secondary: var(--color-neutral-400);
+  --color-icon-primary: var(--color-neutral-300);
+  --color-icon-secondary: var(--color-neutral-600);
+  --color-border: var(--color-neutral-700);
+
+  --shadow-md: 0 25px 50px hsl(var(--color-neutral-1000) / 25%);
+
+  --z-index-behind: -1;
+  --z-index-forward: 1;
+}
+
+/* @media (prefers-color-scheme: light) { */
+:root {
+  --color-background-primary: var(--color-neutral-50);
+  --color-background-secondary: var(--color-neutral-0);
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-500);
+  --color-icon-primary: var(--color-neutral-700);
+  --color-icon-secondary: var(--color-neutral-400);
+  --color-border: var(--color-neutral-200);
+
+  --shadow-md: 0 10px 15px -3px hsl(var(--color-neutral-1000) / 10%),
+    0 4px 6px -4px hsl(var(--color-neutral-1000) / 10%);
+}
+/* } */

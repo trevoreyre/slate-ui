@@ -1,0 +1,51 @@
+:root {
+  --text-xs-font-size: 0.79448125rem;
+  --text-xs-line-height: 1.8125rem;
+  --text-xs-margin-before: -0.8062em;
+  --text-xs-margin-after: -0.7671em;
+
+  --text-sm-font-size: 0.88275625rem;
+  --text-sm-line-height: 2rem;
+  --text-sm-margin-before: -0.7983em;
+  --text-sm-margin-after: -0.7593em;
+
+  --text-md-font-size: 1.0593125rem;
+  --text-md-line-height: 2.25rem;
+  --text-md-margin-before: -0.7275em;
+  --text-md-margin-after: -0.6885em;
+
+  --text-lg-font-size: 1.2358625rem;
+  --text-lg-line-height: 2.375rem;
+  --text-lg-margin-before: -0.6264em;
+  --text-lg-margin-after: -0.5873em;
+
+  --text-xl-font-size: 1.4124125rem;
+  --text-xl-line-height: 2.5rem;
+  --text-xl-margin-before: -0.5505em;
+  --text-xl-margin-after: -0.5115em;
+
+  --text-2xl-font-size: 1.76551875rem;
+  --text-2xl-line-height: 2.75rem;
+  --text-2xl-margin-before: -0.4443em;
+  --text-2xl-margin-after: -0.4053em;
+
+  --text-3xl-font-size: 2.295175rem;
+  --text-3xl-line-height: 3.125rem;
+  --text-3xl-margin-before: -0.3463em;
+  --text-3xl-margin-after: -0.3072em;
+
+  --text-4xl-font-size: 2.824825rem;
+  --text-4xl-line-height: 3.5rem;
+  --text-4xl-margin-before: -0.285em;
+  --text-4xl-margin-after: -0.246em;
+
+  --text-5xl-font-size: 3.5310375rem;
+  --text-5xl-line-height: 4rem;
+  --text-5xl-margin-before: -0.2319em;
+  --text-5xl-margin-after: -0.1929em;
+
+  --text-6xl-font-size: 4.23724375rem;
+  --text-6xl-line-height: 4.5rem;
+  --text-6xl-margin-before: -0.1965em;
+  --text-6xl-margin-after: -0.1575em;
+}
