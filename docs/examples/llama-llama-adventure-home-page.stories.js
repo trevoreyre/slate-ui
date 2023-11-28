@@ -115,7 +115,7 @@ const HomePage = {
                 <gmp-map
                   center="37.4220656,-122.0840897"
                   zoom="4.5"
-                  map-id="f8afe3890f1d85b6"
+                  map-id="${import.meta.env.VITE_GOOGLE_MAPS_MAP_ID}"
                 ></gmp-map>
               </div>
             </slate-stack>

@@ -4,3 +4,5 @@ custom-elements.json
 my-element.bundled.js
 .turbo
 storybook-static
+.DS_Store
+.env
