@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.1.1 (December 3, 2023)
+
+- Reduced width of `<slate-app-nav-content>` a bit
+
 ## v1.1.0 (December 3, 2023)
 
 - Added `SlateElement` class for light DOM web components
