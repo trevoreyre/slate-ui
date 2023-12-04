@@ -81,9 +81,11 @@ function createStyles(props) {
 const _themeTypography = createStyles({ fontMetrics })
 
 const themeTypography = outdent`
-:root {
+@layer theme {
+  :root {
 ${_themeTypography}
+  }
 }
-`.replace(/--/g, '  --')
+`.replace(/--/g, '    --')
 
 fs.writeFileSync('./src/theme-typography.css', themeTypography)

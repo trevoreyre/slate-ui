@@ -1,0 +1,217 @@
+@layer components-1 {
+  /**
+   * <slate-app-nav>
+   */
+  slate-app-nav {
+    display: flex;
+    flex-direction: row;
+    /* Fix for deprecated [align] attribute */
+    text-align: initial;
+    inline-size: 100%;
+
+    /* Defaults - align */
+    align-items: center;
+    /* Defaults - gap */
+    gap: var(--spacing-md);
+    /* Defaults - justify */
+    justify-content: flex-start;
+  }
+
+  slate-app-nav[align='start'] {
+    align-items: start;
+  }
+  slate-app-nav[align='center'] {
+    align-items: center;
+  }
+  slate-app-nav[align='end'] {
+    align-items: end;
+  }
+
+  /* TODO - Shared CSS for shared props? */
+  slate-app-nav[gap='4xs'] {
+    gap: var(--spacing-4xs);
+  }
+  slate-app-nav[gap='3xs'] {
+    gap: var(--spacing-3xs);
+  }
+  slate-app-nav[gap='2xs'] {
+    gap: var(--spacing-2xs);
+  }
+  slate-app-nav[gap='xs'] {
+    gap: var(--spacing-xs);
+  }
+  slate-app-nav[gap='sm'] {
+    gap: var(--spacing-sm);
+  }
+  slate-app-nav[gap='md'] {
+    gap: var(--spacing-md);
+  }
+  slate-app-nav[gap='lg'] {
+    gap: var(--spacing-lg);
+  }
+  slate-app-nav[gap='xl'] {
+    gap: var(--spacing-xl);
+  }
+  slate-app-nav[gap='2xl'] {
+    gap: var(--spacing-2xl);
+  }
+  slate-app-nav[gap='3xl'] {
+    gap: var(--spacing-3xl);
+  }
+  slate-app-nav[gap='4xl'] {
+    gap: var(--spacing-4xl);
+  }
+  slate-app-nav[gap='5xl'] {
+    gap: var(--spacing-5xl);
+  }
+  slate-app-nav[gap='6xl'] {
+    gap: var(--spacing-6xl);
+  }
+  slate-app-nav[gap='7xl'] {
+    gap: var(--spacing-7xl);
+  }
+  slate-app-nav[gap='full'] {
+    justify-content: space-between;
+    gap: var(--spacing-3xs);
+  }
+
+  slate-app-nav[justify='start'] {
+    justify-content: flex-start;
+  }
+  slate-app-nav[justify='center'] {
+    justify-content: center;
+  }
+  slate-app-nav[justify='end'] {
+    justify-content: flex-end;
+  }
+  slate-app-nav[justify='stretch'] {
+    justify-content: stretch;
+  }
+  slate-app-nav[justify='around'] {
+    justify-content: space-around;
+  }
+  slate-app-nav[justify='between'] {
+    justify-content: space-between;
+  }
+  slate-app-nav[justify='evenly'] {
+    justify-content: space-evenly;
+  }
+
+  slate-app-nav[wrap] {
+    flex-wrap: wrap;
+  }
+
+  slate-app-nav[open] slate-app-nav-content {
+    translate: 0 0;
+  }
+
+  /**
+   * <slate-app-nav-content>
+   */
+  slate-app-nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    inline-size: 400px;
+    max-inline-size: 100%;
+    position: fixed;
+    inset-block: 0;
+    inset-inline-start: 0;
+    translate: -100% 0;
+    border-inline-end: var(--border-size-sm) solid hsl(var(--color-border));
+    background-color: hsl(var(--color-background-primary));
+    z-index: var(--z-index-forward);
+
+    /* Defaults - gap */
+    gap: var(--spacing-md);
+  }
+
+  @media screen and (min-width: 600px) {
+    slate-app-nav-content {
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      border-inline-end: none;
+      translate: 0 0;
+    }
+  }
+
+  /* TODO - Shared CSS for shared props? */
+  slate-app-nav-content[gap='4xs'] {
+    gap: var(--spacing-4xs);
+  }
+  slate-app-nav-content[gap='3xs'] {
+    gap: var(--spacing-3xs);
+  }
+  slate-app-nav-content[gap='2xs'] {
+    gap: var(--spacing-2xs);
+  }
+  slate-app-nav-content[gap='xs'] {
+    gap: var(--spacing-xs);
+  }
+  slate-app-nav-content[gap='sm'] {
+    gap: var(--spacing-sm);
+  }
+  slate-app-nav-content[gap='md'] {
+    gap: var(--spacing-md);
+  }
+  slate-app-nav-content[gap='lg'] {
+    gap: var(--spacing-lg);
+  }
+  slate-app-nav-content[gap='xl'] {
+    gap: var(--spacing-xl);
+  }
+  slate-app-nav-content[gap='2xl'] {
+    gap: var(--spacing-2xl);
+  }
+  slate-app-nav-content[gap='3xl'] {
+    gap: var(--spacing-3xl);
+  }
+  slate-app-nav-content[gap='4xl'] {
+    gap: var(--spacing-4xl);
+  }
+  slate-app-nav-content[gap='5xl'] {
+    gap: var(--spacing-5xl);
+  }
+  slate-app-nav-content[gap='6xl'] {
+    gap: var(--spacing-6xl);
+  }
+  slate-app-nav-content[gap='7xl'] {
+    gap: var(--spacing-7xl);
+  }
+  slate-app-nav-content[gap='full'] {
+    justify-content: space-between;
+    gap: var(--spacing-3xs);
+  }
+
+  /**
+   * <slate-app-nav-menu-button>
+   */
+  slate-app-nav-menu-button,
+  [slate-app-nav-menu-button] {
+    border: none;
+    padding: var(--spacing-none);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-inline-size: var(--size-lg);
+    min-block-size: var(--size-lg);
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  slate-app-nav-menu-button:empty,
+  [slate-app-nav-menu-button]:empty {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>');
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: 600px) {
+    slate-app-nav-menu-button,
+    [slate-app-nav-menu-button] {
+      display: none;
+    }
+  }
+}
