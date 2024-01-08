@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v2.0.0 (January 7, 2024)
+
+- BREAKING: Switched from Lit to Stencil
+- BREAKING: Switched all components to use light DOM, except `<slate-link>`
+- BREAKING: Removed `<slate-badge>` component
+- BREAKING: Removed `<slate-link-block>` component
+- Added `<slate-tag>` component
+
 ## v1.1.1 (December 3, 2023)
 
 - Reduced width of `<slate-app-nav-content>` a bit

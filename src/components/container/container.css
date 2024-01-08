@@ -1,0 +1,41 @@
+@layer slate-components-1 {
+  slate-container {
+    /* Normalize */
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+
+    margin: 0 auto;
+    inline-size: 100%;
+    max-inline-size: var(--breakpoint-lg);
+  }
+
+  slate-container[size='xs'] {
+    max-inline-size: var(--breakpoint-xs);
+  }
+  slate-container[size='sm'] {
+    max-inline-size: var(--breakpoint-sm);
+  }
+  slate-container[size='md'] {
+    max-inline-size: var(--breakpoint-md);
+  }
+  slate-container[size='lg'] {
+    max-inline-size: var(--breakpoint-lg);
+  }
+  slate-container[size='xl'] {
+    max-inline-size: var(--breakpoint-xl);
+  }
+  slate-container[size='2xl'] {
+    max-inline-size: var(--breakpoint-2xl);
+  }
+
+  slate-container[align='start'] {
+    margin: 0;
+  }
+  slate-container[align='center'] {
+    margin: 0 auto;
+  }
+  slate-container[align='end'] {
+    margin: 0 0 0 auto;
+  }
+}

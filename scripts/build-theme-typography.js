@@ -1,27 +1,27 @@
-import { createStyleObject } from '@capsizecss/core'
-import extend from 'just-extend'
-import fontMetrics from '@capsizecss/metrics/appleSystem.js'
-import fs from 'fs'
-import outdent from 'outdent'
+const { createStyleObject } = require('@capsizecss/core');
+const extend = require('just-extend');
+const fontMetrics = require('@capsizecss/metrics/appleSystem.js');
+const fs = require('fs');
+const outdent = require('outdent');
 
 const defaultSizeToOptions = {
-  xs: {
+  'xs': {
     capHeight: 9,
     lineGap: 20,
   },
-  sm: {
+  'sm': {
     capHeight: 10,
     lineGap: 22,
   },
-  md: {
+  'md': {
     capHeight: 12,
     lineGap: 24,
   },
-  lg: {
+  'lg': {
     capHeight: 14,
     lineGap: 24,
   },
-  xl: {
+  'xl': {
     capHeight: 16,
     lineGap: 24,
   },
@@ -45,40 +45,42 @@ const defaultSizeToOptions = {
     capHeight: 48,
     lineGap: 24,
   },
-}
+  '7xl': {
+    capHeight: 96,
+    lineGap: 16,
+  },
+};
 
-export function createStyle(props) {
-  const { size, ...options } = props
+function createStyle(props) {
+  const { size, ...options } = props;
 
-  const styles = createStyleObject(options)
+  const styles = createStyleObject(options);
 
-  const fontSize = Number(styles.fontSize.replace('px', ''))
-  const fontSizeRem = fontSize / 16
+  const fontSize = Number(styles.fontSize.replace('px', ''));
+  const fontSizeRem = fontSize / 16;
 
-  const lineHeight = Number(styles.lineHeight.replace('px', ''))
-  const lineHeightRem = lineHeight / 16
+  const lineHeight = Number(styles.lineHeight.replace('px', ''));
+  const lineHeightRem = lineHeight / 16;
 
   return outdent`
     --text-${size}-font-size: ${fontSizeRem}rem;
     --text-${size}-line-height: ${lineHeightRem}rem;
     --text-${size}-margin-before: ${styles['::before'].marginBottom};
     --text-${size}-margin-after: ${styles['::after'].marginTop};
-  `
+  `;
 }
 
 function createStyles(props) {
-  const { fontMetrics, ...sizeToOptionsProp } = props
+  const { fontMetrics, ...sizeToOptionsProp } = props;
 
-  const sizeToOptions = extend(true, defaultSizeToOptions, sizeToOptionsProp)
-  console.log({ sizeToOptions })
+  const sizeToOptions = extend(true, defaultSizeToOptions, sizeToOptionsProp);
+  console.log({ sizeToOptions });
 
-  const styles = Object.entries(sizeToOptions).map(([size, options]) =>
-    createStyle({ size, fontMetrics, ...options })
-  )
-  return styles.join('\n\n')
+  const styles = Object.entries(sizeToOptions).map(([size, options]) => createStyle({ size, fontMetrics, ...options }));
+  return styles.join('\n\n');
 }
 
-const _themeTypography = createStyles({ fontMetrics })
+const _themeTypography = createStyles({ fontMetrics });
 
 const themeTypography = outdent`
 @layer theme {
@@ -86,6 +88,6 @@ const themeTypography = outdent`
 ${_themeTypography}
   }
 }
-`.replace(/--/g, '    --')
+`.replace(/--/g, '    --');
 
-fs.writeFileSync('./src/theme-typography.css', themeTypography)
+fs.writeFileSync('./src/theme-typography.css', themeTypography);
