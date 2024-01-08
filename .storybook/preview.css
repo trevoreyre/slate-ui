@@ -30,3 +30,30 @@ div:has(> .docblock-code-toggle) {
 .docblock-code-toggle.docblock-code-toggle:focus {
   box-shadow: none;
 }
+
+slate-app-nav-content {
+  padding-block: var(--spacing-sm);
+  padding-inline: var(--spacing-sm);
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  border-inline-end: none;
+  translate: 0 0;
+}
+
+slate-app-nav-content a {
+  text-decoration: none;
+}
+
+.story-box {
+  padding: var(--spacing-sm);
+  min-block-size: var(--size-4xl);
+  inline-size: 100%;
+  background-color: hsl(var(--color-neutral-700));
+}
+
+@media (prefers-color-scheme: light) {
+  .story-box {
+    background-color: hsl(var(--color-neutral-200));
+  }
+}
