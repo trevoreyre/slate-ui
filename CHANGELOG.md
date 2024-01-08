@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.0.1 (January 8, 2024)
+
+- Fixed Storybook build
+
 ## v2.0.0 (January 7, 2024)
 
 - BREAKING: Switched from Lit to Stencil
