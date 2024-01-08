@@ -1,0 +1,18 @@
+@layer slate-components-1 {
+  slate-tag {
+    /* Normalize */
+    box-sizing: border-box;
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-4xs);
+    border-radius: var(--border-radius-sm);
+    padding-block: var(--spacing-3xs);
+    padding-inline: var(--spacing-2xs);
+    font-size: var(--text-sm-font-size);
+    line-height: var(--line-height-none);
+    background-color: hsl(var(--color-background-secondary));
+  }
+}

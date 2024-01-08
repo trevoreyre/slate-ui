@@ -1,13 +1,11 @@
-import { setCustomElementsManifest } from '@storybook/web-components'
-import { html } from 'lit'
-import { styleMap } from 'lit/directives/style-map.js'
-import customElementsManifest from '../custom-elements.json'
+import { defineCustomElements } from '../loader'
+import { html } from '../src/utils/html'
 import '../src/theme.css'
 import '../src/theme-typography.css'
 import '../src/styles.css'
 import './preview.css'
 
-setCustomElementsManifest(customElementsManifest)
+defineCustomElements()
 
 const defaultStyles = {
   padding: 'var(--spacing-xl)',
@@ -18,9 +16,16 @@ const preview = {
   decorators: [
     (story, { parameters }) => {
       const { styles = defaultStyles } = parameters
+      console.log({ styles })
+      const style = Object.entries(styles)
+        .map(
+          ([key, value]) => console.log({ key, value }) || `${key}: ${value}`,
+        )
+        .join('; ')
+      console.log({ style })
 
       return html`
-        <div style=${styleMap(styles)}>${story()}</div>
+        <div style="${style}">${story()}</div>
       `
     },
   ],

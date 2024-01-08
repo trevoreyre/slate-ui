@@ -1,0 +1,14 @@
+:host,
+a {
+  /* Normalize */
+  box-sizing: border-box;
+  position: relative;
+
+  display: inline;
+}
+
+a {
+  color: var(--color-brand-700);
+  font-weight: var(--font-weight-bold);
+  text-decoration: inherit;
+}

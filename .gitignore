@@ -1,8 +1,12 @@
 node_modules/
+.stencil/
 custom-elements.json
 # Only generated for size check
 my-element.bundled.js
 .turbo
-storybook-static
 .DS_Store
 .env
+
+dist/
+loader/
+storybook-static/
