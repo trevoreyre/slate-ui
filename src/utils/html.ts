@@ -1,13 +1,11 @@
 /**
- * Tagged template literal function that doesn't actually do anything,
- * but will make VSCode highlight the template literal as HTML.
+ * Tagged template literal to make VSCode highlight the string as HTML.
+ * This doesn't actually do anything.
+ * 
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw#building_an_identity_tag
  */
 function html(strings, ...values) {
-  let value = ''
-  strings.forEach((string, index) => {
-    value = `${value}${string}${values[index] ?? ''}`
-  })
-  return value
+  return String.raw({ raw: strings }, ...values)
 }
 
 export { html }

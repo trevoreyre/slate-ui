@@ -9,27 +9,28 @@ const meta = {
   },
 }
 
-const Basic = {
+const Default = {
   render: () => html`
     <slate-app-bar>
-      <slate-container size="lg">
-        <slate-app-nav aria-label="Main" justify="between" wrap>
-          <slate-app-nav-content gap="md">
-            <a href="#">
-              <slate-text transform="uppercase">Home</slate-text>
-            </a>
-            <a href="#">
-              <slate-text transform="uppercase">Projects</slate-text>
-            </a>
-            <a href="#">
-              <slate-text transform="uppercase">Posts</slate-text>
-            </a>
-            <a href="#">
-              <slate-text transform="uppercase">Contact</slate-text>
-            </a>
-          </slate-app-nav-content>
-          <slate-stack class="social-links" gap="sm" direction="row">
-            <!-- <a
+      <slate-app-nav aria-label="Main" justify="between" wrap>
+        <slate-app-nav-menu-button></slate-app-nav-menu-button>
+        <slate-app-nav-content gap="md">
+          <slate-app-nav-close-button></slate-app-nav-close-button>
+          <a href="#">
+            <slate-text transform="uppercase">Home</slate-text>
+          </a>
+          <a href="#">
+            <slate-text transform="uppercase">Projects</slate-text>
+          </a>
+          <a href="#">
+            <slate-text transform="uppercase">Posts</slate-text>
+          </a>
+          <a href="#">
+            <slate-text transform="uppercase">Contact</slate-text>
+          </a>
+        </slate-app-nav-content>
+        <slate-stack class="social-links" gap="sm" direction="row">
+          <!-- <a
               aria-label="Phone"
               href="tel:+12086316741"
               target="_blank"
@@ -61,12 +62,11 @@ const Basic = {
             >
               <IconLogoLinkedIn aria-hidden="true" />
             </a> -->
-          </slate-stack>
-        </slate-app-nav>
-      </slate-container>
+        </slate-stack>
+      </slate-app-nav>
     </slate-app-bar>
   `,
 }
 
 export default meta
-export { Basic }
+export { Default }

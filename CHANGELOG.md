@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v2.1.0 (July 20, 2024)
+
+- Updated `<slate-app-bar>`
+- Added `<slate-content>` component
+- Added `display` prop to `<slate-link>`
+- Added experimental typography styling update (wip)
+
 ## v2.0.1 (January 8, 2024)
 
 - Fixed Storybook build

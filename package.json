@@ -1,6 +1,6 @@
 {
   "name": "@slate-ui/core",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Web component library",
   "private": false,
   "keywords": [
@@ -31,15 +31,17 @@
   "scripts": {
     "install:package-lock": "npm install --package-lock-only --workspaces false",
     "start": "concurrently \"npm:start:*\"",
-    "start:storybook": "storybook dev -p 9005",
+    "start:storybook": "storybook dev -p 9000",
     "start:stencil": "stencil build --watch",
     "test": "stencil test --spec --e2e",
     "test:watch": "stencil test --spec --e2e --watchAll",
-    "prebuild": "rimraf dist loader storybook-static",
+    "clean": "rimraf dist loader storybook-static",
+    "clean:node_modules": "rimraf node_modules package-lock.json",
+    "prebuild": "npm run clean",
     "build": "npm run build:stencil && npm run build:storybook",
     "build:stencil": "stencil build --docs",
     "build:storybook": "storybook build",
-    "build:typography": "node scripts/build-theme-typography.js"
+    "build:typography": "node scripts/build-theme-typography-2.js"
   },
   "dependencies": {
     "@stencil/core": "^4.7.0"
@@ -47,6 +49,7 @@
   "devDependencies": {
     "@capsizecss/core": "^3.0.0",
     "@capsizecss/metrics": "^0.1.0",
+    "@csstools/postcss-global-data": "^2.1.1",
     "@storybook/addon-essentials": "^7.6.7",
     "@storybook/addon-interactions": "^7.6.7",
     "@storybook/addon-links": "^7.6.7",
@@ -61,10 +64,14 @@
     "jest-cli": "^29.7.0",
     "just-extend": "^6.0.1",
     "outdent": "^0.8.0",
+    "postcss-custom-media": "^10.0.2",
     "puppeteer": "21.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^3.0.2",
     "storybook": "^7.6.7"
+  },
+  "volta": {
+    "extends": "../package.json"
   }
 }

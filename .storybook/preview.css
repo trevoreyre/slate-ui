@@ -31,7 +31,7 @@ div:has(> .docblock-code-toggle) {
   box-shadow: none;
 }
 
-slate-app-nav-content {
+/* slate-app-nav-content {
   padding-block: var(--spacing-sm);
   padding-inline: var(--spacing-sm);
   flex-direction: row;
@@ -39,7 +39,7 @@ slate-app-nav-content {
   position: relative;
   border-inline-end: none;
   translate: 0 0;
-}
+} */
 
 slate-app-nav-content a {
   text-decoration: none;
@@ -50,6 +50,45 @@ slate-app-nav-content a {
   min-block-size: var(--size-4xl);
   inline-size: 100%;
   background-color: hsl(var(--color-neutral-700));
+}
+
+.em-box {
+  display: inline-block;
+  block-size: 1em;
+  inline-size: var(--spacing-3xs);
+  background-color: red;
+}
+
+.lh-box {
+  display: inline-block;
+  block-size: 1lh;
+  inline-size: var(--spacing-3xs);
+  background-color: red;
+}
+
+.cap-box {
+  display: inline-block;
+  block-size: 1cap;
+  inline-size: var(--spacing-3xs);
+  background-color: red;
+}
+
+.ex-box {
+  display: inline-block;
+  block-size: 1ex;
+  inline-size: var(--spacing-3xs);
+  background-color: red;
+}
+
+.desc-box {
+  display: inline-block;
+  block-size: 100%;
+  inline-size: var(--spacing-3xs);
+  background-color: red;
+}
+
+slate-text {
+  background-color: hsl(var(--color-background-secondary));
 }
 
 @media (prefers-color-scheme: light) {
