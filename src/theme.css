@@ -142,13 +142,24 @@
     --color-icon-secondary: var(--color-neutral-600);
     --color-border: var(--color-neutral-700);
 
-    --color-background-gradient: radial-gradient(
-      121.9% 111.09% at 63.31% 0%,
-      hsl(var(--color-background-secondary)) 0%,
-      hsl(var(--color-background-primary)) 100%
-    );
+    --color-background-gradient:
+      /* Background gradient */
+      radial-gradient(
+        122% 111% at 63% 0%,
+        hsl(var(--color-background-secondary)) 0%,
+        hsl(var(--color-background-primary)) 100%
+      )
+      padding-box,
+      /* Border gradient */
+      radial-gradient(
+        122% 111% at 63% 0%,
+        hsl(var(--color-border)) 0%,
+        hsl(var(--color-background-primary)) 100%
+      )
+      border-box;
 
     --shadow-md: 0 25px 50px hsl(var(--color-neutral-1000) / 25%);
+    --shadow-lg: 0 32px 64px hsl(var(--color-neutral-1000) / 33%), 0 4px 8px hsl(var(--color-neutral-1000) / 24%);
 
     --z-index-behind: -1;
     --z-index-forward: 1;

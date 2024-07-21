@@ -2,6 +2,15 @@ import { html } from '../../utils/html'
 
 const meta = {
   title: 'Components/Text',
+  parameters: {
+    styles: {
+      background:
+        'linear-gradient(transparent 7px, hsl(var(--color-border) / 40%) 1px)',
+      'background-size': '8px 8px',
+      'background-repeat': 'repeat',
+      'overflow-x': 'auto',
+    },
+  },
 }
 
 const Basic = {
@@ -16,40 +25,70 @@ const Size = {
       <slate-stack direction="row">
         <slate-text size="sm">xs</slate-text>
         <slate-text size="xs" wrap="false">
+          <span class="lh-box"></span>
+          <span class="em-box"></span>
+          <span class="cap-box"></span>
+          <span class="ex-box"></span>
+          <span class="desc-box"></span>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
       <slate-stack direction="row">
         <slate-text size="sm">sm</slate-text>
         <slate-text size="sm" wrap="false">
+          <span class="lh-box"></span>
+          <span class="em-box"></span>
+          <span class="cap-box"></span>
+          <span class="ex-box"></span>
+          <span class="desc-box"></span>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
       <slate-stack direction="row">
         <slate-text size="sm">md</slate-text>
         <slate-text size="md" wrap="false">
+          <span class="lh-box"></span>
+          <span class="em-box"></span>
+          <span class="cap-box"></span>
+          <span class="ex-box"></span>
+          <span class="desc-box"></span>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
       <slate-stack direction="row">
         <slate-text size="sm">lg</slate-text>
         <slate-text size="lg" wrap="false">
+          <span class="lh-box"></span>
+          <span class="em-box"></span>
+          <span class="cap-box"></span>
+          <span class="ex-box"></span>
+          <span class="desc-box"></span>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
       <slate-stack direction="row">
         <slate-text size="sm">xl</slate-text>
         <slate-text size="xl" wrap="false">
+          <span class="lh-box"></span>
+          <span class="em-box"></span>
+          <span class="cap-box"></span>
+          <span class="ex-box"></span>
+          <span class="desc-box"></span>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
       <slate-stack direction="row">
         <slate-text size="sm">2xl</slate-text>
         <slate-text size="2xl" wrap="false">
+          <span class="lh-box"></span>
+          <span class="em-box"></span>
+          <span class="cap-box"></span>
+          <span class="ex-box"></span>
+          <span class="desc-box"></span>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row">
+      <!-- <slate-stack direction="row">
         <slate-text size="sm">3xl</slate-text>
         <slate-text size="3xl" wrap="false">
           The quick brown fox jumps over the lazy dog
@@ -73,6 +112,12 @@ const Size = {
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
+      <slate-stack direction="row">
+        <slate-text size="sm">7xl</slate-text>
+        <slate-text size="7xl" wrap="false">
+          The quick brown fox jumps over the lazy dog
+        </slate-text>
+      </slate-stack> -->
     </slate-stack>
   `,
 }

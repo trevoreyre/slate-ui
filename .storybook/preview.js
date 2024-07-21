@@ -24,9 +24,9 @@ const defaultStyles = {
 const preview = {
   decorators: [
     (story, { parameters }) => {
-      const { styles = defaultStyles } = parameters
+      const { styles = {} } = parameters
       console.log({ styles })
-      const style = Object.entries(styles)
+      const style = Object.entries({ ...defaultStyles, ...styles })
         .map(
           ([key, value]) => console.log({ key, value }) || `${key}: ${value}`,
         )

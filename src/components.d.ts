@@ -35,6 +35,9 @@ export namespace Components {
         "role": HTMLElement['role'];
         "wrap"?: boolean;
     }
+    interface SlateAppNavCloseButton {
+        "label": string;
+    }
     interface SlateAppNavContent {
         "gap"?: | '4xs'
     | '3xs'
@@ -58,6 +61,8 @@ export namespace Components {
         "align": 'start' | 'center' | 'end';
         "size": 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
     }
+    interface SlateContent {
+    }
     interface SlateHeading {
         "level": HTMLElement['ariaLevel'];
         "role": HTMLElement['role'];
@@ -77,6 +82,7 @@ export namespace Components {
         "wrap"?: boolean;
     }
     interface SlateLink {
+        "display"?: 'inline' | 'block';
         "href": string;
         "rel"?: string;
         "target"?: '_self' | '_blank';
@@ -134,6 +140,12 @@ declare global {
         prototype: HTMLSlateAppNavElement;
         new (): HTMLSlateAppNavElement;
     };
+    interface HTMLSlateAppNavCloseButtonElement extends Components.SlateAppNavCloseButton, HTMLStencilElement {
+    }
+    var HTMLSlateAppNavCloseButtonElement: {
+        prototype: HTMLSlateAppNavCloseButtonElement;
+        new (): HTMLSlateAppNavCloseButtonElement;
+    };
     interface HTMLSlateAppNavContentElement extends Components.SlateAppNavContent, HTMLStencilElement {
     }
     var HTMLSlateAppNavContentElement: {
@@ -151,6 +163,12 @@ declare global {
     var HTMLSlateContainerElement: {
         prototype: HTMLSlateContainerElement;
         new (): HTMLSlateContainerElement;
+    };
+    interface HTMLSlateContentElement extends Components.SlateContent, HTMLStencilElement {
+    }
+    var HTMLSlateContentElement: {
+        prototype: HTMLSlateContentElement;
+        new (): HTMLSlateContentElement;
     };
     interface HTMLSlateHeadingElement extends Components.SlateHeading, HTMLStencilElement {
     }
@@ -185,9 +203,11 @@ declare global {
     interface HTMLElementTagNameMap {
         "slate-app-bar": HTMLSlateAppBarElement;
         "slate-app-nav": HTMLSlateAppNavElement;
+        "slate-app-nav-close-button": HTMLSlateAppNavCloseButtonElement;
         "slate-app-nav-content": HTMLSlateAppNavContentElement;
         "slate-app-nav-menu-button": HTMLSlateAppNavMenuButtonElement;
         "slate-container": HTMLSlateContainerElement;
+        "slate-content": HTMLSlateContentElement;
         "slate-heading": HTMLSlateHeadingElement;
         "slate-link": HTMLSlateLinkElement;
         "slate-stack": HTMLSlateStackElement;
@@ -225,6 +245,9 @@ declare namespace LocalJSX {
         "role"?: HTMLElement['role'];
         "wrap"?: boolean;
     }
+    interface SlateAppNavCloseButton {
+        "label"?: string;
+    }
     interface SlateAppNavContent {
         "gap"?: | '4xs'
     | '3xs'
@@ -248,6 +271,8 @@ declare namespace LocalJSX {
         "align"?: 'start' | 'center' | 'end';
         "size"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
     }
+    interface SlateContent {
+    }
     interface SlateHeading {
         "level"?: HTMLElement['ariaLevel'];
         "role"?: HTMLElement['role'];
@@ -267,6 +292,7 @@ declare namespace LocalJSX {
         "wrap"?: boolean;
     }
     interface SlateLink {
+        "display"?: 'inline' | 'block';
         "href"?: string;
         "rel"?: string;
         "target"?: '_self' | '_blank';
@@ -313,9 +339,11 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "slate-app-bar": SlateAppBar;
         "slate-app-nav": SlateAppNav;
+        "slate-app-nav-close-button": SlateAppNavCloseButton;
         "slate-app-nav-content": SlateAppNavContent;
         "slate-app-nav-menu-button": SlateAppNavMenuButton;
         "slate-container": SlateContainer;
+        "slate-content": SlateContent;
         "slate-heading": SlateHeading;
         "slate-link": SlateLink;
         "slate-stack": SlateStack;
@@ -329,9 +357,11 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "slate-app-bar": LocalJSX.SlateAppBar & JSXBase.HTMLAttributes<HTMLSlateAppBarElement>;
             "slate-app-nav": LocalJSX.SlateAppNav & JSXBase.HTMLAttributes<HTMLSlateAppNavElement>;
+            "slate-app-nav-close-button": LocalJSX.SlateAppNavCloseButton & JSXBase.HTMLAttributes<HTMLSlateAppNavCloseButtonElement>;
             "slate-app-nav-content": LocalJSX.SlateAppNavContent & JSXBase.HTMLAttributes<HTMLSlateAppNavContentElement>;
             "slate-app-nav-menu-button": LocalJSX.SlateAppNavMenuButton & JSXBase.HTMLAttributes<HTMLSlateAppNavMenuButtonElement>;
             "slate-container": LocalJSX.SlateContainer & JSXBase.HTMLAttributes<HTMLSlateContainerElement>;
+            "slate-content": LocalJSX.SlateContent & JSXBase.HTMLAttributes<HTMLSlateContentElement>;
             "slate-heading": LocalJSX.SlateHeading & JSXBase.HTMLAttributes<HTMLSlateHeadingElement>;
             "slate-link": LocalJSX.SlateLink & JSXBase.HTMLAttributes<HTMLSlateLinkElement>;
             "slate-stack": LocalJSX.SlateStack & JSXBase.HTMLAttributes<HTMLSlateStackElement>;

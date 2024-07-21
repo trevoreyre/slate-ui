@@ -7,6 +7,9 @@ import { Component, Prop, h } from '@stencil/core'
 })
 class Link {
   @Prop({ reflect: true })
+  display?: 'inline' | 'block'
+
+  @Prop({ reflect: true })
   href: string
 
   @Prop({ reflect: true })
