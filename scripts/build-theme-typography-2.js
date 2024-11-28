@@ -1,8 +1,8 @@
-const { createStyleObject, precomputeValues } = require('@capsizecss/core')
-const extend = require('just-extend')
-const fontMetrics = require('@capsizecss/metrics/appleSystem.js')
-const fs = require('fs')
-const outdent = require('outdent')
+import { createStyleObject, precomputeValues } from '@capsizecss/core'
+import extend from 'just-extend'
+import fontMetrics from '@capsizecss/metrics/appleSystem.js'
+import fs from 'fs'
+import outdent from 'outdent'
 
 const defaultSizeToOptions = {
   xs: {
@@ -70,32 +70,48 @@ function createStyle(props) {
   `
 }
 
+//   fontMetrics: {
+//     familyName: '-apple-system',
+//     capHeight: 1450,
+//     ascent: 1950,
+//     descent: -420,
+//     lineGap: 0,
+//     unitsPerEm: 2048
+//   }
+// }
+
 function createStyles({ fontMetrics }) {
-  const absoluteDescent = Math.abs(fontMetrics.descent)
   const capHeightScale = fontMetrics.capHeight / fontMetrics.unitsPerEm
-  const descentScale = absoluteDescent / fontMetrics.unitsPerEm
+  const descentScale = Math.abs(fontMetrics.descent) / fontMetrics.unitsPerEm
   const ascentScale = fontMetrics.ascent / fontMetrics.unitsPerEm
   const lineGapScale = fontMetrics.lineGap / fontMetrics.unitsPerEm
 
   const textTrimStart = (ascentScale - capHeightScale + lineGapScale / 2) * -1
   const textTrimEnd = (descentScale + lineGapScale / 2) * -1
 
-  const { capHeightTrim, baselineTrim } = precomputeValues({
-    capHeight: 10,
-    fontMetrics,
-  })
+  // const { capHeightTrim, baselineTrim } = precomputeValues({
+  //   capHeight: 10,
+  //   fontMetrics,
+  // })
+
+  // return outdent`
+  //   --font-scale: ${capHeightScale};
+  //   --text-trim-start: ${capHeightTrim};
+  //   --text-trim-end: ${baselineTrim};
+  // `
 
   return outdent`
-    --font-scale: ${capHeightScale};
-    --text-trim-start: ${capHeightTrim};
-    --text-trim-end: ${baselineTrim};
+    --font-cap-height: ${capHeightScale}em;
+    --font-ascent: ${ascentScale}em;
+    --font-descent: ${descentScale}em;
   `
 }
 
 const _themeTypography = createStyles({ fontMetrics })
+console.log({ fontMetrics })
 
 const themeTypography = outdent`
-@layer theme {
+@layer slate-theme {
   :root {
 ${_themeTypography}
   }

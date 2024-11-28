@@ -1,18 +1,7 @@
-/*
- * https://github.com/facebook/stylex/discussions/388
- * margin-block: calc((1cap - 1lh) / 2);
- *
- * For fonts that are properly vertically centered using (1lh - 1cap) / 2
- * will be close enough for the negative top and bottom margin. Could use
- * a CSS variable that takes font metrics (like Capsize does) and calculates
- * the ratio of ascender height and descender height and adds that ratio
- * to the calculation to get the proper top and bottom margins.
- */
-@layer theme {
+@layer slate-theme {
   :root {
-    --font-scale: 0.7080078125;
-    --text-trim-start: 0.2441em;
-    --text-trim-end: 0.2051em;
-    /* --trim-start: calc(var(--leading-trim-end) - var(--line-height) / 2); */
+    --font-cap-height: 0.7080078125em;
+    --font-ascent: 0.9521484375em;
+    --font-descent: 0.205078125em;
   }
 }

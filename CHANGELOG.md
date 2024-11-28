@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v3.0.0 (November 27, 2024)
+
+- BREAKING: Switched from Stencil back to Lit
+- BREAKING: Updated `wrap` prop for `<slate-text>` component from `boolean` to `string`
+- Added `<slate-card>` component
+
 ## v2.1.0 (July 20, 2024)
 
 - Updated `<slate-app-bar>`
