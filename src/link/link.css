@@ -1,0 +1,29 @@
+:host,
+:host a {
+  /* Normalize */
+  box-sizing: border-box;
+  position: relative;
+
+  /* Defaults - display */
+  display: inline;
+}
+
+:host([display='inline']) {
+  display: inline;
+}
+:host([display='inline']) a {
+  display: inline;
+}
+
+:host([display='block']) {
+  display: block;
+}
+:host([display='block']) a {
+  display: block;
+}
+
+/* a {
+  color: var(--color-brand-700);
+  font-weight: var(--font-weight-bold);
+  text-decoration: inherit;
+} */

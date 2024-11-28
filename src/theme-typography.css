@@ -1,4 +1,4 @@
-@layer theme {
+@layer slate-theme {
   :root {
     --text-xs-font-size: 0.79448125rem;
     --text-xs-line-height: 1.8125rem;

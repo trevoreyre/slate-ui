@@ -1,0 +1,170 @@
+@layer slate-components-1 {
+  slate-text {
+    /* Normalize */
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+
+    text-wrap: pretty;
+
+    /* Defaults - size */
+    --text-font-size: var(--text-md-font-size);
+    --text-line-height: var(--text-md-line-height);
+    --text-margin-before: var(--text-md-margin-before);
+    --text-margin-after: var(--text-md-margin-after);
+    font-size: var(--text-font-size);
+    /* line-height: var(--text-line-height); */
+    line-height: 1.5;
+    /* Defaults - weight */
+    font-weight: var(--font-weight-normal);
+    /* Defaults - variant */
+    color: hsl(var(--color-text-primary));
+
+    /* --text-font-size: 1rem; */
+    /* --text-line-height: 1; */
+    /* font-size: calc(var(--text-font-size) / var(--font-scale)); */
+    /* line-height: var(--text-line-height); */
+  }
+
+  slate-text::before {
+    /* content: '';
+    display: table;
+    margin-block-end: var(--text-margin-before); */
+
+    /* margin-block-end: var(--text-trim-start); */
+    /* margin-block-end: calc(
+      var(--text-trim-start) - var(--text-line-height) / 2
+    ); */
+  }
+
+  slate-text::after {
+    /* content: '';
+    display: table;
+    margin-block-start: var(--text-margin-after); */
+
+    /* margin-block-start: var(--text-trim-end); */
+    /* margin-block-start: calc(
+      var(--text-trim-end) - var(--text-line-height) / 2
+    ); */
+  }
+
+  slate-text[variant='primary'] {
+    color: hsl(var(--color-text-primary));
+  }
+  slate-text[variant='secondary'] {
+    color: hsl(var(--color-text-secondary));
+  }
+
+  slate-text[size='xs'] {
+    --text-font-size: var(--text-xs-font-size);
+    --text-line-height: var(--text-xs-line-height);
+    --text-margin-before: var(--text-xs-margin-before);
+    --text-margin-after: var(--text-xs-margin-after);
+    font-weight: var(--font-weight-bold);
+    /* --text-font-size: 0.5rem; */
+  }
+
+  slate-text[size='sm'] {
+    --text-font-size: var(--text-sm-font-size);
+    --text-line-height: var(--text-sm-line-height);
+    --text-margin-before: var(--text-sm-margin-before);
+    --text-margin-after: var(--text-sm-margin-after);
+    /* --text-font-size: 0.625rem; */
+  }
+
+  slate-text[size='md'] {
+    --text-font-size: var(--text-md-font-size);
+    --text-line-height: var(--text-md-line-height);
+    --text-margin-before: var(--text-md-margin-before);
+    --text-margin-after: var(--text-md-margin-after);
+    /* --text-font-size: 1rem; */
+  }
+
+  slate-text[size='lg'] {
+    --text-font-size: var(--text-lg-font-size);
+    --text-line-height: var(--text-lg-line-height);
+    --text-margin-before: var(--text-lg-margin-before);
+    --text-margin-after: var(--text-lg-margin-after);
+    /* --text-font-size: 1.25rem; */
+  }
+
+  slate-text[size='xl'] {
+    --text-font-size: var(--text-xl-font-size);
+    --text-line-height: var(--text-xl-line-height);
+    --text-margin-before: var(--text-xl-margin-before);
+    --text-margin-after: var(--text-xl-margin-after);
+    /* --text-font-size: 1.5rem; */
+  }
+
+  slate-text[size='2xl'] {
+    --text-font-size: var(--text-2xl-font-size);
+    --text-line-height: var(--text-2xl-line-height);
+    --text-margin-before: var(--text-2xl-margin-before);
+    --text-margin-after: var(--text-2xl-margin-after);
+    /* --text-font-size: 2rem; */
+  }
+
+  slate-text[size='3xl'] {
+    --text-font-size: var(--text-3xl-font-size);
+    --text-line-height: var(--text-3xl-line-height);
+    font-weight: var(--font-weight-light);
+    --text-margin-before: var(--text-3xl-margin-before);
+    --text-margin-after: var(--text-3xl-margin-after);
+  }
+
+  slate-text[size='4xl'] {
+    --text-font-size: var(--text-4xl-font-size);
+    --text-line-height: var(--text-4xl-line-height);
+    font-weight: var(--font-weight-light);
+    --text-margin-before: var(--text-4xl-margin-before);
+    --text-margin-after: var(--text-4xl-margin-after);
+  }
+
+  slate-text[size='5xl'] {
+    --text-font-size: var(--text-5xl-font-size);
+    --text-line-height: var(--text-5xl-line-height);
+    --text-margin-before: var(--text-5xl-margin-before);
+    --text-margin-after: var(--text-5xl-margin-after);
+    font-weight: var(--font-weight-light);
+  }
+
+  slate-text[size='6xl'] {
+    --text-font-size: var(--text-6xl-font-size);
+    --text-line-height: var(--text-6xl-line-height);
+    --text-margin-before: var(--text-6xl-margin-before);
+    --text-margin-after: var(--text-6xl-margin-after);
+    font-weight: var(--font-weight-light);
+  }
+
+  slate-text[size='7xl'] {
+    --text-font-size: var(--text-7xl-font-size);
+    --text-line-height: var(--text-7xl-line-height);
+    --text-margin-before: var(--text-7xl-margin-before);
+    --text-margin-after: var(--text-7xl-margin-after);
+    font-weight: var(--font-weight-light);
+  }
+
+  slate-text[transform='uppercase'] {
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-lg);
+  }
+  slate-text[transform='uppercase'][size='4xl'],
+  slate-text[transform='uppercase'][size='5xl'],
+  slate-text[transform='uppercase'][size='6xl'] {
+    letter-spacing: var(--letter-spacing-xl);
+  }
+
+  slate-text[weight='light'] {
+    font-weight: var(--font-weight-light);
+  }
+  slate-text[weight='normal'] {
+    font-weight: var(--font-weight-normal);
+  }
+  slate-text[weight='bold'] {
+    font-weight: var(--font-weight-bold);
+  }
+
+  slate-text[wrap='false'] {
+    white-space: nowrap;
+  }
+}

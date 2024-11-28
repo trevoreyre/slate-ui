@@ -83,7 +83,7 @@ function createStyles(props) {
 const _themeTypography = createStyles({ fontMetrics });
 
 const themeTypography = outdent`
-@layer theme {
+@layer slate-theme {
   :root {
 ${_themeTypography}
   }

@@ -1,20 +1,15 @@
-import '../dist/components/slate-app-bar'
-import '../dist/components/slate-app-nav'
-import '../dist/components/slate-app-nav-content'
-import '../dist/components/slate-app-nav-menu-button'
-import '../dist/components/slate-container'
-import '../dist/components/slate-heading'
-import '../dist/components/slate-link'
-import '../dist/components/slate-stack'
-import '../dist/components/slate-tag'
-import '../dist/components/slate-text'
-import { html } from '../src/utils/html'
+import { setCustomElementsManifest } from '@storybook/web-components'
+import { html } from 'lit'
+import { styleMap } from 'lit/directives/style-map.js'
+import customElementsManifest from '../custom-elements.json'
 import '../src/theme.css'
 import '../src/theme-typography.css'
+import '../src/theme-typography-2.css'
 import '../src/styles.css'
 import './preview.css'
+import './components.js'
 
-// defineCustomElements()
+setCustomElementsManifest(customElementsManifest)
 
 const defaultStyles = {
   padding: 'var(--spacing-xl)',
@@ -24,17 +19,11 @@ const defaultStyles = {
 const preview = {
   decorators: [
     (story, { parameters }) => {
-      const { styles = {} } = parameters
-      console.log({ styles })
-      const style = Object.entries({ ...defaultStyles, ...styles })
-        .map(
-          ([key, value]) => console.log({ key, value }) || `${key}: ${value}`,
-        )
-        .join('; ')
-      console.log({ style })
+      const { styles: stylesParam = {} } = parameters
+      const styles = { ...defaultStyles, ...stylesParam }
 
       return html`
-        <div style="${style}">${story()}</div>
+        <div style=${styleMap(styles)}>${story()}</div>
       `
     },
   ],

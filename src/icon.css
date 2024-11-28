@@ -1,0 +1,45 @@
+@layer components-1 {
+  lla-icon {
+    display: block;
+
+    --icon-size: var(--size-md);
+    --icon-color: currentColor;
+    inline-size: var(--icon-size);
+    block-size: var(--icon-size);
+  }
+
+  lla-icon svg {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  lla-icon svg path {
+    fill: var(--icon-color);
+  }
+
+  lla-icon[size='4xs'] {
+    --icon-size: var(--size-4xs);
+  }
+  lla-icon[size='3xs'] {
+    --icon-size: var(--size-3xs);
+  }
+  lla-icon[size='2xs'] {
+    --icon-size: var(--size-2xs);
+  }
+  lla-icon[size='xs'] {
+    --icon-size: var(--size-xs);
+  }
+  lla-icon[size='sm'] {
+    --icon-size: var(--size-sm);
+  }
+  lla-icon[size='md'] {
+    --icon-size: var(--size-md);
+  }
+  lla-icon[size='lg'] {
+    --icon-size: var(--size-lg);
+  }
+  lla-icon[size='xl'] {
+    --icon-size: var(--size-xl);
+  }
+}

@@ -1,5 +1,12 @@
 @layer slate-theme {
   html {
+    block-size: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-block-size: 100%;
     font-family: var(--font-family);
     background: hsl(var(--color-background-primary));
     color: hsl(var(--color-text-primary));
@@ -7,8 +14,20 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  body {
-    margin: 0;
-    padding: 0;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  img {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  main {
+    display: block;
   }
 }
