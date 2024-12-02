@@ -1,0 +1,45 @@
+@layer slate-components-1 {
+  :is(slate-field, [slate-field]) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xs);
+  }
+
+  :is(slate-field, [slate-field]) label {
+    --text-font-size: var(--text-xs-font-size);
+    --text-line-height: var(--text-xs-line-height);
+    --text-margin-before: var(--text-xs-margin-before);
+    --text-margin-after: var(--text-xs-margin-after);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--text-font-size);
+    line-height: var(--text-line-height);
+    color: hsl(var(--color-text-primary));
+  }
+
+  :is(slate-field, [slate-field]) label::before {
+    content: '';
+    display: table;
+    margin-block-end: var(--text-margin-before);
+  }
+
+  :is(slate-field, [slate-field]) label::after {
+    content: '';
+    display: table;
+    margin-block-start: var(--text-margin-after);
+  }
+
+  :is(slate-field, [slate-field]) input {
+    appearance: none;
+    border-radius: var(--border-radius-sm);
+    border: var(--border-size-sm) solid hsl(var(--color-border));
+    padding-block: var(--spacing-4xs);
+    padding-inline: var(--spacing-2xs);
+    block-size: calc(var(--size-lg) - 2 * var(--border-size-sm));
+    background-color: hsl(var(--color-background-secondary));
+    color: var(--color-text-primary);
+    font-family: inherit;
+    /* Font size shouldn't fall below 16px, so it doesn't zoom in on mobile */
+    font-size: max(16px, var(--text-md-font-size));
+    line-height: var(--text-md-line-height);
+  }
+}
