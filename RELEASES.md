@@ -1,24 +1,20 @@
 # Release Process
 
-### TODO: This process needs updating
+Release versions for @slate-ui/core follow [Semver](https://semver.org/). To create a new release, use the following process.
 
-Release versions for slate-ui as a whole follow [Semver](https://semver.org/). However, all packages are always updated to the same release number, whether that individual package changed or not. To create a new release, use the following process.
+1. Commit and push changes on `develop` or a feature branch.
 
-1. Commit and push changes on a feature branch, and create a pull request against `master`. Include updates to the `CHANGELOG`.
+2. Update version number in `package.json` and update `CHANGELOG.md`.
 
-2. After merging changes update `peerDependencies` in all packages to the next version with a global search/replace,
+3. Create a pull request against `master`, then merge with a merge commit.
+
+4. Tag the release using `git tag` with the current version number.
 
 ```bash
-# Search
-"(@slate-ui/.*)": "0.0.2"
-
-# Replace
-"$1": "0.0.3"
+git tag v2.1.0
 ```
 
-3. Run `yarn run version` on `master` to increment version numbers and tag the release.
-
-4. If everything looks good, push tags to GitHub.
+5. If everything looks good, push tags to GitHub.
 
 ```bash
 git push origin master --tags

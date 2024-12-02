@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v3.1.0 (December 2, 2024)
+
+- Added `<slate-field>` component
+- Added support for styling headings with `slate-heading` attribute
+
 ## v3.0.0 (November 27, 2024)
 
 - BREAKING: Switched from Stencil back to Lit
