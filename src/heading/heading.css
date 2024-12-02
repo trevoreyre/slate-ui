@@ -1,5 +1,5 @@
 @layer slate-components-1 {
-  slate-heading {
+  :is(slate-heading, [slate-heading]) {
     /* Normalize */
     display: block;
     box-sizing: border-box;
@@ -21,26 +21,26 @@
     color: hsl(var(--color-text-primary));
   }
 
-  slate-heading::before {
+  :is(slate-heading, [slate-heading])::before {
     content: '';
     display: table;
     margin-block-end: var(--text-margin-before);
   }
 
-  slate-heading::after {
+  :is(slate-heading, [slate-heading])::after {
     content: '';
     display: table;
     margin-block-start: var(--text-margin-after);
   }
 
-  slate-heading[variant='primary'] {
+  :is(slate-heading, [slate-heading])[variant='primary'] {
     color: hsl(var(--color-text-primary));
   }
-  slate-heading[variant='secondary'] {
+  :is(slate-heading, [slate-heading])[variant='secondary'] {
     color: hsl(var(--color-text-secondary));
   }
 
-  slate-heading[size='xs'] {
+  :is(slate-heading, [slate-heading])[size='xs'] {
     --text-font-size: var(--text-xs-font-size);
     --text-line-height: var(--text-xs-line-height);
     --text-margin-before: var(--text-xs-margin-before);
@@ -48,42 +48,42 @@
     font-weight: var(--font-weight-bold);
   }
 
-  slate-heading[size='sm'] {
+  :is(slate-heading, [slate-heading])[size='sm'] {
     --text-font-size: var(--text-sm-font-size);
     --text-line-height: var(--text-sm-line-height);
     --text-margin-before: var(--text-sm-margin-before);
     --text-margin-after: var(--text-sm-margin-after);
   }
 
-  slate-heading[size='md'] {
+  :is(slate-heading, [slate-heading])[size='md'] {
     --text-font-size: var(--text-md-font-size);
     --text-line-height: var(--text-md-line-height);
     --text-margin-before: var(--text-md-margin-before);
     --text-margin-after: var(--text-md-margin-after);
   }
 
-  slate-heading[size='lg'] {
+  :is(slate-heading, [slate-heading])[size='lg'] {
     --text-font-size: var(--text-lg-font-size);
     --text-line-height: var(--text-lg-line-height);
     --text-margin-before: var(--text-lg-margin-before);
     --text-margin-after: var(--text-lg-margin-after);
   }
 
-  slate-heading[size='xl'] {
+  :is(slate-heading, [slate-heading])[size='xl'] {
     --text-font-size: var(--text-xl-font-size);
     --text-line-height: var(--text-xl-line-height);
     --text-margin-before: var(--text-xl-margin-before);
     --text-margin-after: var(--text-xl-margin-after);
   }
 
-  slate-heading[size='2xl'] {
+  :is(slate-heading, [slate-heading])[size='2xl'] {
     --text-font-size: var(--text-2xl-font-size);
     --text-line-height: var(--text-2xl-line-height);
     --text-margin-before: var(--text-2xl-margin-before);
     --text-margin-after: var(--text-2xl-margin-after);
   }
 
-  slate-heading[size='3xl'] {
+  :is(slate-heading, [slate-heading])[size='3xl'] {
     --text-font-size: var(--text-3xl-font-size);
     --text-line-height: var(--text-3xl-line-height);
     font-weight: var(--font-weight-light);
@@ -91,7 +91,7 @@
     --text-margin-after: var(--text-3xl-margin-after);
   }
 
-  slate-heading[size='4xl'] {
+  :is(slate-heading, [slate-heading])[size='4xl'] {
     --text-font-size: var(--text-4xl-font-size);
     --text-line-height: var(--text-4xl-line-height);
     font-weight: var(--font-weight-light);
@@ -99,7 +99,7 @@
     --text-margin-after: var(--text-4xl-margin-after);
   }
 
-  slate-heading[size='5xl'] {
+  :is(slate-heading, [slate-heading])[size='5xl'] {
     --text-font-size: var(--text-5xl-font-size);
     --text-line-height: var(--text-5xl-line-height);
     --text-margin-before: var(--text-5xl-margin-before);
@@ -107,7 +107,7 @@
     font-weight: var(--font-weight-light);
   }
 
-  slate-heading[size='6xl'] {
+  :is(slate-heading, [slate-heading])[size='6xl'] {
     --text-font-size: var(--text-6xl-font-size);
     --text-line-height: var(--text-6xl-line-height);
     --text-margin-before: var(--text-6xl-margin-before);
@@ -115,7 +115,7 @@
     font-weight: var(--font-weight-light);
   }
 
-  slate-heading[size='7xl'] {
+  :is(slate-heading, [slate-heading])[size='7xl'] {
     --text-font-size: var(--text-7xl-font-size);
     --text-line-height: var(--text-7xl-line-height);
     --text-margin-before: var(--text-7xl-margin-before);
@@ -123,36 +123,36 @@
     font-weight: var(--font-weight-light);
   }
 
-  slate-heading[transform='uppercase'] {
+  :is(slate-heading, [slate-heading])[transform='uppercase'] {
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-lg);
   }
-  slate-heading[transform='uppercase'][size='4xl'],
-  slate-heading[transform='uppercase'][size='5xl'],
-  slate-heading[transform='uppercase'][size='6xl'] {
+  :is(slate-heading, [slate-heading])[transform='uppercase'][size='4xl'],
+  :is(slate-heading, [slate-heading])[transform='uppercase'][size='5xl'],
+  :is(slate-heading, [slate-heading])[transform='uppercase'][size='6xl'] {
     letter-spacing: var(--letter-spacing-xl);
   }
 
-  slate-heading[weight='light'] {
+  :is(slate-heading, [slate-heading])[weight='light'] {
     font-weight: var(--font-weight-light);
   }
-  slate-heading[weight='normal'] {
+  :is(slate-heading, [slate-heading])[weight='normal'] {
     font-weight: var(--font-weight-normal);
   }
-  slate-heading[weight='bold'] {
+  :is(slate-heading, [slate-heading])[weight='bold'] {
     font-weight: var(--font-weight-bold);
   }
 
-  slate-heading[wrap='wrap'] {
+  :is(slate-heading, [slate-heading])[wrap='wrap'] {
     text-wrap: wrap;
   }
-  slate-heading[wrap='nowrap'] {
+  :is(slate-heading, [slate-heading])[wrap='nowrap'] {
     text-wrap: wrap;
   }
-  slate-heading[wrap='balance'] {
+  :is(slate-heading, [slate-heading])[wrap='balance'] {
     text-wrap: wrap;
   }
-  slate-heading[wrap='pretty'] {
+  :is(slate-heading, [slate-heading])[wrap='pretty'] {
     text-wrap: wrap;
   }
 }
