@@ -19,6 +19,7 @@
   *::after {
     box-sizing: border-box;
     position: relative;
+    margin: 0;
   }
 
   img {
