@@ -1,6 +1,5 @@
 @layer slate-components-1 {
-  slate-stack,
-  [slate-stack] {
+  :is(slate-stack, [slate-stack]) {
     /* Normalize */
     box-sizing: border-box;
     position: relative;
@@ -17,117 +16,90 @@
     gap: var(--spacing-md);
   }
 
-  slate-stack[align='baseline'],
-  [slate-stack][align='baseline'] {
+  :is(slate-stack, [slate-stack])[align='baseline'] {
     align-items: baseline;
   }
-  slate-stack[align='start'],
-  [slate-stack][align='start'] {
+  :is(slate-stack, [slate-stack])[align='start'] {
     align-items: flex-start;
   }
-  slate-stack[align='center'],
-  [slate-stack][align='center'] {
+  :is(slate-stack, [slate-stack])[align='center'] {
     align-items: center;
   }
-  slate-stack[align='end'],
-  [slate-stack][align='end'] {
+  :is(slate-stack, [slate-stack])[align='end'] {
     align-items: flex-end;
   }
-  slate-stack[align='stretch'],
-  [slate-stack][align='stretch'] {
+  :is(slate-stack, [slate-stack])[align='stretch'] {
     align-items: stretch;
   }
 
-  slate-stack[direction='row'],
-  [slate-stack][direction='row'] {
+  :is(slate-stack, [slate-stack])[direction='row'] {
     flex-direction: row;
   }
-  slate-stack[direction='column'],
-  [slate-stack][direction='column'] {
+  :is(slate-stack, [slate-stack])[direction='column'] {
     flex-direction: column;
   }
 
-  slate-stack[gap='4xs'],
-  [slate-stack][gap='4xs'] {
+  :is(slate-stack, [slate-stack])[gap='4xs'] {
     gap: var(--spacing-4xs);
   }
-  slate-stack[gap='3xs'],
-  [slate-stack][gap='3xs'] {
+  :is(slate-stack, [slate-stack])[gap='3xs'] {
     gap: var(--spacing-3xs);
   }
-  slate-stack[gap='2xs'],
-  [slate-stack][gap='2xs'] {
+  :is(slate-stack, [slate-stack])[gap='2xs'] {
     gap: var(--spacing-2xs);
   }
-  slate-stack[gap='xs'],
-  [slate-stack][gap='xs'] {
+  :is(slate-stack, [slate-stack])[gap='xs'] {
     gap: var(--spacing-xs);
   }
-  slate-stack[gap='sm'],
-  [slate-stack][gap='sm'] {
+  :is(slate-stack, [slate-stack])[gap='sm'] {
     gap: var(--spacing-sm);
   }
-  slate-stack[gap='md'],
-  [slate-stack][gap='md'] {
+  :is(slate-stack, [slate-stack])[gap='md'] {
     gap: var(--spacing-md);
   }
-  slate-stack[gap='lg'],
-  [slate-stack][gap='lg'] {
+  :is(slate-stack, [slate-stack])[gap='lg'] {
     gap: var(--spacing-lg);
   }
-  slate-stack[gap='xl'],
-  [slate-stack][gap='xl'] {
+  :is(slate-stack, [slate-stack])[gap='xl'] {
     gap: var(--spacing-xl);
   }
-  slate-stack[gap='2xl'],
-  [slate-stack][gap='2xl'] {
+  :is(slate-stack, [slate-stack])[gap='2xl'] {
     gap: var(--spacing-2xl);
   }
-  slate-stack[gap='3xl'],
-  [slate-stack][gap='3xl'] {
+  :is(slate-stack, [slate-stack])[gap='3xl'] {
     gap: var(--spacing-3xl);
   }
-  slate-stack[gap='4xl'],
-  [slate-stack][gap='4xl'] {
+  :is(slate-stack, [slate-stack])[gap='4xl'] {
     gap: var(--spacing-4xl);
   }
-  slate-stack[gap='5xl'],
-  [slate-stack][gap='5xl'] {
+  :is(slate-stack, [slate-stack])[gap='5xl'] {
     gap: var(--spacing-5xl);
   }
-  slate-stack[gap='6xl'],
-  [slate-stack][gap='6xl'] {
+  :is(slate-stack, [slate-stack])[gap='6xl'] {
     gap: var(--spacing-6xl);
   }
-  slate-stack[gap='7xl'],
-  [slate-stack][gap='7xl'] {
+  :is(slate-stack, [slate-stack])[gap='7xl'] {
     gap: var(--spacing-7xl);
   }
-  slate-stack[gap='full'],
-  [slate-stack][gap='full'] {
+  :is(slate-stack, [slate-stack])[gap='full'] {
     justify-content: space-between;
     gap: var(--spacing-3xs);
   }
 
-  slate-stack[justify='start'],
-  [slate-stack][justify='start'] {
+  :is(slate-stack, [slate-stack])[justify='start'] {
     justify-content: flex-start;
   }
-  slate-stack[justify='center'],
-  [slate-stack][justify='center'] {
+  :is(slate-stack, [slate-stack])[justify='center'] {
     justify-content: center;
   }
-  slate-stack[justify='end'],
-  [slate-stack][justify='end'] {
+  :is(slate-stack, [slate-stack])[justify='end'] {
     justify-content: flex-end;
   }
-  slate-stack[justify='stretch'],
-  [slate-stack][justify='stretch'] {
+  :is(slate-stack, [slate-stack])[justify='stretch'] {
     justify-content: stretch;
   }
 
-  slate-stack[wrap],
-  [slate-stack][wrap] {
+  :is(slate-stack, [slate-stack])[wrap] {
     flex-wrap: wrap;
   }
 }

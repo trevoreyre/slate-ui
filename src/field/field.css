@@ -42,4 +42,8 @@
     font-size: max(16px, var(--text-md-font-size));
     line-height: var(--text-md-line-height);
   }
+
+  :is(slate-field, [slate-field]) input::placeholder {
+    color: hsl(var(--color-text-secondary));
+  }
 }

@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v3.1.1 (December 2, 2024)
+
+- Remove margin on all elements in base styles by default
+- Added support for `slate-container` attribute
+- Added support for `slate-stack` attribute
+- Updated color of `<slate-field>` input placeholder text
+
 ## v3.1.0 (December 2, 2024)
 
 - Added `<slate-field>` component
