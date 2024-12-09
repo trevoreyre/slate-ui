@@ -6,10 +6,10 @@
   }
 
   :is(slate-field, [slate-field]) label {
-    --text-font-size: var(--text-xs-font-size);
-    --text-line-height: var(--text-xs-line-height);
-    --text-margin-before: var(--text-xs-margin-before);
-    --text-margin-after: var(--text-xs-margin-after);
+    --text-font-size: var(--text-sm-font-size);
+    --text-line-height: var(--text-sm-line-height);
+    --text-margin-before: var(--text-sm-margin-before);
+    --text-margin-after: var(--text-sm-margin-after);
     font-weight: var(--font-weight-bold);
     font-size: var(--text-font-size);
     line-height: var(--text-line-height);
@@ -28,7 +28,7 @@
     margin-block-start: var(--text-margin-after);
   }
 
-  :is(slate-field, [slate-field]) input {
+  :is(slate-field, [slate-field]) input[type='text'] {
     appearance: none;
     border-radius: var(--border-radius-sm);
     border: var(--border-size-sm) solid hsl(var(--color-border));
@@ -43,7 +43,45 @@
     line-height: var(--text-md-line-height);
   }
 
-  :is(slate-field, [slate-field]) input::placeholder {
+  :is(slate-field, [slate-field]) input[type='text']::placeholder {
     color: hsl(var(--color-text-secondary));
+  }
+
+  :is(slate-field, [slate-field]):has(input[type='checkbox']) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  :is(slate-field, [slate-field]) input[type='checkbox'] {
+    appearance: none;
+    border-radius: var(--border-radius-sm);
+    box-shadow: inset 0 0 0 var(--border-size-sm) hsl(var(--color-border));
+    inline-size: var(--size-md);
+    block-size: var(--size-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(var(--color-background-secondary));
+    font-family: inherit;
+  }
+
+  :is(slate-field, [slate-field]) input[type='checkbox']:checked::before {
+    content: '';
+    display: block;
+    border-radius: var(--border-radius-sm);
+    inline-size: var(--size-md);
+    block-size: var(--size-md);
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-brand-700);
+  }
+
+  :is(slate-field, [slate-field]) input[type='checkbox']:checked::after {
+    content: '';
+    display: block;
+    inline-size: var(--size-sm);
+    block-size: var(--size-sm);
+    background-color: hsl(var(--color-neutral-0));
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
   }
 }
