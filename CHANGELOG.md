@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v3.2.0 (December 9, 2024)
+
+- Added `<slate-divider>` component
+- Minor style tweaks to `<slate-field>` component
+
 ## v3.1.1 (December 2, 2024)
 
 - Remove margin on all elements in base styles by default
