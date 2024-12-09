@@ -1,0 +1,13 @@
+@layer slate-components-1 {
+  :is(slate-divider, [slate-divider]) {
+    /* Normalize */
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+
+    border: none;
+    border-block-start: var(--border-size-md) solid hsl(var(--color-border));
+    inline-size: 100%;
+  }
+}
