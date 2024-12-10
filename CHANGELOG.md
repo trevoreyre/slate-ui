@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v3.3.0 (December 10, 2024)
+
+- Added `<slate-tooltip>` component
+- Added `<slate-field-set>` component
+- Small tweak to spacing in `<slate-field>` component
+
 ## v3.2.0 (December 9, 2024)
 
 - Added `<slate-divider>` component

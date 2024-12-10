@@ -1,0 +1,44 @@
+@layer slate-components-1 {
+  :is(slate-tooltip, [slate-tooltip]) {
+    /* Normalize */
+    box-sizing: border-box;
+
+    display: none;
+    position: fixed;
+    inset-block-start: 50%; /* @floating-ui */
+    inset-inline-start: 50%; /* @floating-ui */
+    border-radius: var(--border-radius-md);
+    border: var(--border-size-sm) solid hsl(var(--color-border));
+    padding: var(--spacing-xs);
+    inline-size: max-content;
+    max-inline-size: calc(100% - 2 * var(--spacing-3xs));
+    box-shadow: var(--shadow-md);
+    font-size: var(--text-sm-font-size);
+    line-height: 1.6;
+    color: hsl(var(--color-text-primary));
+
+    @media (--viewport-xs) {
+      max-inline-size: calc(var(--breakpoint-xs) - 2 * var(--spacing-3xs));
+    }
+
+    /* CSS anchor positioning */
+    /* TODO - Why is inset-area not working? */
+    /* inset-area: block-start; */
+    /* TODO - Why are logical properties not working in the anchor function? */
+    /* inset-block-end: anchor(inset-block-start); */
+    /* top: anchor(top); */
+    /* left: anchor(center); */
+    /* justify-self: anchor-center; */
+    /* position-try: flip-block flip-inline; */
+    /* translate: -50% -100%; */
+  }
+
+  :is(slate-tooltip, [slate-tooltip]):popover-open {
+    display: block;
+  }
+
+  /* Apply :popover-open styles for polyfill as well */
+  :is(slate-tooltip, [slate-tooltip]).\:popover-open {
+    display: block;
+  }
+}
