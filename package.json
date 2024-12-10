@@ -31,6 +31,11 @@
     "build:storybook": "storybook build",
     "build:typography": "node scripts/build-theme-typography-2.js"
   },
+  "dependencies": {
+    "@floating-ui/dom": "^1.6.12",
+    "@oddbird/popover-polyfill": "^0.5.2",
+    "lit": "^2.8.0"
+  },
   "devDependencies": {
     "@capsizecss/core": "^3.0.0",
     "@capsizecss/metrics": "^0.1.0",
@@ -39,21 +44,20 @@
     "@storybook/addon-essentials": "^7.0.13",
     "@storybook/addon-links": "^7.0.13",
     "@storybook/blocks": "^7.0.13",
-    "@storybook/web-components-vite": "^7.0.13",
     "@storybook/web-components": "^7.0.13",
+    "@storybook/web-components-vite": "^7.0.13",
     "@webcomponents/webcomponentsjs": "^2.6.0",
     "babel-eslint": "^10.1.0",
     "concurrently": "^8.2.2",
-    "eslint-plugin-storybook": "^0.6.12",
     "eslint": "^7.32.0",
+    "eslint-plugin-storybook": "^0.6.12",
     "just-extend": "^6.0.1",
     "lit-analyzer": "^1.1.10",
-    "lit": "^2.8.0",
     "outdent": "^0.8.0",
     "postcss-custom-media": "^10.0.2",
     "prettier": "^2.3.2",
-    "react-dom": "^18.2.0",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^3.0.2",
     "storybook": "^7.0.13"
   },
