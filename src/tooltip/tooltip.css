@@ -9,7 +9,7 @@
     inset-inline-start: 50%; /* @floating-ui */
     border-radius: var(--border-radius-md);
     border: var(--border-size-sm) solid hsl(var(--color-border));
-    padding: var(--spacing-xs);
+    padding: var(--spacing-sm);
     inline-size: max-content;
     max-inline-size: calc(100% - 2 * var(--spacing-3xs));
     box-shadow: var(--shadow-md);
