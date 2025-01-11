@@ -13,8 +13,8 @@
     --text-margin-before: var(--text-md-margin-before);
     --text-margin-after: var(--text-md-margin-after);
     font-size: var(--text-font-size);
-    /* line-height: var(--text-line-height); */
-    line-height: 1.5;
+    line-height: var(--text-line-height);
+    /* line-height: 1.5; */
     /* Defaults - weight */
     font-weight: var(--font-weight-normal);
     /* Defaults - variant */
@@ -27,9 +27,9 @@
   }
 
   slate-text::before {
-    /* content: '';
+    content: '';
     display: table;
-    margin-block-end: var(--text-margin-before); */
+    margin-block-end: var(--text-margin-before);
 
     /* margin-block-end: var(--text-trim-start); */
     /* margin-block-end: calc(
@@ -38,9 +38,9 @@
   }
 
   slate-text::after {
-    /* content: '';
+    content: '';
     display: table;
-    margin-block-start: var(--text-margin-after); */
+    margin-block-start: var(--text-margin-after);
 
     /* margin-block-start: var(--text-trim-end); */
     /* margin-block-start: calc(
