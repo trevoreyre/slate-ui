@@ -9,26 +9,12 @@
     padding: 0;
   }
 
+  /* TODO - Capsize trim text */
   :is(slate-field-set, [slate-field-set]) legend {
     --text-font-size: var(--text-md-font-size);
-    --text-line-height: var(--text-md-line-height);
-    --text-margin-before: var(--text-md-margin-before);
-    --text-margin-after: var(--text-md-margin-after);
     font-weight: var(--font-weight-bold);
     font-size: var(--text-font-size);
-    line-height: var(--text-line-height);
+    line-height: 1.2;
     color: hsl(var(--color-text-primary));
-  }
-
-  :is(slate-field-set, [slate-field-set]) legend::before {
-    content: '';
-    display: table;
-    margin-block-end: var(--text-margin-before);
-  }
-
-  :is(slate-field-set, [slate-field-set]) legend::after {
-    content: '';
-    display: table;
-    margin-block-start: var(--text-margin-after);
   }
 }
