@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v3.3.1 (January 10, 2025)
+
+- Added styling in `Field` component for radios
+- Adjusted line height in `Field` and `FieldSet` components
+- Adjusted line height in `Text` component
+- Adjusted padding in `Tooltip` component
+
 ## v3.3.0 (December 10, 2024)
 
 - Added `<slate-tooltip>` component
