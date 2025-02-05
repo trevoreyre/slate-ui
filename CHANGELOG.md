@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v4.0.0 (February 5, 2025)
+
+- BREAKING: Converted `Link` to light dom component
+- Added `--font-family-monospace` custom property to theme
+- Added styling for links styled as `Heading` components
+- Updated `Text` component to support styling with `slate-text` attribute
+- Fixed `Card` styling
+- Set background color in `Tooltip`
+- Cleaned up Storybook a bit
+
 ## v3.3.1 (January 10, 2025)
 
 - Added styling in `Field` component for radios
