@@ -2,6 +2,7 @@ import { css, html, LitElement } from 'lit'
 
 class TextMetrics extends LitElement {
   render() {
+    return html``
     return html`
       <span class="lh"></span>
       <span class="em"></span>

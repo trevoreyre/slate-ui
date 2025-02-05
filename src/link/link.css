@@ -1,29 +1,30 @@
-:host,
-:host a {
-  /* Normalize */
-  box-sizing: border-box;
-  position: relative;
+@layer slate-components-1 {
+  [slate-link] {
+    /* Normalize */
+    box-sizing: border-box;
+    position: relative;
 
-  /* Defaults - display */
-  display: inline;
-}
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-3xs);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-none);
+    color: inherit;
+    text-decoration: inherit;
 
-:host([display='inline']) {
-  display: inline;
-}
-:host([display='inline']) a {
-  display: inline;
-}
+    /* Defaults - display */
+    display: inline-flex;
+  }
 
-:host([display='block']) {
-  display: block;
-}
-:host([display='block']) a {
-  display: block;
-}
+  [slate-link]:hover {
+    text-decoration: underline;
+  }
 
-/* a {
-  color: var(--color-brand-700);
-  font-weight: var(--font-weight-bold);
-  text-decoration: inherit;
-} */
+  [slate-link][display='inline'] {
+    display: inline-flex;
+  }
+
+  [slate-link][display='block'] {
+    display: flex;
+  }
+}

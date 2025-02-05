@@ -11,10 +11,10 @@ const meta = {
   components: 'slate-text',
   parameters: {
     styles: {
-      background:
-        'linear-gradient(transparent 7px, hsl(var(--color-border) / 40%) 1px)',
-      'background-size': '8px 8px',
-      'background-repeat': 'repeat',
+      //   background:
+      //     'linear-gradient(transparent 7px, hsl(var(--color-border) / 40%) 1px)',
+      //   'background-size': '8px 8px',
+      //   'background-repeat': 'repeat',
       'overflow-x': 'auto',
     },
   },
@@ -29,77 +29,77 @@ const Basic = {
 const Size = {
   render: () => html`
     <slate-stack gap="xl">
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">xs</slate-text>
         <slate-text size="xs" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">sm</slate-text>
         <slate-text size="sm" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">md</slate-text>
         <slate-text size="md" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">lg</slate-text>
         <slate-text size="lg" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">xl</slate-text>
         <slate-text size="xl" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">2xl</slate-text>
         <slate-text size="2xl" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">3xl</slate-text>
         <slate-text size="3xl" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">4xl</slate-text>
         <slate-text size="4xl" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">5xl</slate-text>
         <slate-text size="5xl" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">6xl</slate-text>
         <slate-text size="6xl" wrap="false">
           <story-text-metrics></story-text-metrics>
           The quick brown fox jumps over the lazy dog
         </slate-text>
       </slate-stack>
-      <slate-stack direction="row" align="end" gap="3xs">
+      <slate-stack direction="row" align="end">
         <slate-text size="sm">7xl</slate-text>
         <slate-text size="7xl" wrap="false">
           <story-text-metrics></story-text-metrics>

@@ -1,5 +1,5 @@
 @layer slate-components-1 {
-  slate-text {
+  :is(slate-text, [slate-text]) {
     /* Normalize */
     display: block;
     box-sizing: border-box;
@@ -26,7 +26,7 @@
     /* line-height: var(--text-line-height); */
   }
 
-  slate-text::before {
+  :is(slate-text, [slate-text])::before {
     content: '';
     display: table;
     margin-block-end: var(--text-margin-before);
@@ -37,7 +37,7 @@
     ); */
   }
 
-  slate-text::after {
+  :is(slate-text, [slate-text])::after {
     content: '';
     display: table;
     margin-block-start: var(--text-margin-after);
@@ -48,14 +48,14 @@
     ); */
   }
 
-  slate-text[variant='primary'] {
+  :is(slate-text, [slate-text])[variant='primary'] {
     color: hsl(var(--color-text-primary));
   }
-  slate-text[variant='secondary'] {
+  :is(slate-text, [slate-text])[variant='secondary'] {
     color: hsl(var(--color-text-secondary));
   }
 
-  slate-text[size='xs'] {
+  :is(slate-text, [slate-text])[size='xs'] {
     --text-font-size: var(--text-xs-font-size);
     --text-line-height: var(--text-xs-line-height);
     --text-margin-before: var(--text-xs-margin-before);
@@ -64,7 +64,7 @@
     /* --text-font-size: 0.5rem; */
   }
 
-  slate-text[size='sm'] {
+  :is(slate-text, [slate-text])[size='sm'] {
     --text-font-size: var(--text-sm-font-size);
     --text-line-height: var(--text-sm-line-height);
     --text-margin-before: var(--text-sm-margin-before);
@@ -72,7 +72,7 @@
     /* --text-font-size: 0.625rem; */
   }
 
-  slate-text[size='md'] {
+  :is(slate-text, [slate-text])[size='md'] {
     --text-font-size: var(--text-md-font-size);
     --text-line-height: var(--text-md-line-height);
     --text-margin-before: var(--text-md-margin-before);
@@ -80,7 +80,7 @@
     /* --text-font-size: 1rem; */
   }
 
-  slate-text[size='lg'] {
+  :is(slate-text, [slate-text])[size='lg'] {
     --text-font-size: var(--text-lg-font-size);
     --text-line-height: var(--text-lg-line-height);
     --text-margin-before: var(--text-lg-margin-before);
@@ -88,7 +88,7 @@
     /* --text-font-size: 1.25rem; */
   }
 
-  slate-text[size='xl'] {
+  :is(slate-text, [slate-text])[size='xl'] {
     --text-font-size: var(--text-xl-font-size);
     --text-line-height: var(--text-xl-line-height);
     --text-margin-before: var(--text-xl-margin-before);
@@ -96,7 +96,7 @@
     /* --text-font-size: 1.5rem; */
   }
 
-  slate-text[size='2xl'] {
+  :is(slate-text, [slate-text])[size='2xl'] {
     --text-font-size: var(--text-2xl-font-size);
     --text-line-height: var(--text-2xl-line-height);
     --text-margin-before: var(--text-2xl-margin-before);
@@ -104,7 +104,7 @@
     /* --text-font-size: 2rem; */
   }
 
-  slate-text[size='3xl'] {
+  :is(slate-text, [slate-text])[size='3xl'] {
     --text-font-size: var(--text-3xl-font-size);
     --text-line-height: var(--text-3xl-line-height);
     font-weight: var(--font-weight-light);
@@ -112,7 +112,7 @@
     --text-margin-after: var(--text-3xl-margin-after);
   }
 
-  slate-text[size='4xl'] {
+  :is(slate-text, [slate-text])[size='4xl'] {
     --text-font-size: var(--text-4xl-font-size);
     --text-line-height: var(--text-4xl-line-height);
     font-weight: var(--font-weight-light);
@@ -120,7 +120,7 @@
     --text-margin-after: var(--text-4xl-margin-after);
   }
 
-  slate-text[size='5xl'] {
+  :is(slate-text, [slate-text])[size='5xl'] {
     --text-font-size: var(--text-5xl-font-size);
     --text-line-height: var(--text-5xl-line-height);
     --text-margin-before: var(--text-5xl-margin-before);
@@ -128,7 +128,7 @@
     font-weight: var(--font-weight-light);
   }
 
-  slate-text[size='6xl'] {
+  :is(slate-text, [slate-text])[size='6xl'] {
     --text-font-size: var(--text-6xl-font-size);
     --text-line-height: var(--text-6xl-line-height);
     --text-margin-before: var(--text-6xl-margin-before);
@@ -136,7 +136,7 @@
     font-weight: var(--font-weight-light);
   }
 
-  slate-text[size='7xl'] {
+  :is(slate-text, [slate-text])[size='7xl'] {
     --text-font-size: var(--text-7xl-font-size);
     --text-line-height: var(--text-7xl-line-height);
     --text-margin-before: var(--text-7xl-margin-before);
@@ -144,27 +144,27 @@
     font-weight: var(--font-weight-light);
   }
 
-  slate-text[transform='uppercase'] {
+  :is(slate-text, [slate-text])[transform='uppercase'] {
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-lg);
   }
-  slate-text[transform='uppercase'][size='4xl'],
-  slate-text[transform='uppercase'][size='5xl'],
-  slate-text[transform='uppercase'][size='6xl'] {
+  :is(slate-text, [slate-text])[transform='uppercase'][size='4xl'],
+  :is(slate-text, [slate-text])[transform='uppercase'][size='5xl'],
+  :is(slate-text, [slate-text])[transform='uppercase'][size='6xl'] {
     letter-spacing: var(--letter-spacing-xl);
   }
 
-  slate-text[weight='light'] {
+  :is(slate-text, [slate-text])[weight='light'] {
     font-weight: var(--font-weight-light);
   }
-  slate-text[weight='normal'] {
+  :is(slate-text, [slate-text])[weight='normal'] {
     font-weight: var(--font-weight-normal);
   }
-  slate-text[weight='bold'] {
+  :is(slate-text, [slate-text])[weight='bold'] {
     font-weight: var(--font-weight-bold);
   }
 
-  slate-text[wrap='false'] {
+  :is(slate-text, [slate-text])[wrap='false'] {
     white-space: nowrap;
   }
 }

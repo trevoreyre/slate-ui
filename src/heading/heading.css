@@ -7,6 +7,7 @@
 
     font-family: var(--font-family-heading);
     text-wrap: balance;
+    text-decoration: none;
 
     /* Defaults - size */
     --text-font-size: var(--text-md-font-size);
@@ -19,6 +20,10 @@
     font-weight: var(--font-weight-normal);
     /* Defaults - variant */
     color: hsl(var(--color-text-primary));
+  }
+
+  :is(slate-heading, [slate-heading])[href]:hover {
+    text-decoration: underline;
   }
 
   :is(slate-heading, [slate-heading])::before {

@@ -16,6 +16,7 @@
     font-size: var(--text-sm-font-size);
     line-height: 1.6;
     color: hsl(var(--color-text-primary));
+    background-color: hsl(var(--color-background-secondary));
 
     @media (--viewport-xs) {
       max-inline-size: calc(var(--breakpoint-xs) - 2 * var(--spacing-3xs));
