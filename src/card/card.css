@@ -11,32 +11,32 @@
     box-shadow: var(--shadow-sm);
   }
 
-  slate-container[radius='sm'] {
+  slate-card[radius='sm'] {
     border-radius: var(--border-radius-sm);
   }
-  slate-container[radius='md'] {
+  slate-card[radius='md'] {
     border-radius: var(--border-radius-md);
   }
-  slate-container[radius='lg'] {
+  slate-card[radius='lg'] {
     border-radius: var(--border-radius-lg);
   }
-  slate-container[radius='xl'] {
+  slate-card[radius='xl'] {
     border-radius: var(--border-radius-xl);
   }
 
-  slate-container[shadow='xs'] {
+  slate-card[shadow='xs'] {
     box-shadow: var(--shadow-xs);
   }
-  slate-container[shadow='sm'] {
+  slate-card[shadow='sm'] {
     box-shadow: var(--shadow-sm);
   }
-  slate-container[shadow='md'] {
+  slate-card[shadow='md'] {
     box-shadow: var(--shadow-md);
   }
-  slate-container[shadow='lg'] {
+  slate-card[shadow='lg'] {
     box-shadow: var(--shadow-lg);
   }
-  slate-container[shadow='xl'] {
+  slate-card[shadow='xl'] {
     box-shadow: var(--shadow-xl);
   }
 }
