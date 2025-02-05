@@ -52,12 +52,12 @@ slate-app-nav-content a {
   background-color: hsl(var(--color-neutral-700));
 }
 
-slate-text:has(story-text-metrics) {
+/* slate-text:has(story-text-metrics) {
   padding-inline-start: calc(
     7 * var(--spacing-sm) + 6 * var(--spacing-4xs) + var(--spacing-3xs)
   );
   background: hsl(var(--color-background-secondary));
-}
+} */
 
 @media (prefers-color-scheme: light) {
   .story-box {
